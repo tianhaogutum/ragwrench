@@ -1,10 +1,10 @@
 """GFM pipe tables, with source locations and fenced-code exclusion."""
 import re
-from html.parser import HTMLParser
+from .html import EagerHTMLParser
 from .models import Block, Table, TableChunkError
 
 
-class _TableBoundary(HTMLParser):
+class _TableBoundary(EagerHTMLParser):
     """Find a block boundary without counting table-like text in comments/scripts."""
     def __init__(self):
         super().__init__()

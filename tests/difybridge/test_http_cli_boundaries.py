@@ -77,18 +77,19 @@ def test_cli_start_check_shutdown():
                                env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     try:
         # select prevents an indefinitely blocked test if the startup path regresses.
+        # Generous bound: cold imports on shared CI runners (notably macOS) can be slow.
         import select
-        assert select.select([process.stdout], [], [], 5)[0], 'CLI did not start in 5 seconds'
+        assert select.select([process.stdout], [], [], 30)[0], 'CLI did not start in 30 seconds'
         line = process.stdout.readline()
         assert '127.0.0.1:' in line, line
         endpoint = 'http://' + line.strip().split()[-1]
         result = subprocess.run([sys.executable, '-m', 'ragwrench.difybridge.cli', 'check', '--endpoint', endpoint,
                                  '--knowledge-id', 'handbook', '--query', 'vacation'],
-                                env=env, capture_output=True, text=True, timeout=10)
+                                env=env, capture_output=True, text=True, timeout=30)
         assert result.returncode == 0, result.stderr + result.stdout
         assert json.loads(result.stdout)['passed']
         process.send_signal(signal.SIGINT)
-        assert process.wait(timeout=5) == 0
+        assert process.wait(timeout=15) == 0
     finally:
         if process.poll() is None:
             process.kill()

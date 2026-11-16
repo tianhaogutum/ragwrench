@@ -10,6 +10,7 @@ from ragwrench.sync.core import SyncError, build_snapshot, make_plan, write_json
 from ragwrench.sync.embedders import HashEmbedder
 from ragwrench.sync.store import apply_plan, local_client, verify_snapshot
 from ragwrench.sync.review import compare_plans, require_allowed, review_plan, validate_review
+from .conftest import linux_durable
 
 
 def snapshot(*texts, model="hash-v1", doc="a"):
@@ -21,6 +22,7 @@ def cli(*args):
                           capture_output=True, text=True)
 
 
+@linux_durable
 def test_default_model_change_refused_before_embedding_or_writes(tmp_path, monkeypatch):
     old, new = snapshot("same"), snapshot("same", model="hash-v2")
     with local_client(str(tmp_path / "db")) as client:
@@ -158,6 +160,7 @@ def test_receipt_tampering_and_other_plans_refused_before_store_open(tmp_path, f
     assert not (tmp_path / "absent").exists()
 
 
+@linux_durable
 def test_cli_review_receipt_apply_and_comparison_exit_codes(tmp_path):
     old, new = snapshot("a", "b", "c", "d"), snapshot("a")
     plan, bootstrap, review = [tmp_path / f"{name}.json" for name in ("plan", "bootstrap", "review")]
@@ -185,6 +188,7 @@ def test_cli_review_receipt_apply_and_comparison_exit_codes(tmp_path):
 
 
 @pytest.mark.parametrize("change", ["policy", "reviewer", "reason"])
+@linux_durable
 def test_override_provenance_bound_across_persisted_failure(tmp_path, monkeypatch, change):
     old, new = snapshot("a", "b", "c", "d"), snapshot("a")
     plan = make_plan(old, new)
@@ -219,6 +223,7 @@ def test_override_provenance_bound_across_persisted_failure(tmp_path, monkeypatc
         assert verify_snapshot(client, "kb", new, HashEmbedder())["points"] == 1
 
 
+@linux_durable
 def test_old_journal_without_review_binding_remains_resumable(tmp_path, monkeypatch):
     old, new = snapshot("old"), snapshot("new")
     plan = make_plan(old, new)

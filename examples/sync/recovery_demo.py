@@ -62,7 +62,9 @@ def main(failure="torn_metadata"):
             def torn_open(path, mode="r", *args, **kwargs):
                 with open(path, mode, *args, **kwargs) as out:
                     pending = client.get_collection("kb").config.metadata["chunksync"]["pending"]
-                    if (Path(path) == db / "meta.json" and mode == "w" and isinstance(pending, dict)
+                    # qdrant-client 1.16 writes meta.json in place; 1.20+ writes meta.json.tmp.
+                    if (Path(path) in (db / "meta.json", db / "meta.json.tmp") and mode == "w"
+                            and isinstance(pending, dict)
                             and pending["next_operation"] == 2 and pending["in_flight"] is None):
                         out.write('{"collections":')
                         out.flush()
@@ -111,6 +113,10 @@ def main(failure="torn_metadata"):
                     raise AssertionError("failed live client was not fenced")
             assert retry_embedder.calls == 0
         if failure == "torn_metadata":
+            if (db / "meta.json.tmp").exists():
+                # Atomic upstream save: the tear stayed in the unsynced temp
+                # file. Model a crash after its rename, leaving meta.json torn.
+                (db / "meta.json").write_text('{"collections":')
             assert (db / "meta.json").read_text() == '{"collections":'
         else:
             # Directory sync failure must prevent the primary writer entirely.

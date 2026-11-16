@@ -13,6 +13,34 @@ from ragwrench.sync.core import build_snapshot, make_plan
 from ragwrench.sync.embedders import HashEmbedder
 from ragwrench.sync.store import apply_plan, local_client, verify_snapshot
 from ragwrench.sync.recovery import SIDECAR
+from .conftest import linux_durable
+
+pytestmark = linux_durable
+
+TORN = '{"collections":'
+
+
+def is_primary_write(db, path, mode):
+    """Match Qdrant's metadata writer across supported qdrant-client versions.
+
+    qdrant-client 1.16 truncated and rewrote ``meta.json`` in place; 1.20+
+    writes ``meta.json.tmp`` and then ``os.replace``s it over ``meta.json``.
+    """
+    path = Path(path)
+    return mode == "w" and path.parent == db and path.name in ("meta.json", "meta.json.tmp")
+
+
+def check_torn_primary(db, previous_primary):
+    """Assert where a torn backend write landed; return True for atomic saves."""
+    temp = db / "meta.json.tmp"
+    if previous_primary is not None:
+        # Atomic upstream save: the tear stays in the temp file and the old,
+        # complete primary catalog is untouched (it is stale but valid).
+        assert temp.read_text() == TORN
+        assert (db / "meta.json").read_bytes() == previous_primary
+        return True
+    assert (db / "meta.json").read_text() == TORN
+    return False
 
 
 def snapshots():
@@ -36,10 +64,12 @@ def record_mutations(client, monkeypatch, successful):
 
 
 @pytest.mark.parametrize("phase", ["upsert_checkpoint", "delete_checkpoint", "commit"])
-def test_torn_meta_recovers_without_replaying_successful_point_writes(tmp_path, monkeypatch, phase):
+@pytest.mark.parametrize("primary", ["as_left", "torn"])
+def test_torn_meta_recovers_without_replaying_successful_point_writes(tmp_path, monkeypatch, phase, primary):
     old, new, plan = snapshots()
     db = tmp_path / "db"
     successful = Counter()
+    previous_primary = None
     with local_client(str(db)) as client:
         apply_plan(client, "kb", make_plan(build_snapshot([]), old), HashEmbedder())
         # A second collection proves recovery retains the whole store catalog.
@@ -54,18 +84,24 @@ def test_torn_meta_recovers_without_replaying_successful_point_writes(tmp_path, 
                 hit = (pending is None and state["fingerprint"] == new["fingerprint"] if phase == "commit"
                        else isinstance(pending, dict) and pending["in_flight"] is None
                        and pending["next_operation"] == (2 if phase == "upsert_checkpoint" else 3))
-                if Path(path) == db / "meta.json" and mode == "w" and hit:
-                    out.write('{"collections":')
+                if is_primary_write(db, path, mode) and hit:
+                    nonlocal previous_primary
+                    if Path(path).name != "meta.json":
+                        previous_primary = (db / "meta.json").read_bytes()
+                    out.write(TORN)
                     out.flush()
                     raise OSError("injected torn metadata checkpoint")
                 yield out
 
         with monkeypatch.context() as patch:
-            # Inject below the adapter, at the pinned backend's real file open.
+            # Inject below the adapter, at the backend's real file open.
             patch.setattr(qdrant_local, "open", torn_open, raising=False)
             with pytest.raises(OSError, match="torn metadata"):
                 apply_plan(client, "kb", plan, HashEmbedder())
-    assert (db / "meta.json").read_text() == '{"collections":'
+    if check_torn_primary(db, previous_primary) and primary == "torn":
+        # Atomic upstream saves do not fsync their temp file, so a crash after
+        # the rename can still leave a torn primary that needs the sidecar.
+        (db / "meta.json").write_text(TORN)
     with local_client(str(db)) as client:
         record_mutations(client, monkeypatch, successful)
         embedder = HashEmbedder()
@@ -316,6 +352,9 @@ def test_recovery_fsync_order_and_flushed_contents(tmp_path, monkeypatch, operat
         return original_fsync(fd)
 
     def replace(src, dst):
+        if operation == "save" and Path(dst) == db / "meta.json" and "primary_write" in events:
+            events.append("primary_replace")  # qdrant-client 1.20+ atomic save
+            return original_replace(src, dst)
         assert Path(dst) == target
         assert handles[-1].closed, "temporary file must close before rename"
         events.append("rename")
@@ -327,7 +366,7 @@ def test_recovery_fsync_order_and_flushed_contents(tmp_path, monkeypatch, operat
         return original_close(fd)
 
     def primary_open(path, mode="r", *args, **kwargs):
-        if Path(path) == db / "meta.json" and mode == "w":
+        if is_primary_write(db, path, mode):
             events.append("primary_write")
         return open(path, mode, *args, **kwargs)
 
@@ -344,8 +383,12 @@ def test_recovery_fsync_order_and_flushed_contents(tmp_path, monkeypatch, operat
             else:
                 with local_client(str(db)):
                     pass
-    assert events == ["directory_open", "flush", "file_fsync", "rename",
-                      "directory_fsync", "directory_close"] + (["primary_write"] if operation == "save" else [])
+    durable = ["directory_open", "flush", "file_fsync", "rename", "directory_fsync", "directory_close"]
+    if operation == "save":
+        # qdrant-client 1.16 rewrote meta.json in place; 1.20+ renames a temp file.
+        assert events in (durable + ["primary_write"], durable + ["primary_write", "primary_replace"])
+    else:
+        assert events == durable
     with pytest.raises(OSError):
         os.fstat(handles[0])  # directory descriptor closed
 
@@ -389,6 +432,10 @@ def test_fsync_failure_stops_apply_and_reopens_without_repeated_writes(
             return inject(kind, lambda: original_fsync(fd))
 
         def replace(src, dst):
+            if Path(dst) == db / "meta.json":
+                # qdrant-client 1.20+ publishes its own metadata by rename;
+                # faults here target only the recovery sidecar.
+                return original_replace(src, dst)
             assert Path(dst).name == SIDECAR
             return inject("rename", lambda: original_replace(src, dst))
 
@@ -490,11 +537,16 @@ def test_failed_metadata_save_fences_live_apply_until_reopen(
                 raise error
             return result
 
+        previous_primary = None
+
         @contextmanager
         def torn_open(path, mode="r", *args, **kwargs):
             with open(path, mode, *args, **kwargs) as out:
-                if Path(path) == db / "meta.json" and mode == "w" and hit():
-                    out.write('{"collections":')
+                if is_primary_write(db, path, mode) and hit():
+                    nonlocal previous_primary
+                    if Path(path).name != "meta.json":
+                        previous_primary = (db / "meta.json").read_bytes()
+                    out.write(TORN)
                     out.flush()
                     raise error
                 yield out
@@ -509,6 +561,8 @@ def test_failed_metadata_save_fences_live_apply_until_reopen(
             with pytest.raises(OSError) as first:
                 apply_plan(client, "kb", plan, HashEmbedder())
         assert first.value is error, "the first save error must propagate unchanged"
+        if boundary == "primary_torn":
+            check_torn_primary(db, previous_primary)
         assert sum(successful.values()) == completed
         # These reads remain available, but describe live, possibly unsaved state.
         assert client.count("kb").count == 2 + min(completed, 2) - max(completed - 2, 0)

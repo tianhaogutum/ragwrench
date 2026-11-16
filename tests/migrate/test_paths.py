@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import stat
+import sys
 from dataclasses import replace
 from pathlib import Path
 
@@ -547,7 +548,8 @@ def test_unicode_encode_error_after_path_validation_is_not_misclassified(monkeyp
     assert caught.value is unrelated
 
 
-@pytest.mark.parametrize("flavor", ["unicode", "surrogateescape"])
+@pytest.mark.parametrize("flavor", ["unicode", pytest.param("surrogateescape", marks=pytest.mark.skipif(
+    sys.platform == "darwin", reason="macOS (APFS) rejects non-UTF-8 filenames with EILSEQ"))])
 def test_filesystem_encodable_source_paths_still_work(migration_source, tmp_path, flavor):
     name = "données-文書" if flavor == "unicode" else os.fsdecode(b"source-\xff")
     path = tmp_path / name

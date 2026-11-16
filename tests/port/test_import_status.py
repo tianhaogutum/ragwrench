@@ -346,5 +346,8 @@ def test_pending_counts_multiple_documents(checkpoint, tmp_path, capsys, monkeyp
     assert code == 0 and not err
     assert json.loads(out) == {**{k: v for k, v in full.items() if k != "documents"},
                                "pending_counts": expected_counts}
-    assert "private" not in out and "documents" not in json.loads(out)
+    # No per-document source IDs leak into the summary ("state" is the checkpoint path,
+    # which on macOS lives under /private/var, so check the IDs, not a substring).
+    assert not any(source in out for source in checkpoint["documents"])
+    assert "documents" not in json.loads(out)
     assert (path.read_bytes(), path.stat().st_mtime_ns, set(tmp_path.iterdir())) == before

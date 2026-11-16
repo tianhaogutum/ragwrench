@@ -8,6 +8,9 @@ from qdrant_client import models
 from ragwrench.sync.core import SyncError, build_snapshot, make_plan
 from ragwrench.sync.embedders import HashEmbedder
 from ragwrench.sync.store import apply_plan, local_client, stored_payload, verify_snapshot
+from .conftest import linux_durable
+
+pytestmark = linux_durable
 
 
 def snapshots():

@@ -8,6 +8,7 @@ from ragwrench.sync.core import SyncError, build_snapshot, make_plan
 from ragwrench.sync.embedders import CommandEmbedder, HashEmbedder, PrecomputedEmbedder
 from ragwrench.sync.review import review_plan
 from ragwrench.sync.store import apply_plan, local_client, verify_snapshot
+from .conftest import linux_durable
 
 
 def snapshot(*texts, **kwargs):
@@ -18,6 +19,7 @@ def initialize(client, old, embedder):
     return apply_plan(client, "kb", make_plan(build_snapshot([]), old), embedder)
 
 
+@linux_durable
 def test_persistent_roundtrip_move_payload_delete_and_idempotence(tmp_path):
     old = build_snapshot([{"doc_id": "old", "text": "repeat"}, {"doc_id": "old", "text": "repeat"},
                           {"doc_id": "old", "text": "remove"}, {"doc_id": "same", "text": "payload", "metadata": {"x": 1}}])
@@ -68,6 +70,7 @@ def test_empty_collection_is_managed_and_verifiable():
         assert verify_snapshot(client, "kb", empty, embedder)["points"] == 0
 
 
+@linux_durable
 def test_resume_actual_command_failure(tmp_path):
     # A real child process fails exactly once on its second input, across
     # Qdrant close/reopen. Its argv identity stays the same on resume.
@@ -210,6 +213,7 @@ def test_command_protocol_failure(program, message):
         embedder.embed(snapshot("a")["chunks"][0], "hash-v1")
 
 
+@linux_durable
 def test_resume_after_delete_crash_and_rename_upsert(tmp_path):
     old = build_snapshot([{"doc_id": "old", "text": "same"}, {"doc_id": "deleted", "text": "gone"}])
     new = build_snapshot([{"doc_id": "new", "text": "same"}])
@@ -236,6 +240,7 @@ def test_resume_after_delete_crash_and_rename_upsert(tmp_path):
         verify_snapshot(client, "kb", new, embedder)
 
 
+@linux_durable
 def test_resume_after_upsert_before_checkpoint(tmp_path):
     old, new = snapshot("old"), snapshot("new1", "new2")
     plan = make_plan(old, new)

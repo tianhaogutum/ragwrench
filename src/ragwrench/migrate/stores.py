@@ -39,7 +39,10 @@ def read_store(uri: StoreURI, vector_name: str | None = None, *, optional: bool 
         yield None
         return
     with TemporaryDirectory(prefix="vecparity-") as temp:
-        path = Path(temp) / "store"
+        # Our own fresh snapshot directory: canonicalize it so a symlinked system
+        # temp root (macOS /var -> /private/var, or a symlinked TMPDIR) does not
+        # trip the store-path symlink refusal. User-supplied paths stay strict.
+        path = Path(temp).resolve() / "store"
         shutil.copytree(uri.path, path)
         with Store(replace(uri, path=path), vector_name) as store:
             if store.collection is None and not optional:

@@ -9,6 +9,7 @@ from ragwrench.sync.core import SyncError, build_snapshot, make_plan
 from ragwrench.sync.embedders import HashEmbedder
 from ragwrench.sync.review import review_plan
 from ragwrench.sync.store import apply_plan, local_client
+from .conftest import linux_durable
 
 
 @pytest.fixture
@@ -29,6 +30,7 @@ def inspection(name, limit, source="explicit", pending=None, override=None):
             "pending_plan_fingerprint": pending, "policy_override": override}
 
 
+@linux_durable
 def test_lists_two_managed_and_one_unmanaged_without_collection_argument(inventory_store, capsys):
     assert main(["list-policies", "--qdrant-path", str(inventory_store)]) == 0
     out = capsys.readouterr()
@@ -103,6 +105,7 @@ def guarded_list(db, monkeypatch, capsys, *, no_repair=False, exit_code=0):
 
 
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_reads_only_catalog_and_is_deterministic(inventory_store, monkeypatch, capsys, no_repair):
     first = guarded_list(inventory_store, monkeypatch, capsys, no_repair=no_repair)
     edit_catalog(inventory_store, lambda m: m.update(collections=dict(reversed(list(m["collections"].items())))))
@@ -111,6 +114,7 @@ def test_reads_only_catalog_and_is_deterministic(inventory_store, monkeypatch, c
 
 @pytest.mark.parametrize("source,limit", [("legacy-review", 0.25), ("default", 1.0), ("explicit", 0.25)])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_legacy_policy_precedence_without_adoption(inventory_store, monkeypatch, capsys, source, limit, no_repair):
     def change(m):
         state = m["collections"]["alpha"]["metadata"]["chunksync"]
@@ -126,6 +130,7 @@ def test_legacy_policy_precedence_without_adoption(inventory_store, monkeypatch,
 
 
 @pytest.mark.parametrize("state", [None, [], {}, {"version": True}, {"version": 2}])
+@linux_durable
 def test_missing_and_unsupported_states_are_explicit(inventory_store, monkeypatch, capsys, state):
     edit_catalog(inventory_store, lambda m: m["collections"]["alpha"]["metadata"].update(chunksync=state))
     rows = guarded_list(inventory_store, monkeypatch, capsys)["collections"]
@@ -143,6 +148,7 @@ def test_missing_and_unsupported_states_are_explicit(inventory_store, monkeypatc
     ("pending", {}), ("pending", "A" * 64), ("last_policy_override", {}),
 ])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_one_invalid_policy_does_not_hide_other_collections(inventory_store, monkeypatch, capsys, field, value, no_repair):
     edit_catalog(inventory_store, lambda m: m["collections"]["alpha"]["metadata"]["chunksync"].update({field: value}))
     a, m, z = guarded_list(inventory_store, monkeypatch, capsys, no_repair=no_repair)["collections"]
@@ -152,6 +158,7 @@ def test_one_invalid_policy_does_not_hide_other_collections(inventory_store, mon
 
 
 @pytest.mark.parametrize("change", ["config", "distance", "name", "metadata"])
+@linux_durable
 def test_unavailable_config_is_a_row_diagnostic(inventory_store, monkeypatch, capsys, change):
     def mutate(m):
         config = m["collections"]["alpha"]
@@ -171,6 +178,7 @@ def test_unavailable_config_is_a_row_diagnostic(inventory_store, monkeypatch, ca
 
 
 @pytest.mark.parametrize("pending", ["a" * 64, {"plan_fingerprint": "b" * 64}])
+@linux_durable
 def test_pending_and_historical_override_reuse_inspection_validation(inventory_store, monkeypatch, capsys, pending):
     from ragwrench.sync.policy import policy_override
     record = policy_override(make_plan(build_snapshot([]), build_snapshot([])), "alpha",
@@ -196,6 +204,7 @@ def test_initialized_empty_catalog(tmp_path, monkeypatch, capsys, no_repair):
 
 
 @pytest.mark.parametrize("damage", ["missing", "truncated", "invalid-utf8"])
+@linux_durable
 def test_default_recovers_catalog_in_memory_only_and_no_repair_refuses(inventory_store, monkeypatch, capsys, damage):
     before = guarded_list(inventory_store, monkeypatch, capsys)
     primary = inventory_store / "meta.json"
@@ -209,6 +218,7 @@ def test_default_recovers_catalog_in_memory_only_and_no_repair_refuses(inventory
 
 
 @pytest.mark.parametrize("case", ["bad-json", "fingerprint", "version", "metadata", "aliases", "missing"])
+@linux_durable
 def test_bad_recovery_refused_but_healthy_primary_authoritative(inventory_store, monkeypatch, capsys, case):
     from ragwrench.sync.core import digest
     sidecar = inventory_store / "chunksync-recovery.json"
@@ -233,11 +243,13 @@ def test_bad_recovery_refused_but_healthy_primary_authoritative(inventory_store,
 
 
 @pytest.mark.parametrize("metadata", [[], {}, {"collections": [], "aliases": {}}, {"collections": {}, "aliases": {"x": "alpha"}}])
+@linux_durable
 def test_semantic_primary_error_never_uses_valid_sidecar(inventory_store, monkeypatch, capsys, metadata):
     (inventory_store / "meta.json").write_text(json.dumps(metadata))
     assert "unsupported Qdrant metadata or aliases" in guarded_list(inventory_store, monkeypatch, capsys, exit_code=2)
 
 
+@linux_durable
 def test_count_limit_before_rows_and_exact_boundary(inventory_store, monkeypatch, capsys):
     import ragwrench.sync.inventory as inventory
     config = json.loads((inventory_store / "meta.json").read_text())["collections"]["alpha"]
@@ -252,6 +264,7 @@ def test_count_limit_before_rows_and_exact_boundary(inventory_store, monkeypatch
     assert "1000 collection limit" in guarded_list(inventory_store, monkeypatch, capsys, exit_code=2)
 
 
+@linux_durable
 def test_output_byte_bound_includes_newline(inventory_store, monkeypatch, capsys):
     import ragwrench.sync.inventory as inventory
     report = guarded_list(inventory_store, monkeypatch, capsys)
@@ -263,6 +276,7 @@ def test_output_byte_bound_includes_newline(inventory_store, monkeypatch, capsys
 
 
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_oversized_primary_refuses_without_fallback(inventory_store, monkeypatch, capsys, no_repair):
     from ragwrench.sync.core import MAX_JSON_BYTES
     primary = inventory_store / "meta.json"
@@ -301,6 +315,7 @@ def test_invalid_paths_are_never_created(tmp_path, capsys, case):
 
 
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_catalog_io_error_does_not_read_fallback(inventory_store, monkeypatch, capsys, no_repair):
     import ragwrench.sync.inventory as inventory
     def unreadable(path):
@@ -311,6 +326,7 @@ def test_catalog_io_error_does_not_read_fallback(inventory_store, monkeypatch, c
 
 
 @pytest.mark.parametrize("damaged", [False, True])
+@linux_durable
 def test_no_repair_never_reads_sidecar(inventory_store, monkeypatch, capsys, damaged):
     import ragwrench.sync.inventory as inventory
     if damaged:
@@ -323,6 +339,7 @@ def test_no_repair_never_reads_sidecar(inventory_store, monkeypatch, capsys, dam
     guarded_list(inventory_store, monkeypatch, capsys, no_repair=True, exit_code=2 if damaged else 0)
 
 
+@linux_durable
 def test_recovery_reports_invalid_one_collection_metadata(inventory_store, monkeypatch, capsys):
     from ragwrench.sync.core import digest
     sidecar = inventory_store / "chunksync-recovery.json"

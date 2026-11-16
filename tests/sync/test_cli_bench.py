@@ -5,12 +5,14 @@ import sys
 
 from ragwrench.sync.bench import run_bench
 from ragwrench.sync.core import build_snapshot, make_plan, write_json
+from .conftest import linux_durable
 
 
 def cli(*args):
     return subprocess.run([sys.executable, "-m", "ragwrench.sync.cli", *map(str, args)], capture_output=True, text=True)
 
 
+@linux_durable
 def test_cli_e2e(tmp_path):
     fixtures = Path(__file__).parent / "fixtures"
     empty, old, new, bootstrap, plan = [tmp_path / f"{x}.json" for x in ("empty", "old", "new", "bootstrap", "plan")]

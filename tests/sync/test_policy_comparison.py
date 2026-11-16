@@ -6,6 +6,7 @@ import pytest
 
 from ragwrench.sync.cli import main
 from .test_inventory import inventory_store
+from .conftest import linux_durable
 
 
 def report(rows=(), source="primary"):
@@ -307,6 +308,7 @@ def test_reads_only_two_files_without_backend_or_mutation(tmp_path, capsys, monk
     assert files == {p: p.read_bytes() for p in tmp_path.iterdir()}
 
 
+@linux_durable
 def test_real_archives_include_all_statuses_and_in_memory_recovery(inventory_store, tmp_path, capsys):
     from ragwrench.sync.core import digest
     from .test_inventory import files

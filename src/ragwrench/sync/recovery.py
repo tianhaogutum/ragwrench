@@ -1,8 +1,11 @@
-"""Atomic write-ahead catalog for the pinned local Qdrant metadata writer.
+"""Durable write-ahead catalog for the local Qdrant metadata writer.
 
-Qdrant 1.16.2 truncates meta.json in place. Save its entire intended catalog
-before that write, including all collection configs, management state, journals
-and review receipts. Point data remains exclusively in Qdrant's SQLite stores.
+qdrant-client 1.16 truncated meta.json in place; 1.20+ writes meta.json.tmp
+and renames it over meta.json, but fsyncs neither the file nor the directory,
+so a crash can still leave the primary catalog missing, empty or torn. Save
+the entire intended catalog durably before Qdrant's write, including all
+collection configs, management state, journals and review receipts. Point
+data remains exclusively in Qdrant's SQLite stores.
 """
 import json
 from pathlib import Path
@@ -82,7 +85,7 @@ def protect_metadata(client, root):
 
     This hook also protects collection creation and preserves other collections
     when Qdrant rewrites the whole catalog. Sync the temporary file, rename,
-    then sync the directory before entering Qdrant's truncating writer. Any
+    then sync the directory before entering Qdrant's (non-durable) writer. Any
     failure stops that save; after rename the new sidecar may be published.
     Latch any save failure, including a directory fsync error, so apply_plan
     requires close/reopen rather than trusting potentially unsaved live state.
@@ -91,16 +94,18 @@ def protect_metadata(client, root):
     backend = client._client
     original = backend._save
 
-    def save():
+    def save(*args, **kwargs):
+        # qdrant-client 1.20+ may pass the aliases about to be saved.
         if backend.closed:
-            return original()  # preserve Qdrant's closed-client refusal
+            return original(*args, **kwargs)  # preserve Qdrant's closed-client refusal
         try:
+            aliases = kwargs.get("aliases", args[0] if args else None)
             body = {"kind": "chunksync.recovery", "version": 1,
                     "metadata": {"collections": {name: to_dict(collection.config)
                                                  for name, collection in backend.collections.items()},
-                                 "aliases": backend.aliases}}
+                                 "aliases": backend.aliases if aliases is None else aliases}}
             write_json(Path(root) / SIDECAR, {**body, "fingerprint": digest(body)}, durable=True)
-            return original()
+            return original(*args, **kwargs)
         except BaseException:
             # An interrupted save is ambiguous too. Preserve its original error;
             # reads/close remain usable, but no later apply may trust live state.

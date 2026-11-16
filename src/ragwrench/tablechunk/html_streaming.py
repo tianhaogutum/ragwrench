@@ -80,6 +80,7 @@ def html_blocks(source, limit):
             data = source.read(65536)
             parser.feed(decoder.decode(data, final=not data))
             # HTMLParser holds incomplete tags, entities, comments and script/style.
+            # _Parser feeds eagerly (EagerHTMLParser), so rawdata is the whole backlog.
             if len(parser.rawdata.encode('utf-8')) > limit:
                 raise TableChunkError('streaming HTML unfinished token exceeds 1 MiB limit')
             yield from drain()

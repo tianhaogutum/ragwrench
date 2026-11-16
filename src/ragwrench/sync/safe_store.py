@@ -1,4 +1,4 @@
-"""Preflight qdrant-client 1.16.2 stores before its pickle-based loader runs.
+"""Preflight qdrant-client local-mode stores before its pickle-based loader runs.
 
 This adapter accepts only the PointStruct serialization emitted by this tool.
 It is a single-writer preflight, not protection against concurrent filesystem

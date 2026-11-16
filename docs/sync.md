@@ -682,8 +682,8 @@ store; `inspect-policy --no-repair` refuses that repair, and `apply --dry-run` n
 opens or repairs it.
 
 `python examples/sync/recovery_demo.py` runs two synthetic failures at the
-second upsert's checkpoint for `old1, old2 → new1, new2`: a torn real `meta.json`
-write, and an error after a real directory `fsync` but before Qdrant's writer.
+second upsert's checkpoint for `old1, old2 → new1, new2`: a torn real Qdrant
+metadata write (left torn in `meta.json`, as after a crash), and an error after a real directory `fsync` but before Qdrant's writer.
 Four points remain at each failure. An accidental same-client retry is refused
 with zero embeddings or point/management writes. Reopening resumes with `embedded: 0`,
 verifies two final vectors, and proves each of the two upserts and two deletes
@@ -700,8 +700,15 @@ ordering and flushed bytes, inject errors before/after file sync, rename and
 directory sync at upsert/delete intent/checkpoint and commit, then reopen using
 both valid primary metadata and a torn primary requiring sidecar recovery.
 
-This adapter relies on qdrant-client local-mode storage internals (written against
-qdrant-client 1.16.2). It requires one
+This adapter relies on qdrant-client local-mode storage internals (supported:
+qdrant-client 1.20 or later below 2; it was first written against 1.16.2).
+qdrant-client 1.16 rewrote `meta.json` in place, while 1.20+ writes
+`meta.json.tmp` and renames it over `meta.json`. Neither version fsyncs that
+write, so the durable sidecar is still required: with 1.20+, an interrupted
+save normally leaves the previous complete `meta.json` (valid, so it stays
+authoritative and the journal recognizes already-persisted writes), and a
+crash after an unsynced rename can leave a missing or torn primary that is
+repaired from the sidecar. It requires one
 writer and no concurrent filesystem replacement. These exception tests **do not
 prove physical power-loss safety**: no power cut, kernel crash, disk/controller
 cache test, or filesystem certification is performed. The adapter does not add

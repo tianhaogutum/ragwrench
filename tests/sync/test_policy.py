@@ -8,12 +8,14 @@ from ragwrench.sync.embedders import HashEmbedder
 from ragwrench.sync.policy import policy_override, validate_policy_override
 from ragwrench.sync.review import review_plan
 from ragwrench.sync.store import apply_plan, local_client, verify_snapshot
+from .conftest import linux_durable
 
 
 def snapshot(*texts):
     return build_snapshot([{"doc_id": "a", "text": text} for text in texts])
 
 
+@linux_durable
 def test_collection_policy_cannot_be_silently_weakened(tmp_path):
     old = snapshot("a", "b", "c", "d")
     bootstrap = make_plan(snapshot(), old)
@@ -49,6 +51,7 @@ def forbid_writes(guard, client, embedder):
 
 
 @pytest.mark.parametrize("case", ["zero_deletions", "explicit_limit", "gate_override", "completed_replay"])
+@linux_durable
 def test_weakening_is_refused_regardless_of_actual_deletions_or_gate_override(tmp_path, monkeypatch, case):
     old = snapshot("a", "b", "c", "d")
     with local_client(str(tmp_path / "db")) as client:
@@ -66,6 +69,7 @@ def test_weakening_is_refused_regardless_of_actual_deletions_or_gate_override(tm
             apply_plan(client, "kb", plan, embedder, review=review)
 
 
+@linux_durable
 def test_gate_override_keeps_strict_collection_policy(tmp_path):
     old = snapshot("a", "b", "c", "d")
     plan = make_plan(old, snapshot("a"))
@@ -78,6 +82,7 @@ def test_gate_override_keeps_strict_collection_policy(tmp_path):
         assert result["policy_override"] is None
 
 
+@linux_durable
 def test_explicit_policy_override_persists_and_replays(tmp_path):
     old, new = snapshot("a", "b", "c", "d"), snapshot("a")
     plan = make_plan(old, new)
@@ -99,6 +104,7 @@ def test_explicit_policy_override_persists_and_replays(tmp_path):
                        policy_override=record(plan, reason="new reason"))
 
 
+@linux_durable
 def test_tightening_admitted_for_later_plan_and_retains_last_policy_exception(tmp_path):
     old, middle, new = snapshot("a", "b", "c", "d"), snapshot("a", "b"), snapshot("a", "b", "e")
     first, second = make_plan(old, middle), make_plan(middle, new)
@@ -116,6 +122,7 @@ def test_tightening_admitted_for_later_plan_and_retains_last_policy_exception(tm
 
 
 @pytest.mark.parametrize("change", ["missing", "reason", "from", "to", "collection", "plan", "hash", "extra", "malformed"])
+@linux_durable
 def test_bad_or_stale_policy_override_refused_without_mutation(tmp_path, monkeypatch, change):
     old, new = snapshot("a", "b", "c", "d"), snapshot("a")
     plan = make_plan(old, new)
@@ -162,6 +169,7 @@ def test_policy_exception_input_contract(field, value):
 
 
 @pytest.mark.parametrize("change", ["missing", "reason", "review"])
+@linux_durable
 def test_policy_override_is_bound_before_persisted_failure_and_resume(tmp_path, monkeypatch, change):
     old, new = snapshot("a", "b", "c", "d"), snapshot("a")
     plan = make_plan(old, new)
@@ -199,6 +207,7 @@ def test_policy_override_is_bound_before_persisted_failure_and_resume(tmp_path, 
 
 
 @pytest.mark.parametrize("legacy", ["last_review", "no_review", "invalid"])
+@linux_durable
 def test_legacy_policy_migration_and_corrupt_policy_fail_closed(tmp_path, monkeypatch, legacy):
     old, new = snapshot("a", "b"), snapshot("a", "b", "c")
     plan = make_plan(old, new)
@@ -225,6 +234,7 @@ def test_legacy_policy_migration_and_corrupt_policy_fail_closed(tmp_path, monkey
                 assert apply_plan(client, "kb", plan, HashEmbedder(), review=review_plan(plan, max_deletion_fraction=0.5))["review_policy"] == {"max_deletion_fraction": 0.5}
 
 
+@linux_durable
 def test_unused_policy_override_and_plan_gate_still_refused(tmp_path):
     old = snapshot("a", "b", "c", "d")
     plan = make_plan(old, snapshot("a"))
@@ -239,6 +249,7 @@ def test_unused_policy_override_and_plan_gate_still_refused(tmp_path):
             apply_plan(client, "kb", plan, HashEmbedder(), review=review_plan(plan, max_deletion_fraction=0.6), policy_override=record(plan, after=0.6))
 
 
+@linux_durable
 def test_cli_policy_record_receipt_admission_and_offline_dry_run(tmp_path):
     import json
     import subprocess
@@ -285,6 +296,7 @@ def test_cli_policy_record_receipt_admission_and_offline_dry_run(tmp_path):
     assert invalid.returncode == 2 and not (tmp_path / "invalid.json").exists()
 
 
+@linux_durable
 def test_policy_is_recorded_before_embedding_and_survives_torn_metadata(tmp_path, monkeypatch):
     old, new = snapshot("a", "b"), snapshot("a", "b", "c")
     plan = make_plan(old, new)
@@ -313,6 +325,7 @@ def test_policy_is_recorded_before_embedding_and_survives_torn_metadata(tmp_path
         assert verify_snapshot(client, "kb", new, HashEmbedder())["points"] == 3
 
 
+@linux_durable
 def test_completed_replay_does_not_silently_change_policy(tmp_path):
     old = snapshot("a")
     plan = make_plan(snapshot(), old)
@@ -337,6 +350,7 @@ def test_explicit_null_policy_override_file_is_invalid_even_offline(tmp_path):
     assert not (tmp_path / "absent").exists()
 
 
+@linux_durable
 def test_policy_override_cannot_initialize_unmanaged_collection(tmp_path, monkeypatch):
     from qdrant_client import models
     plan = make_plan(snapshot(), snapshot("a"))

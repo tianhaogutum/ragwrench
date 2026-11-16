@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import os
 import pwd
+import sys
 import tempfile
 from pathlib import Path, PurePath, PureWindowsPath
 from contextlib import closing
@@ -257,7 +258,9 @@ def test_unencodable_checkpoint_python_cli(source, tmp_path, monkeypatch, capsys
 
 
 @pytest.mark.parametrize("as_string", [False, True])
-@pytest.mark.parametrize("filename", ["progress.json", "進捗-é.json", os.fsdecode(b"progress-\xff.json")],
+@pytest.mark.parametrize("filename", ["progress.json", "進捗-é.json", pytest.param(
+    os.fsdecode(b"progress-\xff.json"),
+    marks=pytest.mark.skipif(sys.platform == "darwin", reason="macOS (APFS) rejects non-UTF-8 filenames with EILSEQ"))],
                          ids=["ascii", "unicode", "surrogateescape"])
 def test_encodable_checkpoint_create_and_resume(source, tmp_path, as_string, filename):
     target = target_for(source, tmp_path)

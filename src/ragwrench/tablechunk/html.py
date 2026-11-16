@@ -23,7 +23,23 @@ class Cell:
     header_refs: list[str] | None = None
 
 
-class _Parser(HTMLParser):
+class EagerHTMLParser(HTMLParser):
+    """HTMLParser that parses every fed chunk immediately.
+
+    Recent CPython security releases make ``feed()`` defer parsing, holding fed
+    text in a private pending list outside ``rawdata`` until the buffer doubles.
+    Incremental callers here inspect parser state after each ``feed()`` (table
+    depth, unfinished-token size), so restore the historical behavior on every
+    Python version. Rescanning stays bounded: streaming caps unfinished tokens
+    at 1 MiB, and one-shot parsing feeds the whole text once.
+    """
+
+    def feed(self, data):
+        self.rawdata += data
+        self.goahead(0)
+
+
+class _Parser(EagerHTMLParser):
     def __init__(self, offset: int, storage=None):
         super().__init__(convert_charrefs=True)
         # HTMLParser itself owns `offset` (the current column).

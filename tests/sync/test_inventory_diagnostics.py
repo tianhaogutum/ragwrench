@@ -7,6 +7,9 @@ import pytest
 from ragwrench.sync.cli import main
 from ragwrench.sync.core import digest
 from .test_inventory import files, inventory_store
+from .conftest import linux_durable
+
+pytestmark = linux_durable
 
 
 def test_fail_on_diagnostics_keeps_complete_report(inventory_store, capsys):

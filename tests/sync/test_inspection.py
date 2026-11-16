@@ -10,6 +10,7 @@ from ragwrench.sync.core import build_snapshot, make_plan
 from ragwrench.sync.embedders import HashEmbedder
 from ragwrench.sync.review import review_plan
 from ragwrench.sync.store import apply_plan, local_client
+from .conftest import linux_durable
 
 
 def snapshot(*texts):
@@ -35,6 +36,7 @@ def expected(*, limit=0.5, source="explicit", pending=None, override=None):
             "pending_plan_fingerprint": pending, "policy_override": override}
 
 
+@linux_durable
 def test_cli_inspects_strict_explicit_policy_without_changing_store(tmp_path):
     db = tmp_path / "db"
     bootstrap(db)
@@ -94,6 +96,7 @@ def guarded_inspection(db, monkeypatch, capsys, *, collection="kb", exit_code=0,
     ("no_review", "default", 1.0), ("null_review", "default", 1.0),
 ])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_policy_precedence_and_legacy_fallbacks_do_not_adopt_policy(tmp_path, monkeypatch, capsys, case, source, limit, no_repair):
     db = tmp_path / "db"
     bootstrap(db)
@@ -112,6 +115,7 @@ def test_policy_precedence_and_legacy_fallbacks_do_not_adopt_policy(tmp_path, mo
 
 
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_pending_transaction_reports_admitted_override_without_resuming(tmp_path, monkeypatch, capsys, no_repair):
     from ragwrench.sync.policy import policy_override
     db = tmp_path / "db"
@@ -134,6 +138,7 @@ def test_pending_transaction_reports_admitted_override_without_resuming(tmp_path
 
 @pytest.mark.parametrize("journal", [False, True])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_pending_binding_is_reported_without_requiring_full_journal(tmp_path, monkeypatch, capsys, journal, no_repair):
     db = tmp_path / "db"
     bootstrap(db)
@@ -143,6 +148,7 @@ def test_pending_binding_is_reported_without_requiring_full_journal(tmp_path, mo
 
 
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_latest_exception_retained_when_later_policy_is_stricter(tmp_path, monkeypatch, capsys, no_repair):
     from ragwrench.sync.policy import policy_override
     db = tmp_path / "db"
@@ -167,6 +173,7 @@ def test_latest_exception_retained_when_later_policy_is_stricter(tmp_path, monke
 ])
 @pytest.mark.parametrize("source", ["explicit", "legacy-review"])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_malformed_policy_fails_closed_without_fallback(tmp_path, monkeypatch, capsys, policy, source, no_repair):
     db = tmp_path / "db"
     bootstrap(db)
@@ -182,6 +189,7 @@ def test_malformed_policy_fails_closed_without_fallback(tmp_path, monkeypatch, c
 
 @pytest.mark.parametrize("pending", [{}, [], 12, "", "A" * 64, {"plan_fingerprint": None}])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_invalid_pending_binding_is_an_error(tmp_path, monkeypatch, capsys, pending, no_repair):
     db = tmp_path / "db"
     bootstrap(db)
@@ -191,6 +199,7 @@ def test_invalid_pending_binding_is_an_error(tmp_path, monkeypatch, capsys, pend
 
 @pytest.mark.parametrize("state", [None, [], {}, {"version": True}, {"version": 2}])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_unmanaged_or_unsupported_state_is_an_error(tmp_path, monkeypatch, capsys, state, no_repair):
     db = tmp_path / "db"
     bootstrap(db)
@@ -201,6 +210,7 @@ def test_unmanaged_or_unsupported_state_is_an_error(tmp_path, monkeypatch, capsy
 
 @pytest.mark.parametrize("record", [[], {}, {"fingerprint": "0" * 64}])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_malformed_override_is_an_error(tmp_path, monkeypatch, capsys, record, no_repair):
     db = tmp_path / "db"
     bootstrap(db)
@@ -210,6 +220,7 @@ def test_malformed_override_is_an_error(tmp_path, monkeypatch, capsys, record, n
 
 @pytest.mark.parametrize("change", ["tampered", "wrong-collection", "bad-plan"])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_invalid_historical_override_is_an_error(tmp_path, monkeypatch, capsys, change, no_repair):
     from ragwrench.sync.policy import policy_override
     db = tmp_path / "db"
@@ -227,6 +238,7 @@ def test_invalid_historical_override_is_an_error(tmp_path, monkeypatch, capsys, 
 
 
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_missing_collection_is_not_created(tmp_path, monkeypatch, capsys, no_repair):
     db = tmp_path / "db"
     bootstrap(db)
@@ -258,6 +270,7 @@ def test_invalid_inputs_refuse_before_opening(tmp_path, monkeypatch, capsys, cas
         assert db.read_text() == "not a store"
 
 
+@linux_durable
 def test_inspection_retains_documented_metadata_repair_on_open(tmp_path):
     db = tmp_path / "db"
     bootstrap(db)
@@ -271,6 +284,7 @@ def test_inspection_retains_documented_metadata_repair_on_open(tmp_path):
 
 
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_unmanaged_collection_with_no_state_is_an_error(tmp_path, monkeypatch, capsys, no_repair):
     from qdrant_client import models
     db = tmp_path / "db"
@@ -281,6 +295,7 @@ def test_unmanaged_collection_with_no_state_is_an_error(tmp_path, monkeypatch, c
 
 @pytest.mark.parametrize("review", [[], {}, {"policy": "invalid"}])
 @pytest.mark.parametrize("no_repair", [False, True])
+@linux_durable
 def test_malformed_legacy_review_is_an_error(tmp_path, monkeypatch, capsys, review, no_repair):
     db = tmp_path / "db"
     bootstrap(db)
@@ -292,6 +307,7 @@ def test_malformed_legacy_review_is_an_error(tmp_path, monkeypatch, capsys, revi
 
 
 @pytest.mark.parametrize("limit", [float("nan"), float("inf"), float("-inf")])
+@linux_durable
 def test_nonfinite_policy_is_refused_by_reused_validator(tmp_path, monkeypatch, capsys, limit):
     # Recovery serialization already refuses these, so inject at the read boundary.
     import ragwrench.sync.store as store_module
@@ -303,6 +319,7 @@ def test_nonfinite_policy_is_refused_by_reused_validator(tmp_path, monkeypatch, 
 
 
 @pytest.mark.parametrize("limit", [0.0, 1.0])
+@linux_durable
 def test_valid_explicit_limit_boundaries(tmp_path, monkeypatch, capsys, limit):
     db = tmp_path / "db"
     bootstrap(db)
@@ -316,6 +333,7 @@ REPAIR_REQUIRED = ("ragwrench sync: primary metadata repair required; reopen wit
 
 @pytest.mark.parametrize("damage", ["missing", "truncated", "invalid-utf8"])
 @pytest.mark.parametrize("sidecar", ["valid", "bad", "missing"])
+@linux_durable
 def test_no_repair_refuses_damaged_primary_without_touching_files(tmp_path, damage, sidecar):
     db = tmp_path / "db"
     bootstrap(db)
@@ -351,6 +369,7 @@ def test_no_repair_refuses_damaged_primary_without_touching_files(tmp_path, dama
 
 
 @pytest.mark.parametrize("sidecar", ["bad", "missing"])
+@linux_durable
 def test_no_repair_healthy_primary_ignores_unusable_sidecar_and_keeps_lock_handling(tmp_path, sidecar):
     db = tmp_path / "db"
     bootstrap(db)
@@ -375,6 +394,7 @@ def test_no_repair_healthy_primary_ignores_unusable_sidecar_and_keeps_lock_handl
     ("pickle", "pickle"), ("symlink", "symlink"), ("oversize", "64 MiB"),
     ("nonregular", "regular file"),
 ])
+@linux_durable
 def test_no_repair_preserves_safe_store_preflight(tmp_path, case, diagnostic):
     import sqlite3
     db = tmp_path / "db"
@@ -420,6 +440,7 @@ def test_no_repair_preserves_safe_store_preflight(tmp_path, case, diagnostic):
     assert not (db / ".lock").exists()
 
 
+@linux_durable
 def test_no_repair_propagates_metadata_io_error_without_open_or_fallback(tmp_path, monkeypatch, capsys):
     import ragwrench.sync.recovery as recovery
     import ragwrench.sync.store as store

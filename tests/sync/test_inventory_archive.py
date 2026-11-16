@@ -7,6 +7,9 @@ import pytest
 
 from ragwrench.sync.cli import main
 from .test_inventory import edit_catalog, files, inventory_store
+from .conftest import linux_durable
+
+pytestmark = linux_durable
 
 
 def test_archive_exact_stdout_two_managed_one_unmanaged(inventory_store, tmp_path, capsys):

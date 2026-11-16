@@ -153,7 +153,11 @@ def test_dify_bridge_does_not_require_qdrant_up_front():
     result = run("dify-bridge", "--help", module=blocked("qdrant_client"))
     assert result.returncode == 0, result.stderr
     assert "usage: ragwrench dify-bridge" in result.stdout
-    assert "needs ragwrench[qdrant]" not in run("--help", module=blocked("qdrant_client")).stdout
+    assert "missing optional dependencies" not in result.stdout + result.stderr
+    overview = run("--help", module=blocked("qdrant_client")).stdout
+    # sync/bm25 legitimately carry the hint; the dify-bridge line must not.
+    (line,) = [line for line in overview.splitlines() if line.strip().startswith("dify-bridge ")]
+    assert "needs ragwrench[" not in line
 
 
 @pytest.mark.parametrize("module", ["ragwrench.audit", "ragwrench.lint", "ragwrench.tablechunk", "ragwrench.citecheck",
