@@ -79,7 +79,10 @@ def test_cli_start_check_shutdown():
         # select prevents an indefinitely blocked test if the startup path regresses.
         # Generous bound: cold imports on shared CI runners (notably macOS) can be slow.
         import select
-        assert select.select([process.stdout], [], [], 30)[0], 'CLI did not start in 30 seconds'
+        if not select.select([process.stdout], [], [], 60)[0]:
+            process.kill()
+            _, err = process.communicate(timeout=10)
+            raise AssertionError('CLI did not start in 60 seconds; stderr:\n' + err[-4000:])
         line = process.stdout.readline()
         assert '127.0.0.1:' in line, line
         endpoint = 'http://' + line.strip().split()[-1]
