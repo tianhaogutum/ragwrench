@@ -1,0 +1,28 @@
+# Create/index the collection separately using your ingestion pipeline.
+[knowledge.handbook]
+backend = "qdrant"
+url = "http://127.0.0.1:6333"
+# Alternatively remove url and use path = "./existing-qdrant-directory"
+collection = "handbook"
+vector_name = "text" # Omit for an unnamed dense vector.
+content_field = "content"
+title_field = "title"
+metadata_field = "metadata"
+metadata_allowlist = ["lang", "page", "team", "updated", "tags"]
+api_key_env = "QDRANT_API_KEY"
+distance = "cosine" # Must match the collection: cosine, dot, euclid.
+score_scale = 1.0
+max_candidates = 10000
+overfetch = 4
+timeout = 10.0
+
+[knowledge.handbook.embedder]
+kind = "hash"
+dimensions = 64 # Must match both index vectors and the ingestion embedder.
+# For an OpenAI-compatible HTTP embedding service, replace this table with:
+# kind = "http"
+# url = "http://127.0.0.1:8080/v1/embeddings" # Exact URL; no auto-appended path.
+# model = "your-model"
+# dimensions = 768
+# api_key_env = "EMBEDDING_API_KEY"
+# timeout = 10

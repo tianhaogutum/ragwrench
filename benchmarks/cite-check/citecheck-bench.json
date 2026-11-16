@@ -1,0 +1,1104 @@
+{
+  "schema_version": 1,
+  "kind": "citecheck-benchmark",
+  "case_count": 78,
+  "dataset_sha256": "865f9b7a281c163a5acfcc4cedb71200c841d7672a8124fc07c2f601ea12d3a3",
+  "config": {
+    "support_threshold": 0.5,
+    "misattribution_margin": 0.3,
+    "best_source_threshold": 0.65,
+    "min_claim_tokens": 2,
+    "strict_quotes": false
+  },
+  "evaluation_unit": "presence of each diagnostic code per case (includes informational CC007/CC008)",
+  "metrics": {
+    "CC001": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 66,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CC002": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 66,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CC003": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 66,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CC004": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 70,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CC005": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 72,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CC006": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "tn": 71,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CC007": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 66,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CC008": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 72,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "micro": {
+      "tp": 75,
+      "fp": 0,
+      "fn": 0,
+      "tn": 549,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "baseline_metrics": {
+    "CC001": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 66,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CC002": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "tn": 66,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "CC003": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "tn": 66,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "CC004": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 8,
+      "tn": 70,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "CC005": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "tn": 72,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "CC006": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 71,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "CC007": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "tn": 66,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "CC008": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "tn": 72,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "micro": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 63,
+      "tn": 549,
+      "precision": 1.0,
+      "recall": 0.16,
+      "f1": 0.275862
+    }
+  },
+  "elapsed_ms": {
+    "checker": 6.333,
+    "marker_exists_baseline": 0.87
+  },
+  "notes": [
+    "Synthetic labels are regression targets, not evidence of real-world accuracy.",
+    "Precision is null when no positives are predicted; recall is null when no positives are labelled.",
+    "Timings are actual single-process measurements and may vary between runs.",
+    "Baseline shares marker parsing and Markdown handling, but only predicts CC001."
+  ],
+  "cases": [
+    {
+      "id": "clean-square",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-cjk",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-source",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-ragflow",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-id",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-thousands",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-percent",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-date",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-fullwidth",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-quote",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-markdown",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-postfix",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-group",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-adjacent",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-sparse",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "clean-mixed",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "dangling-0",
+      "expected": [
+        "CC001"
+      ],
+      "predicted": [
+        "CC001"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "dangling-1",
+      "expected": [
+        "CC001"
+      ],
+      "predicted": [
+        "CC001"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "dangling-2",
+      "expected": [
+        "CC001"
+      ],
+      "predicted": [
+        "CC001"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "dangling-3",
+      "expected": [
+        "CC001"
+      ],
+      "predicted": [
+        "CC001"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "dangling-4",
+      "expected": [
+        "CC001"
+      ],
+      "predicted": [
+        "CC001"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "dangling-5",
+      "expected": [
+        "CC001"
+      ],
+      "predicted": [
+        "CC001"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "malformed-0",
+      "expected": [
+        "CC001",
+        "CC002"
+      ],
+      "predicted": [
+        "CC001",
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "malformed-1",
+      "expected": [
+        "CC001",
+        "CC002"
+      ],
+      "predicted": [
+        "CC001",
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "malformed-2",
+      "expected": [
+        "CC001",
+        "CC002"
+      ],
+      "predicted": [
+        "CC001",
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "malformed-3",
+      "expected": [
+        "CC001",
+        "CC002"
+      ],
+      "predicted": [
+        "CC001",
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "malformed-4",
+      "expected": [
+        "CC001",
+        "CC002"
+      ],
+      "predicted": [
+        "CC001",
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "malformed-5",
+      "expected": [
+        "CC001",
+        "CC002"
+      ],
+      "predicted": [
+        "CC001",
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": [
+        "CC001"
+      ]
+    },
+    {
+      "id": "uncited-0",
+      "expected": [
+        "CC002"
+      ],
+      "predicted": [
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "uncited-1",
+      "expected": [
+        "CC002"
+      ],
+      "predicted": [
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "uncited-2",
+      "expected": [
+        "CC002"
+      ],
+      "predicted": [
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "uncited-3",
+      "expected": [
+        "CC002"
+      ],
+      "predicted": [
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "uncited-4",
+      "expected": [
+        "CC002"
+      ],
+      "predicted": [
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "uncited-5",
+      "expected": [
+        "CC002"
+      ],
+      "predicted": [
+        "CC002"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unsupported-0",
+      "expected": [
+        "CC003"
+      ],
+      "predicted": [
+        "CC003"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unsupported-1",
+      "expected": [
+        "CC003"
+      ],
+      "predicted": [
+        "CC003"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unsupported-2",
+      "expected": [
+        "CC003"
+      ],
+      "predicted": [
+        "CC003"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unsupported-3",
+      "expected": [
+        "CC003"
+      ],
+      "predicted": [
+        "CC003"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unsupported-4",
+      "expected": [
+        "CC003"
+      ],
+      "predicted": [
+        "CC003"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unsupported-5",
+      "expected": [
+        "CC003"
+      ],
+      "predicted": [
+        "CC003"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quantity-0",
+      "expected": [
+        "CC004"
+      ],
+      "predicted": [
+        "CC004"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quantity-1",
+      "expected": [
+        "CC004"
+      ],
+      "predicted": [
+        "CC004"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quantity-2",
+      "expected": [
+        "CC004"
+      ],
+      "predicted": [
+        "CC004"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quantity-3",
+      "expected": [
+        "CC004"
+      ],
+      "predicted": [
+        "CC004"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quantity-4",
+      "expected": [
+        "CC004"
+      ],
+      "predicted": [
+        "CC004"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quantity-5",
+      "expected": [
+        "CC004"
+      ],
+      "predicted": [
+        "CC004"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quantity-6",
+      "expected": [
+        "CC004"
+      ],
+      "predicted": [
+        "CC004"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quantity-7",
+      "expected": [
+        "CC004"
+      ],
+      "predicted": [
+        "CC004"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "misattributed-0",
+      "expected": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "predicted": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "misattributed-1",
+      "expected": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "predicted": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "misattributed-2",
+      "expected": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "predicted": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "misattributed-3",
+      "expected": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "predicted": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "misattributed-4",
+      "expected": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "predicted": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "misattributed-5",
+      "expected": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "predicted": [
+        "CC003",
+        "CC005",
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-0",
+      "expected": [
+        "CC006"
+      ],
+      "predicted": [
+        "CC006"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-1",
+      "expected": [
+        "CC006"
+      ],
+      "predicted": [
+        "CC006"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-2",
+      "expected": [
+        "CC006"
+      ],
+      "predicted": [
+        "CC006"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-3",
+      "expected": [
+        "CC006"
+      ],
+      "predicted": [
+        "CC006"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-4",
+      "expected": [
+        "CC006"
+      ],
+      "predicted": [
+        "CC006"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-5",
+      "expected": [
+        "CC006"
+      ],
+      "predicted": [
+        "CC006"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unused-0",
+      "expected": [
+        "CC007"
+      ],
+      "predicted": [
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unused-1",
+      "expected": [
+        "CC007"
+      ],
+      "predicted": [
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unused-2",
+      "expected": [
+        "CC007"
+      ],
+      "predicted": [
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unused-3",
+      "expected": [
+        "CC007"
+      ],
+      "predicted": [
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unused-4",
+      "expected": [
+        "CC007"
+      ],
+      "predicted": [
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "unused-5",
+      "expected": [
+        "CC007"
+      ],
+      "predicted": [
+        "CC007"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "question",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "code-only",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "semantic-limit-negation",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "semantic-limit-relation",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-normalized-0",
+      "expected": [
+        "CC008"
+      ],
+      "predicted": [
+        "CC008"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-normalized-1",
+      "expected": [
+        "CC008"
+      ],
+      "predicted": [
+        "CC008"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-normalized-2",
+      "expected": [
+        "CC008"
+      ],
+      "predicted": [
+        "CC008"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-normalized-3",
+      "expected": [
+        "CC008"
+      ],
+      "predicted": [
+        "CC008"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-normalized-4",
+      "expected": [
+        "CC008"
+      ],
+      "predicted": [
+        "CC008"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-normalized-5",
+      "expected": [
+        "CC008"
+      ],
+      "predicted": [
+        "CC008"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-fullwidth-exact",
+      "expected": [],
+      "predicted": [],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    },
+    {
+      "id": "quote-punctuation-not-deleted",
+      "expected": [
+        "CC006"
+      ],
+      "predicted": [
+        "CC006"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "baseline_predicted": []
+    }
+  ]
+}

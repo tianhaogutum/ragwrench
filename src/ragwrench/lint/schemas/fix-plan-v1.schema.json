@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:chunklint:fix-plan:v1",
+  "title": "chunklint saved repair plan v1",
+  "description": "Structural contract only. validate-plan adds cross-field range/configuration/hint checks, exact integer types and tool compatibility. Preview/apply verify snapshots and deterministic repair.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "chunklint.fix-plan"
+    },
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "tool_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coordinates": {
+      "const": "canonical-generic-jsonl-utf8-v1"
+    },
+    "input": {
+      "type": "object",
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "adapter": {
+          "enum": [
+            "auto",
+            "generic",
+            "langchain",
+            "llamaindex"
+          ]
+        }
+      },
+      "required": [
+        "sha256",
+        "bytes",
+        "adapter"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "$ref": "#/$defs/snapshot"
+    },
+    "config": {
+      "$ref": "#/$defs/config"
+    },
+    "edits": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edit"
+      }
+    },
+    "output_sha256": {
+      "$ref": "#/$defs/sha256"
+    }
+  },
+  "required": [
+    "format",
+    "version",
+    "tool_version",
+    "coordinates",
+    "input",
+    "source",
+    "config",
+    "edits",
+    "output_sha256"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "snapshot": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "min_chars": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_chars": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "near_duplicate": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "max_overlap": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "disable": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "CL001",
+              "CL002",
+              "CL003",
+              "CL004",
+              "CL005",
+              "CL006",
+              "CL007",
+              "CL008"
+            ]
+          }
+        },
+        "fail_on": {
+          "enum": [
+            "error",
+            "warning",
+            "note",
+            "none"
+          ]
+        },
+        "max_pair_checks": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "min_chars",
+        "max_chars",
+        "near_duplicate",
+        "max_overlap",
+        "disable",
+        "fail_on",
+        "max_pair_checks"
+      ],
+      "additionalProperties": false
+    },
+    "edit": {
+      "type": "object",
+      "properties": {
+        "start_chunk": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end_chunk": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "start_byte": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end_byte": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "before_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "replacement": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/record"
+          }
+        }
+      },
+      "required": [
+        "start_chunk",
+        "end_chunk",
+        "start_byte",
+        "end_byte",
+        "before_sha256",
+        "replacement"
+      ],
+      "additionalProperties": false
+    },
+    "record": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "start_char_idx": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end_char_idx": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "metadata"
+      ],
+      "additionalProperties": false,
+      "dependentRequired": {
+        "start_char_idx": [
+          "end_char_idx"
+        ],
+        "end_char_idx": [
+          "start_char_idx"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The rover weighs 10 kg [1]. The battery lasts 8 hours [2].",
+  "source_nodes": [
+    {"node": {"id_": "rover-chunk", "text": "Source 1:\nThe rover weighs 10 kg.", "metadata": {"file_name": "rover.txt"}}, "score": 0.91},
+    {"node": {"id_": "battery-chunk", "text": "Source 2:\nThe battery lasts 8 hours.", "metadata": {"file_name": "battery.txt"}}, "score": 0.85}
+  ]
+}

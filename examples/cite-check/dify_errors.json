@@ -1,0 +1,9 @@
+{
+  "answer": "The warranty lasts 24 months [1]. Returns are free [3].",
+  "metadata": {
+    "retriever_resources": [
+      {"position": 1, "document_name": "warranty.md", "content": "The warranty period is 12 months."},
+      {"position": 2, "document_name": "returns.md", "content": "Returns are free within 30 days."}
+    ]
+  }
+}

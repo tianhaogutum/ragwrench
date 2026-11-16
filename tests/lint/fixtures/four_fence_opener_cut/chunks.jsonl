@@ -1,0 +1,2 @@
+{"id": "a", "text": "# Example\n``", "metadata": {"part": "left"}}
+{"id": "b", "text": "``python\nprint(\"unique\")\n````\n", "metadata": {"part": "right"}}

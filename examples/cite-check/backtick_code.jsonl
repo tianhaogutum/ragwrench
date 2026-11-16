@@ -1,0 +1,3 @@
+{"answer":"Supported syntax is ``use `x` [9]`` [1].","sources":[{"idx":1,"text":"Supported syntax is documented."}]}
+{"answer":"Supported syntax is ``use `x`\n[9] 999 kg \"invented quote\"`` [1].","sources":[{"idx":1,"text":"Supported syntax is documented."}]}
+{"answer":"```literal [9]``` The rover uses solar panels [1].","sources":[{"idx":1,"text":"The rover uses solar panels."}]}

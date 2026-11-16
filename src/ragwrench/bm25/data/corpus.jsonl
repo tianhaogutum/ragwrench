@@ -1,0 +1,12 @@
+{"id":"zh-backup","text":"向量数据库支持快照备份与恢复。","metadata":{"lang":"zh"}}
+{"id":"zh-keyword","text":"稀疏向量实现关键词检索和文本搜索。","metadata":{"lang":"zh"}}
+{"id":"zh-bread","text":"烘焙面包需要面粉温水和酵母。","metadata":{"lang":"zh"}}
+{"id":"zh-bike","text":"自行车修理需要检查轮胎和刹车。","metadata":{"lang":"zh"}}
+{"id":"ja-backup","text":"データベースのバックアップと復元を確認する。","metadata":{"lang":"ja"}}
+{"id":"ja-search","text":"日本語の検索では文字の分割が大切です。","metadata":{"lang":"ja"}}
+{"id":"ja-train","text":"東京駅で新幹線の切符を購入します。","metadata":{"lang":"ja"}}
+{"id":"ja-food","text":"朝ごはんに焼きたてのパンを食べます。","metadata":{"lang":"ja"}}
+{"id":"mix-backup","text":"Qdrant 支持 snapshot 快照恢复流程。","metadata":{"lang":"mixed"}}
+{"id":"mix-search","text":"Python 实现 BM25 关键词检索工具。","metadata":{"lang":"mixed"}}
+{"id":"mix-korea","text":"서울 데이터베이스 백업과 복구를 확인합니다。","metadata":{"lang":"mixed"}}
+{"id":"mix-web","text":"JavaScript 构建网页样式与按钮。","metadata":{"lang":"mixed"}}

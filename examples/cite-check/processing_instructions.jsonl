@@ -1,0 +1,7 @@
+{"answer": "说明🙂 <?note > [9] ?>", "sources": []}
+{"answer": "说明🙂 <?note > ` [8] ?>[9]`", "sources": []}
+{"answer": "说明🙂 <?note \" ?>[9]\" ?>", "sources": []}
+{"answer": "说明🙂 <?note [8] > [9]", "sources": []}
+{"answer": "说明🙂 <?note >\n[9] ?>", "sources": []}
+{"answer": "说明🙂 `<?note > [8] ?>`", "sources": []}
+{"answer": "Archive \"stable signal\" <?note > [9] 999kg \"absent quotation\" ` ?> [4] manual", "sources": [{"idx": 4, "text": "Archive stable signal manual"}]}

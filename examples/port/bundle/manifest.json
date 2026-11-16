@@ -1,0 +1,1 @@
+{"counts":{"chunks":15,"documents":3},"format":"kbbundle/1","settings":{"indexing_technique":"economy"},"sha256":{"chunks.jsonl":"dad6f115c5bb5a2095dc2621f12f71104162ad71c83584a797efbbfad0a66962","documents.jsonl":"c475b10139513696ce194c9a3c76cb6070c5cc25e409c5ba6c2b8c215fd60acf"},"source":{"dataset_id":"00000000-0000-0000-0000-000000000001","system":"dify"}}

@@ -1,0 +1,5 @@
+[knowledge.handbook]
+backend = "jsonl"
+path = "chunks.jsonl" # Relative to this config, not the current directory.
+metadata_allowlist = ["lang", "page", "team", "updated", "tags"]
+score_scale = 1.0

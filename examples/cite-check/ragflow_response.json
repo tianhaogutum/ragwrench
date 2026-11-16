@@ -1,0 +1,13 @@
+{
+  "code": 0,
+  "data": {
+    "answer": "火星探测器重10千克。##0$$ Battery life is 8 hours. ##1$$",
+    "reference": {
+      "chunks": [
+        {"chunk_id": "rover-chunk", "docnm_kwd": "rover.txt", "content_with_weight": "<p>火星探测器重10千克。</p>"},
+        {"chunk_id": "battery-chunk", "docnm_kwd": "battery.txt", "content_with_weight": "<table><tr><td>Battery life</td><td>8 hours</td></tr></table>"}
+      ],
+      "doc_aggs": []
+    }
+  }
+}

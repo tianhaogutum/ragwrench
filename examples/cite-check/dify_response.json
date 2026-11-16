@@ -1,0 +1,10 @@
+{
+  "event": "message",
+  "answer": "The warranty lasts 12 months [1]. Returns are free within 30 days [2].",
+  "metadata": {
+    "retriever_resources": [
+      {"position": 1, "document_id": "doc-warranty", "segment_id": "warranty-1", "document_name": "warranty.md", "content": "The warranty lasts 12 months."},
+      {"position": 2, "document_id": "doc-returns", "segment_id": "returns-1", "document_name": "returns.md", "content": "Returns are free within 30 days."}
+    ]
+  }
+}

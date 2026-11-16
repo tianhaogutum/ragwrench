@@ -1,0 +1,4 @@
+{"id":"d1","text":"Qdrant 向量数据库支持快照备份与恢复。","metadata":{"topic":"backup","lang":"zh"}}
+{"id":"d2","text":"向量数据库使用稀疏向量实现关键词检索。","metadata":{"topic":"search","lang":"zh"}}
+{"id":"d3","text":"烘焙面包需要面粉、温水和酵母。","metadata":{"topic":"cooking","lang":"zh"}}
+{"id":"d4","text":"数据库备份应该定期验证恢复流程。","metadata":{"topic":"backup","lang":"zh"}}

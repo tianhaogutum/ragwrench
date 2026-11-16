@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kbport.local/kbbundle-1.schema.json",
+  "title": "kbbundle/1 validation view (three files combined)",
+  "type": "object",
+  "properties": {
+    "manifest": {
+      "$ref": "#/$defs/manifest"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/document"
+      }
+    },
+    "chunks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/chunk"
+      }
+    }
+  },
+  "required": [
+    "manifest",
+    "documents",
+    "chunks"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "kbbundle/1"
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "system": {
+              "enum": [
+                "dify",
+                "ragflow"
+              ]
+            },
+            "dataset_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{1,128}$"
+            }
+          },
+          "required": [
+            "system",
+            "dataset_id"
+          ],
+          "additionalProperties": false
+        },
+        "settings": {
+          "type": "object"
+        },
+        "counts": {
+          "type": "object",
+          "properties": {
+            "documents": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "chunks": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "documents",
+            "chunks"
+          ],
+          "additionalProperties": false
+        },
+        "sha256": {
+          "type": "object",
+          "properties": {
+            "documents.jsonl": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "chunks.jsonl": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "documents.jsonl",
+            "chunks.jsonl"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "format",
+        "source",
+        "settings",
+        "counts",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "document": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,128}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "doc_form": {
+          "enum": [
+            "text_model",
+            "qa_model"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "metadata",
+        "doc_form"
+      ],
+      "additionalProperties": false
+    },
+    "chunk": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,128}$"
+        },
+        "doc_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,128}$"
+        },
+        "position": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1048576
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "answer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "id",
+        "doc_id",
+        "position",
+        "content",
+        "keywords",
+        "questions",
+        "answer",
+        "enabled",
+        "metadata",
+        "content_sha256"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

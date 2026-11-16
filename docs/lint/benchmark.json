@@ -1,0 +1,96 @@
+{
+  "fixture": "synthetic-langchain-document-export-v1",
+  "config": {
+    "min_chars": 0,
+    "max_chars": 160,
+    "near_duplicate": 0.95
+  },
+  "before": {
+    "chunks": 7,
+    "characters": 520,
+    "source": {
+      "total_chars": 344,
+      "covered_chars": 344,
+      "missing_chars": 0,
+      "coverage": 1.0,
+      "gaps": []
+    },
+    "alignment_failure_rate": 0.0,
+    "ambiguous_chunks": 0,
+    "fragmented_chunks": 0,
+    "defects": 6,
+    "by_rule": {
+      "CL001": 2,
+      "CL002": 1,
+      "CL003": 1,
+      "CL006": 2
+    }
+  },
+  "after": {
+    "chunks": 5,
+    "characters": 467,
+    "source": {
+      "total_chars": 344,
+      "covered_chars": 344,
+      "missing_chars": 0,
+      "coverage": 1.0,
+      "gaps": []
+    },
+    "alignment_failure_rate": 0.0,
+    "ambiguous_chunks": 0,
+    "fragmented_chunks": 1,
+    "defects": 0,
+    "by_rule": {}
+  },
+  "changes": [
+    {
+      "operation": "drop_duplicate",
+      "chunk_ids": [
+        "duplicate"
+      ],
+      "kept": "lc6"
+    },
+    {
+      "operation": "rejoin_fence",
+      "chunk_ids": [
+        "lc2",
+        "lc3"
+      ],
+      "output_id": "lc2"
+    },
+    {
+      "operation": "rejoin_table",
+      "chunk_ids": [
+        "lc2",
+        "lc4"
+      ],
+      "output_id": "lc2"
+    },
+    {
+      "operation": "merge_heading_forward",
+      "chunk_ids": [
+        "lc5",
+        "lc6"
+      ],
+      "output_id": "lc5"
+    },
+    {
+      "operation": "split_structure",
+      "chunk_ids": [
+        "lc2"
+      ],
+      "output_ids": [
+        "lc2",
+        "lc2~2",
+        "lc2~3"
+      ]
+    }
+  ],
+  "invariant": {
+    "input_nonwhitespace_preserved_except_logged_exact_duplicates": true,
+    "source_coverage_preserved": true,
+    "source_coverage_checked": true
+  },
+  "idempotent": true,
+  "method": "Same rules/config before and after; Unicode characters; no timer or external splitter."
+}

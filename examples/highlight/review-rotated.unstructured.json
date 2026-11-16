@@ -1,0 +1,156 @@
+[
+  {
+    "element_id": "good-0",
+    "text": "ANCHOR",
+    "metadata": {
+      "page_number": 1,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 600,
+        "layout_height": 400,
+        "points": [
+          [
+            100,
+            200
+          ],
+          [
+            240,
+            240
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "element_id": "good-90",
+    "text": "ANCHOR",
+    "metadata": {
+      "page_number": 2,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 400,
+        "layout_height": 600,
+        "points": [
+          [
+            160,
+            100
+          ],
+          [
+            200,
+            240
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "element_id": "good-180",
+    "text": "ANCHOR",
+    "metadata": {
+      "page_number": 3,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 600,
+        "layout_height": 400,
+        "points": [
+          [
+            360,
+            160
+          ],
+          [
+            500,
+            200
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "element_id": "good-270",
+    "text": "ANCHOR",
+    "metadata": {
+      "page_number": 4,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 400,
+        "layout_height": 600,
+        "points": [
+          [
+            200,
+            360
+          ],
+          [
+            240,
+            500
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "element_id": "ambiguous",
+    "text": "ANCHOR",
+    "metadata": {
+      "page_number": 2,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 400,
+        "layout_height": 600,
+        "points": [
+          [
+            160,
+            100
+          ],
+          [
+            200,
+            520
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "element_id": "blank",
+    "text": "MISSING",
+    "metadata": {
+      "page_number": 2,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 400,
+        "layout_height": 600,
+        "points": [
+          [
+            40,
+            100
+          ],
+          [
+            80,
+            240
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "element_id": "mismatch",
+    "text": "WRONG",
+    "metadata": {
+      "page_number": 2,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 400,
+        "layout_height": 600,
+        "points": [
+          [
+            280,
+            100
+          ],
+          [
+            320,
+            240
+          ]
+        ]
+      }
+    }
+  }
+]

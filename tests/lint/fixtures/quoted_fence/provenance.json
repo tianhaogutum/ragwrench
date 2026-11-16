@@ -1,0 +1,19 @@
+{
+  "packages": {
+    "langchain-text-splitters": "0.3.11",
+    "langchain-core": "0.3.79"
+  },
+  "splitter": "langchain_text_splitters.RecursiveCharacterTextSplitter",
+  "options": {
+    "separators": [
+      "\n"
+    ],
+    "keep_separator": "end",
+    "chunk_size": 65,
+    "chunk_overlap": 0,
+    "strip_whitespace": false,
+    "add_start_index": true
+  },
+  "synthetic_source": "source.md",
+  "chunks": 3
+}

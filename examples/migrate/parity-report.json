@@ -1,0 +1,44 @@
+{
+  "cosine_normalized": true,
+  "count_ok": true,
+  "extra_count": 0,
+  "extra_ids": [],
+  "ids_ok": true,
+  "max_abs_diff": 0.0,
+  "mismatch_counts": {
+    "documents": 0,
+    "id_mapping": 0,
+    "metadata": 0,
+    "vectors": 0
+  },
+  "mismatch_ids": {
+    "documents": [],
+    "id_mapping": [],
+    "metadata": [],
+    "vectors": []
+  },
+  "missing_count": 0,
+  "missing_ids": [],
+  "ok": true,
+  "operation": "verify",
+  "schema_ok": true,
+  "source_count": 5,
+  "target_count": 5,
+  "tolerance": 1e-05,
+  "top_k": {
+    "checked": true,
+    "k": 2,
+    "min_overlap": 1.0,
+    "ok": true,
+    "overlap_mean": 1.0,
+    "overlaps": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "samples": 5,
+    "seed": 0
+  }
+}

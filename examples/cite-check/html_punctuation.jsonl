@@ -1,0 +1,8 @@
+{"answer":"说明🙂 <+ [9] >","sources":[]}
+{"answer":"说明🙂 <- [9] >","sources":[]}
+{"answer":"说明🙂 <span title=\">` [8]\">[9]`","sources":[]}
+{"answer":"说明🙂 <!-- ` [8] -->[9]`","sources":[]}
+{"answer":"说明🙂 <+ [archive](part(one)`[8])[9]` >","sources":[]}
+{"answer":"说明🙂 ``<+ ` [9] >``","sources":[]}
+{"answer":"说明🙂 <https://example.invalid/[8]>","sources":[]}
+{"answer":"Archive <+ \"stable signal\" [4] > manual","sources":[{"idx":4,"text":"Archive stable signal manual"}]}

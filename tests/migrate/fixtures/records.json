@@ -1,0 +1,11 @@
+{
+  "license": "CC0-1.0",
+  "distance": "cosine",
+  "records": [
+    {"id": "guide.md::12", "vector": [1.0, 0.2, 0.1, 0.0], "metadata": {"source": "guide.md", "page": 12, "published": true}, "document": "A synthetic installation guide."},
+    {"id": "550e8400-e29b-41d4-a716-446655440000", "vector": [0.1, 1.0, 0.2, 0.0], "metadata": {"source": "faq.md", "page": 2}, "document": "A synthetic frequently asked question."},
+    {"id": "42", "vector": [0.1, 0.2, 1.0, 0.1], "metadata": null, "document": null},
+    {"id": "笔记/一", "vector": [0.2, 0.1, 0.0, 1.0], "metadata": {"source": "notes.md", "document": "a metadata key, not the document"}, "document": ""},
+    {"id": "0007", "vector": [0.8, 0.5, 0.1, 0.2], "metadata": {"source": "other.md", "score": 0.75}, "document": "All fixtures are synthetic and reusable."}
+  ]
+}

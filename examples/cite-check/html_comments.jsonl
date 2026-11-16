@@ -1,0 +1,8 @@
+{"answer":"说明🙂 <!-- > [9] -->","sources":[]}
+{"answer":"说明🙂 <!-- > ` [8] -->[9]`","sources":[]}
+{"answer":"说明🙂 <!-- > \"unclosed [8] -->[9]","sources":[]}
+{"answer":"说明🙂 <!----> [9]","sources":[]}
+{"answer":"说明🙂 <!-- [8] > [9]","sources":[]}
+{"answer":"说明🙂 <!-- >\n[9] -->","sources":[]}
+{"answer":"说明🙂 `<!-- > [8] -->`","sources":[]}
+{"answer":"Archive \"stable signal\" <!-- > [9] 999kg \"absent quotation\" ` --> [4] manual","sources":[{"idx":4,"text":"Archive stable signal manual"}]}

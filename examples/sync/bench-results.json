@@ -1,0 +1,182 @@
+{
+  "kind": "chunksync.bench",
+  "version": 1,
+  "seed": 25,
+  "documents": 3,
+  "paragraphs_per_document": 60,
+  "chunk_sizes": {
+    "min": 128,
+    "target": 256,
+    "max": 512
+  },
+  "corpus_fingerprint": "ea20b2d3afcce24982c178387253a122a6cb6b4f4ce7a00ece47e40b6a3de1eb",
+  "metric": "actual HashEmbedder(8) calls during update; setup and independent verification excluded",
+  "baseline": "full and document-hash use the same CDC chunks; fixed has its own total; moves reuse vectors",
+  "results": [
+    {
+      "scenario": "insert_at_top",
+      "strategies": {
+        "full_reindex": {
+          "embedded": 172,
+          "total": 172,
+          "avoided": 0,
+          "verified_points": 172
+        },
+        "document_hash": {
+          "embedded": 56,
+          "total": 172,
+          "avoided": 116,
+          "verified_points": 172
+        },
+        "chunk_fixed": {
+          "embedded": 70,
+          "total": 209,
+          "moved": 0,
+          "deleted": 69,
+          "avoided": 139,
+          "verified_points": 209
+        },
+        "chunk_cdc": {
+          "embedded": 3,
+          "total": 172,
+          "moved": 53,
+          "deleted": 2,
+          "avoided": 169,
+          "verified_points": 172
+        }
+      }
+    },
+    {
+      "scenario": "modify_paragraph",
+      "strategies": {
+        "full_reindex": {
+          "embedded": 171,
+          "total": 171,
+          "avoided": 0,
+          "verified_points": 171
+        },
+        "document_hash": {
+          "embedded": 55,
+          "total": 171,
+          "avoided": 116,
+          "verified_points": 171
+        },
+        "chunk_fixed": {
+          "embedded": 34,
+          "total": 208,
+          "moved": 0,
+          "deleted": 34,
+          "avoided": 174,
+          "verified_points": 208
+        },
+        "chunk_cdc": {
+          "embedded": 3,
+          "total": 171,
+          "moved": 0,
+          "deleted": 3,
+          "avoided": 168,
+          "verified_points": 171
+        }
+      }
+    },
+    {
+      "scenario": "delete",
+      "strategies": {
+        "full_reindex": {
+          "embedded": 116,
+          "total": 116,
+          "avoided": 0,
+          "verified_points": 116
+        },
+        "document_hash": {
+          "embedded": 0,
+          "total": 116,
+          "avoided": 116,
+          "verified_points": 116
+        },
+        "chunk_fixed": {
+          "embedded": 0,
+          "total": 139,
+          "moved": 0,
+          "deleted": 69,
+          "avoided": 139,
+          "verified_points": 139
+        },
+        "chunk_cdc": {
+          "embedded": 0,
+          "total": 116,
+          "moved": 0,
+          "deleted": 55,
+          "avoided": 116,
+          "verified_points": 116
+        }
+      }
+    },
+    {
+      "scenario": "reorder",
+      "strategies": {
+        "full_reindex": {
+          "embedded": 171,
+          "total": 171,
+          "avoided": 0,
+          "verified_points": 171
+        },
+        "document_hash": {
+          "embedded": 55,
+          "total": 171,
+          "avoided": 116,
+          "verified_points": 171
+        },
+        "chunk_fixed": {
+          "embedded": 15,
+          "total": 208,
+          "moved": 0,
+          "deleted": 15,
+          "avoided": 193,
+          "verified_points": 208
+        },
+        "chunk_cdc": {
+          "embedded": 6,
+          "total": 171,
+          "moved": 2,
+          "deleted": 6,
+          "avoided": 165,
+          "verified_points": 171
+        }
+      }
+    },
+    {
+      "scenario": "rename",
+      "strategies": {
+        "full_reindex": {
+          "embedded": 171,
+          "total": 171,
+          "avoided": 0,
+          "verified_points": 171
+        },
+        "document_hash": {
+          "embedded": 55,
+          "total": 171,
+          "avoided": 116,
+          "verified_points": 171
+        },
+        "chunk_fixed": {
+          "embedded": 0,
+          "total": 208,
+          "moved": 69,
+          "deleted": 0,
+          "avoided": 208,
+          "verified_points": 208
+        },
+        "chunk_cdc": {
+          "embedded": 0,
+          "total": 171,
+          "moved": 55,
+          "deleted": 0,
+          "avoided": 171,
+          "verified_points": 171
+        }
+      }
+    }
+  ]
+}

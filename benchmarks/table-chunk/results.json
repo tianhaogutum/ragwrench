@@ -1,0 +1,47 @@
+{
+  "configuration": {
+    "bm25": {
+      "b": 0.75,
+      "k1": 1.5
+    },
+    "counter": "regex-v1",
+    "k": 3,
+    "max_tokens": 120
+  },
+  "corpus_sha256": "914c63da7d0e28fc8f4573cce19653166d3caf14339d5953a423bbcaca7738b5",
+  "methods": {
+    "naive_fixed": {
+      "answerable_fraction": 0.15416666666666667,
+      "chunks": 20,
+      "entity_hit@3": 0.44722222222222224,
+      "hit@3": 0.15416666666666667,
+      "max_chunk_tokens": 120,
+      "mrr": 0.15416666666666667,
+      "queries": 720,
+      "total_chunk_tokens": 2304
+    },
+    "table_kv": {
+      "answerable_fraction": 1.0,
+      "chunks": 40,
+      "entity_hit@3": 1.0,
+      "hit@3": 1.0,
+      "max_chunk_tokens": 115,
+      "mrr": 1.0,
+      "queries": 720,
+      "total_chunk_tokens": 3996
+    },
+    "table_markdown": {
+      "answerable_fraction": 1.0,
+      "chunks": 32,
+      "entity_hit@3": 1.0,
+      "hit@3": 1.0,
+      "max_chunk_tokens": 115,
+      "mrr": 1.0,
+      "queries": 720,
+      "total_chunk_tokens": 3136
+    }
+  },
+  "queries_sha256": "bf939300973ff5025c1a94380df6adc86568c13f4e5dc5fb03277d1d4f58fc19",
+  "relevance": "one chunk contains entity, all column-label terms, and answer; token co-occurrence, not semantic proof",
+  "schema_version": 1
+}

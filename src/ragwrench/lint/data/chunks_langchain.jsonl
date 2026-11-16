@@ -1,0 +1,7 @@
+{"id": "lc1", "page_content": "# Demo\nThis synthetic guide demonstrates structural chunk repair without a network.\n\n", "metadata": {"source": "synthetic://guide", "producer": "langchain-document-shape"}}
+{"id": "lc2", "page_content": "## Code\n````python\nprint(\"hello\")\n```\n", "metadata": {"source": "synthetic://guide", "producer": "langchain-document-shape"}}
+{"id": "lc3", "page_content": "print(\"a shorter marker is code\")\n````\n\n## Measurements\n| Name | Value |\n| --- | --- |\n| alpha | one |\n", "metadata": {"source": "synthetic://guide", "producer": "langchain-document-shape"}}
+{"id": "lc4", "page_content": "| beta | two |\n| gamma | three |\n| delta | four |\n| epsilon | five |\n| zeta | six |\n| eta | seven |\n| theta | eight |\n\n", "metadata": {"source": "synthetic://guide", "producer": "langchain-document-shape"}}
+{"id": "lc5", "page_content": "## Usage\n", "metadata": {"source": "synthetic://guide", "producer": "langchain-document-shape"}}
+{"id": "lc6", "page_content": "Run the local command with your JSONL file. The audit checks structural integrity.\n", "metadata": {"source": "synthetic://guide", "producer": "langchain-document-shape"}}
+{"id": "duplicate", "page_content": "Run the local command with your JSONL file. The audit checks structural integrity.\n", "metadata": {"source": "synthetic://guide", "producer": "langchain-document-shape"}}

@@ -1,0 +1,5 @@
+{"page_content": "> > | Key | Value |\n", "metadata": {"source": "synthetic-quoted-table.md", "start_index": 0}}
+{"page_content": ">> | :--- | ---: |\n", "metadata": {"source": "synthetic-quoted-table.md", "start_index": 20}}
+{"page_content": " > > | café | one |\n", "metadata": {"source": "synthetic-quoted-table.md", "start_index": 39}}
+{"page_content": ">  > | 雪 | two |\n", "metadata": {"source": "synthetic-quoted-table.md", "start_index": 59}}
+{"page_content": "> > | escaped\\|pipe | three |\n", "metadata": {"source": "synthetic-quoted-table.md", "start_index": 76}}

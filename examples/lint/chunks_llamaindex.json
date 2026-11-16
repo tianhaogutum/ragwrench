@@ -1,0 +1,72 @@
+[
+  {
+    "id_": "lc1",
+    "text": "# Demo\nThis synthetic guide demonstrates structural chunk repair without a network.\n\n",
+    "metadata": {
+      "source": "synthetic://guide",
+      "producer": "langchain-document-shape"
+    },
+    "start_char_idx": 0,
+    "end_char_idx": 85
+  },
+  {
+    "id_": "lc2",
+    "text": "## Code\n````python\nprint(\"hello\")\n```\n",
+    "metadata": {
+      "source": "synthetic://guide",
+      "producer": "langchain-document-shape"
+    },
+    "start_char_idx": 85,
+    "end_char_idx": 123
+  },
+  {
+    "id_": "lc3",
+    "text": "print(\"a shorter marker is code\")\n````\n\n## Measurements\n| Name | Value |\n| --- | --- |\n| alpha | one |\n",
+    "metadata": {
+      "source": "synthetic://guide",
+      "producer": "langchain-document-shape"
+    },
+    "start_char_idx": 123,
+    "end_char_idx": 226
+  },
+  {
+    "id_": "lc4",
+    "text": "| beta | two |\n| gamma | three |\n| delta | four |\n| epsilon | five |\n| zeta | six |\n| eta | seven |\n| theta | eight |\n\n",
+    "metadata": {
+      "source": "synthetic://guide",
+      "producer": "langchain-document-shape"
+    },
+    "start_char_idx": 226,
+    "end_char_idx": 345
+  },
+  {
+    "id_": "lc5",
+    "text": "## Usage\n",
+    "metadata": {
+      "source": "synthetic://guide",
+      "producer": "langchain-document-shape"
+    },
+    "start_char_idx": 345,
+    "end_char_idx": 354
+  },
+  {
+    "id_": "lc6",
+    "text": "Run the local command with your JSONL file. The audit checks structural integrity.\n",
+    "metadata": {
+      "source": "synthetic://guide",
+      "producer": "langchain-document-shape"
+    },
+    "start_char_idx": 354,
+    "end_char_idx": 437
+  },
+  {
+    "id_": "duplicate",
+    "text": "Run the local command with your JSONL file. The audit checks structural integrity.\n",
+    "metadata": {
+      "source": "synthetic://guide",
+      "producer": "langchain-document-shape"
+    },
+    "start_char_idx": 354,
+    "end_char_idx": 437
+  }
+]

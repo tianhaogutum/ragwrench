@@ -1,0 +1,11 @@
+[
+  {"id":"qzh1","lang":"zh","text":"快照备份","relevant":["zh-backup"]},
+  {"id":"qzh2","lang":"zh","text":"关键词检索","relevant":["zh-keyword","mix-search"]},
+  {"id":"qzh3","lang":"zh","text":"面包","relevant":["zh-bread"]},
+  {"id":"qja1","lang":"ja","text":"バックアップ","relevant":["ja-backup"]},
+  {"id":"qja2","lang":"ja","text":"日本語","relevant":["ja-search"]},
+  {"id":"qja3","lang":"ja","text":"新幹線","relevant":["ja-train"]},
+  {"id":"qmix1","lang":"mixed","text":"Qdrant 快照恢复","relevant":["mix-backup"]},
+  {"id":"qmix2","lang":"mixed","text":"Python 检索","relevant":["mix-search"]},
+  {"id":"qmix3","lang":"mixed","text":"데이터","relevant":["mix-korea"]}
+]

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Environments and tool caches
+.venv/
+.venv*/
+venv/
+.tmp/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Lock files are not committed for this library; CI resolves fresh dependencies.
+uv.lock
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Tool scratch output from tests and demos
+.artifacts/
+.cache/
+.qdrant/
+.kbport/
+/bench-results.json
+examples/highlight/normalized.jsonl
+examples/highlight/highlighted.pdf
+examples/highlight/citations.json
+examples/highlight/pixel-regions.jsonl
+examples/highlight/chunk-regions.jsonl

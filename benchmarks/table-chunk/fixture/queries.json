@@ -1,0 +1,4322 @@
+[
+  {
+    "query": "PLAN000000 Seats",
+    "entity": "PLAN000000",
+    "column": "Seats",
+    "answer": "5"
+  },
+  {
+    "query": "PLAN000000 Annual cost",
+    "entity": "PLAN000000",
+    "column": "Annual cost",
+    "answer": "1000"
+  },
+  {
+    "query": "PLAN000000 Storage GB",
+    "entity": "PLAN000000",
+    "column": "Storage GB",
+    "answer": "500"
+  },
+  {
+    "query": "PLAN000001 Seats",
+    "entity": "PLAN000001",
+    "column": "Seats",
+    "answer": "6"
+  },
+  {
+    "query": "PLAN000001 Annual cost",
+    "entity": "PLAN000001",
+    "column": "Annual cost",
+    "answer": "1001"
+  },
+  {
+    "query": "PLAN000001 Storage GB",
+    "entity": "PLAN000001",
+    "column": "Storage GB",
+    "answer": "501"
+  },
+  {
+    "query": "PLAN000002 Seats",
+    "entity": "PLAN000002",
+    "column": "Seats",
+    "answer": "7"
+  },
+  {
+    "query": "PLAN000002 Annual cost",
+    "entity": "PLAN000002",
+    "column": "Annual cost",
+    "answer": "1002"
+  },
+  {
+    "query": "PLAN000002 Storage GB",
+    "entity": "PLAN000002",
+    "column": "Storage GB",
+    "answer": "502"
+  },
+  {
+    "query": "PLAN000003 Seats",
+    "entity": "PLAN000003",
+    "column": "Seats",
+    "answer": "8"
+  },
+  {
+    "query": "PLAN000003 Annual cost",
+    "entity": "PLAN000003",
+    "column": "Annual cost",
+    "answer": "1003"
+  },
+  {
+    "query": "PLAN000003 Storage GB",
+    "entity": "PLAN000003",
+    "column": "Storage GB",
+    "answer": "503"
+  },
+  {
+    "query": "PLAN000004 Seats",
+    "entity": "PLAN000004",
+    "column": "Seats",
+    "answer": "9"
+  },
+  {
+    "query": "PLAN000004 Annual cost",
+    "entity": "PLAN000004",
+    "column": "Annual cost",
+    "answer": "1004"
+  },
+  {
+    "query": "PLAN000004 Storage GB",
+    "entity": "PLAN000004",
+    "column": "Storage GB",
+    "answer": "504"
+  },
+  {
+    "query": "PLAN000005 Seats",
+    "entity": "PLAN000005",
+    "column": "Seats",
+    "answer": "10"
+  },
+  {
+    "query": "PLAN000005 Annual cost",
+    "entity": "PLAN000005",
+    "column": "Annual cost",
+    "answer": "1005"
+  },
+  {
+    "query": "PLAN000005 Storage GB",
+    "entity": "PLAN000005",
+    "column": "Storage GB",
+    "answer": "505"
+  },
+  {
+    "query": "PLAN000006 Seats",
+    "entity": "PLAN000006",
+    "column": "Seats",
+    "answer": "11"
+  },
+  {
+    "query": "PLAN000006 Annual cost",
+    "entity": "PLAN000006",
+    "column": "Annual cost",
+    "answer": "1006"
+  },
+  {
+    "query": "PLAN000006 Storage GB",
+    "entity": "PLAN000006",
+    "column": "Storage GB",
+    "answer": "506"
+  },
+  {
+    "query": "PLAN000007 Seats",
+    "entity": "PLAN000007",
+    "column": "Seats",
+    "answer": "12"
+  },
+  {
+    "query": "PLAN000007 Annual cost",
+    "entity": "PLAN000007",
+    "column": "Annual cost",
+    "answer": "1007"
+  },
+  {
+    "query": "PLAN000007 Storage GB",
+    "entity": "PLAN000007",
+    "column": "Storage GB",
+    "answer": "507"
+  },
+  {
+    "query": "PLAN000008 Seats",
+    "entity": "PLAN000008",
+    "column": "Seats",
+    "answer": "13"
+  },
+  {
+    "query": "PLAN000008 Annual cost",
+    "entity": "PLAN000008",
+    "column": "Annual cost",
+    "answer": "1008"
+  },
+  {
+    "query": "PLAN000008 Storage GB",
+    "entity": "PLAN000008",
+    "column": "Storage GB",
+    "answer": "508"
+  },
+  {
+    "query": "PLAN000009 Seats",
+    "entity": "PLAN000009",
+    "column": "Seats",
+    "answer": "14"
+  },
+  {
+    "query": "PLAN000009 Annual cost",
+    "entity": "PLAN000009",
+    "column": "Annual cost",
+    "answer": "1009"
+  },
+  {
+    "query": "PLAN000009 Storage GB",
+    "entity": "PLAN000009",
+    "column": "Storage GB",
+    "answer": "509"
+  },
+  {
+    "query": "PLAN000010 Seats",
+    "entity": "PLAN000010",
+    "column": "Seats",
+    "answer": "15"
+  },
+  {
+    "query": "PLAN000010 Annual cost",
+    "entity": "PLAN000010",
+    "column": "Annual cost",
+    "answer": "1010"
+  },
+  {
+    "query": "PLAN000010 Storage GB",
+    "entity": "PLAN000010",
+    "column": "Storage GB",
+    "answer": "510"
+  },
+  {
+    "query": "PLAN000011 Seats",
+    "entity": "PLAN000011",
+    "column": "Seats",
+    "answer": "16"
+  },
+  {
+    "query": "PLAN000011 Annual cost",
+    "entity": "PLAN000011",
+    "column": "Annual cost",
+    "answer": "1011"
+  },
+  {
+    "query": "PLAN000011 Storage GB",
+    "entity": "PLAN000011",
+    "column": "Storage GB",
+    "answer": "511"
+  },
+  {
+    "query": "PLAN000012 Seats",
+    "entity": "PLAN000012",
+    "column": "Seats",
+    "answer": "17"
+  },
+  {
+    "query": "PLAN000012 Annual cost",
+    "entity": "PLAN000012",
+    "column": "Annual cost",
+    "answer": "1012"
+  },
+  {
+    "query": "PLAN000012 Storage GB",
+    "entity": "PLAN000012",
+    "column": "Storage GB",
+    "answer": "512"
+  },
+  {
+    "query": "PLAN000013 Seats",
+    "entity": "PLAN000013",
+    "column": "Seats",
+    "answer": "18"
+  },
+  {
+    "query": "PLAN000013 Annual cost",
+    "entity": "PLAN000013",
+    "column": "Annual cost",
+    "answer": "1013"
+  },
+  {
+    "query": "PLAN000013 Storage GB",
+    "entity": "PLAN000013",
+    "column": "Storage GB",
+    "answer": "513"
+  },
+  {
+    "query": "PLAN000014 Seats",
+    "entity": "PLAN000014",
+    "column": "Seats",
+    "answer": "19"
+  },
+  {
+    "query": "PLAN000014 Annual cost",
+    "entity": "PLAN000014",
+    "column": "Annual cost",
+    "answer": "1014"
+  },
+  {
+    "query": "PLAN000014 Storage GB",
+    "entity": "PLAN000014",
+    "column": "Storage GB",
+    "answer": "514"
+  },
+  {
+    "query": "PLAN000015 Seats",
+    "entity": "PLAN000015",
+    "column": "Seats",
+    "answer": "20"
+  },
+  {
+    "query": "PLAN000015 Annual cost",
+    "entity": "PLAN000015",
+    "column": "Annual cost",
+    "answer": "1015"
+  },
+  {
+    "query": "PLAN000015 Storage GB",
+    "entity": "PLAN000015",
+    "column": "Storage GB",
+    "answer": "515"
+  },
+  {
+    "query": "PLAN000016 Seats",
+    "entity": "PLAN000016",
+    "column": "Seats",
+    "answer": "21"
+  },
+  {
+    "query": "PLAN000016 Annual cost",
+    "entity": "PLAN000016",
+    "column": "Annual cost",
+    "answer": "1016"
+  },
+  {
+    "query": "PLAN000016 Storage GB",
+    "entity": "PLAN000016",
+    "column": "Storage GB",
+    "answer": "516"
+  },
+  {
+    "query": "PLAN000017 Seats",
+    "entity": "PLAN000017",
+    "column": "Seats",
+    "answer": "22"
+  },
+  {
+    "query": "PLAN000017 Annual cost",
+    "entity": "PLAN000017",
+    "column": "Annual cost",
+    "answer": "1017"
+  },
+  {
+    "query": "PLAN000017 Storage GB",
+    "entity": "PLAN000017",
+    "column": "Storage GB",
+    "answer": "517"
+  },
+  {
+    "query": "PLAN000018 Seats",
+    "entity": "PLAN000018",
+    "column": "Seats",
+    "answer": "23"
+  },
+  {
+    "query": "PLAN000018 Annual cost",
+    "entity": "PLAN000018",
+    "column": "Annual cost",
+    "answer": "1018"
+  },
+  {
+    "query": "PLAN000018 Storage GB",
+    "entity": "PLAN000018",
+    "column": "Storage GB",
+    "answer": "518"
+  },
+  {
+    "query": "PLAN000019 Seats",
+    "entity": "PLAN000019",
+    "column": "Seats",
+    "answer": "24"
+  },
+  {
+    "query": "PLAN000019 Annual cost",
+    "entity": "PLAN000019",
+    "column": "Annual cost",
+    "answer": "1019"
+  },
+  {
+    "query": "PLAN000019 Storage GB",
+    "entity": "PLAN000019",
+    "column": "Storage GB",
+    "answer": "519"
+  },
+  {
+    "query": "PLAN000020 Seats",
+    "entity": "PLAN000020",
+    "column": "Seats",
+    "answer": "25"
+  },
+  {
+    "query": "PLAN000020 Annual cost",
+    "entity": "PLAN000020",
+    "column": "Annual cost",
+    "answer": "1020"
+  },
+  {
+    "query": "PLAN000020 Storage GB",
+    "entity": "PLAN000020",
+    "column": "Storage GB",
+    "answer": "520"
+  },
+  {
+    "query": "PLAN000021 Seats",
+    "entity": "PLAN000021",
+    "column": "Seats",
+    "answer": "26"
+  },
+  {
+    "query": "PLAN000021 Annual cost",
+    "entity": "PLAN000021",
+    "column": "Annual cost",
+    "answer": "1021"
+  },
+  {
+    "query": "PLAN000021 Storage GB",
+    "entity": "PLAN000021",
+    "column": "Storage GB",
+    "answer": "521"
+  },
+  {
+    "query": "PLAN000022 Seats",
+    "entity": "PLAN000022",
+    "column": "Seats",
+    "answer": "27"
+  },
+  {
+    "query": "PLAN000022 Annual cost",
+    "entity": "PLAN000022",
+    "column": "Annual cost",
+    "answer": "1022"
+  },
+  {
+    "query": "PLAN000022 Storage GB",
+    "entity": "PLAN000022",
+    "column": "Storage GB",
+    "answer": "522"
+  },
+  {
+    "query": "PLAN000023 Seats",
+    "entity": "PLAN000023",
+    "column": "Seats",
+    "answer": "28"
+  },
+  {
+    "query": "PLAN000023 Annual cost",
+    "entity": "PLAN000023",
+    "column": "Annual cost",
+    "answer": "1023"
+  },
+  {
+    "query": "PLAN000023 Storage GB",
+    "entity": "PLAN000023",
+    "column": "Storage GB",
+    "answer": "523"
+  },
+  {
+    "query": "PLAN000024 Seats",
+    "entity": "PLAN000024",
+    "column": "Seats",
+    "answer": "29"
+  },
+  {
+    "query": "PLAN000024 Annual cost",
+    "entity": "PLAN000024",
+    "column": "Annual cost",
+    "answer": "1024"
+  },
+  {
+    "query": "PLAN000024 Storage GB",
+    "entity": "PLAN000024",
+    "column": "Storage GB",
+    "answer": "524"
+  },
+  {
+    "query": "PLAN000025 Seats",
+    "entity": "PLAN000025",
+    "column": "Seats",
+    "answer": "30"
+  },
+  {
+    "query": "PLAN000025 Annual cost",
+    "entity": "PLAN000025",
+    "column": "Annual cost",
+    "answer": "1025"
+  },
+  {
+    "query": "PLAN000025 Storage GB",
+    "entity": "PLAN000025",
+    "column": "Storage GB",
+    "answer": "525"
+  },
+  {
+    "query": "PLAN000026 Seats",
+    "entity": "PLAN000026",
+    "column": "Seats",
+    "answer": "31"
+  },
+  {
+    "query": "PLAN000026 Annual cost",
+    "entity": "PLAN000026",
+    "column": "Annual cost",
+    "answer": "1026"
+  },
+  {
+    "query": "PLAN000026 Storage GB",
+    "entity": "PLAN000026",
+    "column": "Storage GB",
+    "answer": "526"
+  },
+  {
+    "query": "PLAN000027 Seats",
+    "entity": "PLAN000027",
+    "column": "Seats",
+    "answer": "32"
+  },
+  {
+    "query": "PLAN000027 Annual cost",
+    "entity": "PLAN000027",
+    "column": "Annual cost",
+    "answer": "1027"
+  },
+  {
+    "query": "PLAN000027 Storage GB",
+    "entity": "PLAN000027",
+    "column": "Storage GB",
+    "answer": "527"
+  },
+  {
+    "query": "PLAN000028 Seats",
+    "entity": "PLAN000028",
+    "column": "Seats",
+    "answer": "33"
+  },
+  {
+    "query": "PLAN000028 Annual cost",
+    "entity": "PLAN000028",
+    "column": "Annual cost",
+    "answer": "1028"
+  },
+  {
+    "query": "PLAN000028 Storage GB",
+    "entity": "PLAN000028",
+    "column": "Storage GB",
+    "answer": "528"
+  },
+  {
+    "query": "PLAN000029 Seats",
+    "entity": "PLAN000029",
+    "column": "Seats",
+    "answer": "34"
+  },
+  {
+    "query": "PLAN000029 Annual cost",
+    "entity": "PLAN000029",
+    "column": "Annual cost",
+    "answer": "1029"
+  },
+  {
+    "query": "PLAN000029 Storage GB",
+    "entity": "PLAN000029",
+    "column": "Storage GB",
+    "answer": "529"
+  },
+  {
+    "query": "PLAN000030 Seats",
+    "entity": "PLAN000030",
+    "column": "Seats",
+    "answer": "35"
+  },
+  {
+    "query": "PLAN000030 Annual cost",
+    "entity": "PLAN000030",
+    "column": "Annual cost",
+    "answer": "1030"
+  },
+  {
+    "query": "PLAN000030 Storage GB",
+    "entity": "PLAN000030",
+    "column": "Storage GB",
+    "answer": "530"
+  },
+  {
+    "query": "PLAN000031 Seats",
+    "entity": "PLAN000031",
+    "column": "Seats",
+    "answer": "36"
+  },
+  {
+    "query": "PLAN000031 Annual cost",
+    "entity": "PLAN000031",
+    "column": "Annual cost",
+    "answer": "1031"
+  },
+  {
+    "query": "PLAN000031 Storage GB",
+    "entity": "PLAN000031",
+    "column": "Storage GB",
+    "answer": "531"
+  },
+  {
+    "query": "PLAN000032 Seats",
+    "entity": "PLAN000032",
+    "column": "Seats",
+    "answer": "37"
+  },
+  {
+    "query": "PLAN000032 Annual cost",
+    "entity": "PLAN000032",
+    "column": "Annual cost",
+    "answer": "1032"
+  },
+  {
+    "query": "PLAN000032 Storage GB",
+    "entity": "PLAN000032",
+    "column": "Storage GB",
+    "answer": "532"
+  },
+  {
+    "query": "PLAN000033 Seats",
+    "entity": "PLAN000033",
+    "column": "Seats",
+    "answer": "38"
+  },
+  {
+    "query": "PLAN000033 Annual cost",
+    "entity": "PLAN000033",
+    "column": "Annual cost",
+    "answer": "1033"
+  },
+  {
+    "query": "PLAN000033 Storage GB",
+    "entity": "PLAN000033",
+    "column": "Storage GB",
+    "answer": "533"
+  },
+  {
+    "query": "PLAN000034 Seats",
+    "entity": "PLAN000034",
+    "column": "Seats",
+    "answer": "39"
+  },
+  {
+    "query": "PLAN000034 Annual cost",
+    "entity": "PLAN000034",
+    "column": "Annual cost",
+    "answer": "1034"
+  },
+  {
+    "query": "PLAN000034 Storage GB",
+    "entity": "PLAN000034",
+    "column": "Storage GB",
+    "answer": "534"
+  },
+  {
+    "query": "PLAN000035 Seats",
+    "entity": "PLAN000035",
+    "column": "Seats",
+    "answer": "40"
+  },
+  {
+    "query": "PLAN000035 Annual cost",
+    "entity": "PLAN000035",
+    "column": "Annual cost",
+    "answer": "1035"
+  },
+  {
+    "query": "PLAN000035 Storage GB",
+    "entity": "PLAN000035",
+    "column": "Storage GB",
+    "answer": "535"
+  },
+  {
+    "query": "PLAN000036 Seats",
+    "entity": "PLAN000036",
+    "column": "Seats",
+    "answer": "41"
+  },
+  {
+    "query": "PLAN000036 Annual cost",
+    "entity": "PLAN000036",
+    "column": "Annual cost",
+    "answer": "1036"
+  },
+  {
+    "query": "PLAN000036 Storage GB",
+    "entity": "PLAN000036",
+    "column": "Storage GB",
+    "answer": "536"
+  },
+  {
+    "query": "PLAN000037 Seats",
+    "entity": "PLAN000037",
+    "column": "Seats",
+    "answer": "42"
+  },
+  {
+    "query": "PLAN000037 Annual cost",
+    "entity": "PLAN000037",
+    "column": "Annual cost",
+    "answer": "1037"
+  },
+  {
+    "query": "PLAN000037 Storage GB",
+    "entity": "PLAN000037",
+    "column": "Storage GB",
+    "answer": "537"
+  },
+  {
+    "query": "PLAN000038 Seats",
+    "entity": "PLAN000038",
+    "column": "Seats",
+    "answer": "43"
+  },
+  {
+    "query": "PLAN000038 Annual cost",
+    "entity": "PLAN000038",
+    "column": "Annual cost",
+    "answer": "1038"
+  },
+  {
+    "query": "PLAN000038 Storage GB",
+    "entity": "PLAN000038",
+    "column": "Storage GB",
+    "answer": "538"
+  },
+  {
+    "query": "PLAN000039 Seats",
+    "entity": "PLAN000039",
+    "column": "Seats",
+    "answer": "44"
+  },
+  {
+    "query": "PLAN000039 Annual cost",
+    "entity": "PLAN000039",
+    "column": "Annual cost",
+    "answer": "1039"
+  },
+  {
+    "query": "PLAN000039 Storage GB",
+    "entity": "PLAN000039",
+    "column": "Storage GB",
+    "answer": "539"
+  },
+  {
+    "query": "PLAN000040 Seats",
+    "entity": "PLAN000040",
+    "column": "Seats",
+    "answer": "45"
+  },
+  {
+    "query": "PLAN000040 Annual cost",
+    "entity": "PLAN000040",
+    "column": "Annual cost",
+    "answer": "1040"
+  },
+  {
+    "query": "PLAN000040 Storage GB",
+    "entity": "PLAN000040",
+    "column": "Storage GB",
+    "answer": "540"
+  },
+  {
+    "query": "PLAN000041 Seats",
+    "entity": "PLAN000041",
+    "column": "Seats",
+    "answer": "46"
+  },
+  {
+    "query": "PLAN000041 Annual cost",
+    "entity": "PLAN000041",
+    "column": "Annual cost",
+    "answer": "1041"
+  },
+  {
+    "query": "PLAN000041 Storage GB",
+    "entity": "PLAN000041",
+    "column": "Storage GB",
+    "answer": "541"
+  },
+  {
+    "query": "PLAN000042 Seats",
+    "entity": "PLAN000042",
+    "column": "Seats",
+    "answer": "47"
+  },
+  {
+    "query": "PLAN000042 Annual cost",
+    "entity": "PLAN000042",
+    "column": "Annual cost",
+    "answer": "1042"
+  },
+  {
+    "query": "PLAN000042 Storage GB",
+    "entity": "PLAN000042",
+    "column": "Storage GB",
+    "answer": "542"
+  },
+  {
+    "query": "PLAN000043 Seats",
+    "entity": "PLAN000043",
+    "column": "Seats",
+    "answer": "48"
+  },
+  {
+    "query": "PLAN000043 Annual cost",
+    "entity": "PLAN000043",
+    "column": "Annual cost",
+    "answer": "1043"
+  },
+  {
+    "query": "PLAN000043 Storage GB",
+    "entity": "PLAN000043",
+    "column": "Storage GB",
+    "answer": "543"
+  },
+  {
+    "query": "PLAN000044 Seats",
+    "entity": "PLAN000044",
+    "column": "Seats",
+    "answer": "49"
+  },
+  {
+    "query": "PLAN000044 Annual cost",
+    "entity": "PLAN000044",
+    "column": "Annual cost",
+    "answer": "1044"
+  },
+  {
+    "query": "PLAN000044 Storage GB",
+    "entity": "PLAN000044",
+    "column": "Storage GB",
+    "answer": "544"
+  },
+  {
+    "query": "PLAN000045 Seats",
+    "entity": "PLAN000045",
+    "column": "Seats",
+    "answer": "50"
+  },
+  {
+    "query": "PLAN000045 Annual cost",
+    "entity": "PLAN000045",
+    "column": "Annual cost",
+    "answer": "1045"
+  },
+  {
+    "query": "PLAN000045 Storage GB",
+    "entity": "PLAN000045",
+    "column": "Storage GB",
+    "answer": "545"
+  },
+  {
+    "query": "PLAN000046 Seats",
+    "entity": "PLAN000046",
+    "column": "Seats",
+    "answer": "51"
+  },
+  {
+    "query": "PLAN000046 Annual cost",
+    "entity": "PLAN000046",
+    "column": "Annual cost",
+    "answer": "1046"
+  },
+  {
+    "query": "PLAN000046 Storage GB",
+    "entity": "PLAN000046",
+    "column": "Storage GB",
+    "answer": "546"
+  },
+  {
+    "query": "PLAN000047 Seats",
+    "entity": "PLAN000047",
+    "column": "Seats",
+    "answer": "52"
+  },
+  {
+    "query": "PLAN000047 Annual cost",
+    "entity": "PLAN000047",
+    "column": "Annual cost",
+    "answer": "1047"
+  },
+  {
+    "query": "PLAN000047 Storage GB",
+    "entity": "PLAN000047",
+    "column": "Storage GB",
+    "answer": "547"
+  },
+  {
+    "query": "PLAN000048 Seats",
+    "entity": "PLAN000048",
+    "column": "Seats",
+    "answer": "53"
+  },
+  {
+    "query": "PLAN000048 Annual cost",
+    "entity": "PLAN000048",
+    "column": "Annual cost",
+    "answer": "1048"
+  },
+  {
+    "query": "PLAN000048 Storage GB",
+    "entity": "PLAN000048",
+    "column": "Storage GB",
+    "answer": "548"
+  },
+  {
+    "query": "PLAN000049 Seats",
+    "entity": "PLAN000049",
+    "column": "Seats",
+    "answer": "54"
+  },
+  {
+    "query": "PLAN000049 Annual cost",
+    "entity": "PLAN000049",
+    "column": "Annual cost",
+    "answer": "1049"
+  },
+  {
+    "query": "PLAN000049 Storage GB",
+    "entity": "PLAN000049",
+    "column": "Storage GB",
+    "answer": "549"
+  },
+  {
+    "query": "PLAN000050 Seats",
+    "entity": "PLAN000050",
+    "column": "Seats",
+    "answer": "55"
+  },
+  {
+    "query": "PLAN000050 Annual cost",
+    "entity": "PLAN000050",
+    "column": "Annual cost",
+    "answer": "1050"
+  },
+  {
+    "query": "PLAN000050 Storage GB",
+    "entity": "PLAN000050",
+    "column": "Storage GB",
+    "answer": "550"
+  },
+  {
+    "query": "PLAN000051 Seats",
+    "entity": "PLAN000051",
+    "column": "Seats",
+    "answer": "56"
+  },
+  {
+    "query": "PLAN000051 Annual cost",
+    "entity": "PLAN000051",
+    "column": "Annual cost",
+    "answer": "1051"
+  },
+  {
+    "query": "PLAN000051 Storage GB",
+    "entity": "PLAN000051",
+    "column": "Storage GB",
+    "answer": "551"
+  },
+  {
+    "query": "PLAN000052 Seats",
+    "entity": "PLAN000052",
+    "column": "Seats",
+    "answer": "57"
+  },
+  {
+    "query": "PLAN000052 Annual cost",
+    "entity": "PLAN000052",
+    "column": "Annual cost",
+    "answer": "1052"
+  },
+  {
+    "query": "PLAN000052 Storage GB",
+    "entity": "PLAN000052",
+    "column": "Storage GB",
+    "answer": "552"
+  },
+  {
+    "query": "PLAN000053 Seats",
+    "entity": "PLAN000053",
+    "column": "Seats",
+    "answer": "58"
+  },
+  {
+    "query": "PLAN000053 Annual cost",
+    "entity": "PLAN000053",
+    "column": "Annual cost",
+    "answer": "1053"
+  },
+  {
+    "query": "PLAN000053 Storage GB",
+    "entity": "PLAN000053",
+    "column": "Storage GB",
+    "answer": "553"
+  },
+  {
+    "query": "PLAN000054 Seats",
+    "entity": "PLAN000054",
+    "column": "Seats",
+    "answer": "59"
+  },
+  {
+    "query": "PLAN000054 Annual cost",
+    "entity": "PLAN000054",
+    "column": "Annual cost",
+    "answer": "1054"
+  },
+  {
+    "query": "PLAN000054 Storage GB",
+    "entity": "PLAN000054",
+    "column": "Storage GB",
+    "answer": "554"
+  },
+  {
+    "query": "PLAN000055 Seats",
+    "entity": "PLAN000055",
+    "column": "Seats",
+    "answer": "60"
+  },
+  {
+    "query": "PLAN000055 Annual cost",
+    "entity": "PLAN000055",
+    "column": "Annual cost",
+    "answer": "1055"
+  },
+  {
+    "query": "PLAN000055 Storage GB",
+    "entity": "PLAN000055",
+    "column": "Storage GB",
+    "answer": "555"
+  },
+  {
+    "query": "PLAN000056 Seats",
+    "entity": "PLAN000056",
+    "column": "Seats",
+    "answer": "61"
+  },
+  {
+    "query": "PLAN000056 Annual cost",
+    "entity": "PLAN000056",
+    "column": "Annual cost",
+    "answer": "1056"
+  },
+  {
+    "query": "PLAN000056 Storage GB",
+    "entity": "PLAN000056",
+    "column": "Storage GB",
+    "answer": "556"
+  },
+  {
+    "query": "PLAN000057 Seats",
+    "entity": "PLAN000057",
+    "column": "Seats",
+    "answer": "62"
+  },
+  {
+    "query": "PLAN000057 Annual cost",
+    "entity": "PLAN000057",
+    "column": "Annual cost",
+    "answer": "1057"
+  },
+  {
+    "query": "PLAN000057 Storage GB",
+    "entity": "PLAN000057",
+    "column": "Storage GB",
+    "answer": "557"
+  },
+  {
+    "query": "PLAN000058 Seats",
+    "entity": "PLAN000058",
+    "column": "Seats",
+    "answer": "63"
+  },
+  {
+    "query": "PLAN000058 Annual cost",
+    "entity": "PLAN000058",
+    "column": "Annual cost",
+    "answer": "1058"
+  },
+  {
+    "query": "PLAN000058 Storage GB",
+    "entity": "PLAN000058",
+    "column": "Storage GB",
+    "answer": "558"
+  },
+  {
+    "query": "PLAN000059 Seats",
+    "entity": "PLAN000059",
+    "column": "Seats",
+    "answer": "64"
+  },
+  {
+    "query": "PLAN000059 Annual cost",
+    "entity": "PLAN000059",
+    "column": "Annual cost",
+    "answer": "1059"
+  },
+  {
+    "query": "PLAN000059 Storage GB",
+    "entity": "PLAN000059",
+    "column": "Storage GB",
+    "answer": "559"
+  },
+  {
+    "query": "PLAN010000 Seats",
+    "entity": "PLAN010000",
+    "column": "Seats",
+    "answer": "5"
+  },
+  {
+    "query": "PLAN010000 Annual cost",
+    "entity": "PLAN010000",
+    "column": "Annual cost",
+    "answer": "1060"
+  },
+  {
+    "query": "PLAN010000 Storage GB",
+    "entity": "PLAN010000",
+    "column": "Storage GB",
+    "answer": "500"
+  },
+  {
+    "query": "PLAN010001 Seats",
+    "entity": "PLAN010001",
+    "column": "Seats",
+    "answer": "6"
+  },
+  {
+    "query": "PLAN010001 Annual cost",
+    "entity": "PLAN010001",
+    "column": "Annual cost",
+    "answer": "1061"
+  },
+  {
+    "query": "PLAN010001 Storage GB",
+    "entity": "PLAN010001",
+    "column": "Storage GB",
+    "answer": "501"
+  },
+  {
+    "query": "PLAN010002 Seats",
+    "entity": "PLAN010002",
+    "column": "Seats",
+    "answer": "7"
+  },
+  {
+    "query": "PLAN010002 Annual cost",
+    "entity": "PLAN010002",
+    "column": "Annual cost",
+    "answer": "1062"
+  },
+  {
+    "query": "PLAN010002 Storage GB",
+    "entity": "PLAN010002",
+    "column": "Storage GB",
+    "answer": "502"
+  },
+  {
+    "query": "PLAN010003 Seats",
+    "entity": "PLAN010003",
+    "column": "Seats",
+    "answer": "8"
+  },
+  {
+    "query": "PLAN010003 Annual cost",
+    "entity": "PLAN010003",
+    "column": "Annual cost",
+    "answer": "1063"
+  },
+  {
+    "query": "PLAN010003 Storage GB",
+    "entity": "PLAN010003",
+    "column": "Storage GB",
+    "answer": "503"
+  },
+  {
+    "query": "PLAN010004 Seats",
+    "entity": "PLAN010004",
+    "column": "Seats",
+    "answer": "9"
+  },
+  {
+    "query": "PLAN010004 Annual cost",
+    "entity": "PLAN010004",
+    "column": "Annual cost",
+    "answer": "1064"
+  },
+  {
+    "query": "PLAN010004 Storage GB",
+    "entity": "PLAN010004",
+    "column": "Storage GB",
+    "answer": "504"
+  },
+  {
+    "query": "PLAN010005 Seats",
+    "entity": "PLAN010005",
+    "column": "Seats",
+    "answer": "10"
+  },
+  {
+    "query": "PLAN010005 Annual cost",
+    "entity": "PLAN010005",
+    "column": "Annual cost",
+    "answer": "1065"
+  },
+  {
+    "query": "PLAN010005 Storage GB",
+    "entity": "PLAN010005",
+    "column": "Storage GB",
+    "answer": "505"
+  },
+  {
+    "query": "PLAN010006 Seats",
+    "entity": "PLAN010006",
+    "column": "Seats",
+    "answer": "11"
+  },
+  {
+    "query": "PLAN010006 Annual cost",
+    "entity": "PLAN010006",
+    "column": "Annual cost",
+    "answer": "1066"
+  },
+  {
+    "query": "PLAN010006 Storage GB",
+    "entity": "PLAN010006",
+    "column": "Storage GB",
+    "answer": "506"
+  },
+  {
+    "query": "PLAN010007 Seats",
+    "entity": "PLAN010007",
+    "column": "Seats",
+    "answer": "12"
+  },
+  {
+    "query": "PLAN010007 Annual cost",
+    "entity": "PLAN010007",
+    "column": "Annual cost",
+    "answer": "1067"
+  },
+  {
+    "query": "PLAN010007 Storage GB",
+    "entity": "PLAN010007",
+    "column": "Storage GB",
+    "answer": "507"
+  },
+  {
+    "query": "PLAN010008 Seats",
+    "entity": "PLAN010008",
+    "column": "Seats",
+    "answer": "13"
+  },
+  {
+    "query": "PLAN010008 Annual cost",
+    "entity": "PLAN010008",
+    "column": "Annual cost",
+    "answer": "1068"
+  },
+  {
+    "query": "PLAN010008 Storage GB",
+    "entity": "PLAN010008",
+    "column": "Storage GB",
+    "answer": "508"
+  },
+  {
+    "query": "PLAN010009 Seats",
+    "entity": "PLAN010009",
+    "column": "Seats",
+    "answer": "14"
+  },
+  {
+    "query": "PLAN010009 Annual cost",
+    "entity": "PLAN010009",
+    "column": "Annual cost",
+    "answer": "1069"
+  },
+  {
+    "query": "PLAN010009 Storage GB",
+    "entity": "PLAN010009",
+    "column": "Storage GB",
+    "answer": "509"
+  },
+  {
+    "query": "PLAN010010 Seats",
+    "entity": "PLAN010010",
+    "column": "Seats",
+    "answer": "15"
+  },
+  {
+    "query": "PLAN010010 Annual cost",
+    "entity": "PLAN010010",
+    "column": "Annual cost",
+    "answer": "1070"
+  },
+  {
+    "query": "PLAN010010 Storage GB",
+    "entity": "PLAN010010",
+    "column": "Storage GB",
+    "answer": "510"
+  },
+  {
+    "query": "PLAN010011 Seats",
+    "entity": "PLAN010011",
+    "column": "Seats",
+    "answer": "16"
+  },
+  {
+    "query": "PLAN010011 Annual cost",
+    "entity": "PLAN010011",
+    "column": "Annual cost",
+    "answer": "1071"
+  },
+  {
+    "query": "PLAN010011 Storage GB",
+    "entity": "PLAN010011",
+    "column": "Storage GB",
+    "answer": "511"
+  },
+  {
+    "query": "PLAN010012 Seats",
+    "entity": "PLAN010012",
+    "column": "Seats",
+    "answer": "17"
+  },
+  {
+    "query": "PLAN010012 Annual cost",
+    "entity": "PLAN010012",
+    "column": "Annual cost",
+    "answer": "1072"
+  },
+  {
+    "query": "PLAN010012 Storage GB",
+    "entity": "PLAN010012",
+    "column": "Storage GB",
+    "answer": "512"
+  },
+  {
+    "query": "PLAN010013 Seats",
+    "entity": "PLAN010013",
+    "column": "Seats",
+    "answer": "18"
+  },
+  {
+    "query": "PLAN010013 Annual cost",
+    "entity": "PLAN010013",
+    "column": "Annual cost",
+    "answer": "1073"
+  },
+  {
+    "query": "PLAN010013 Storage GB",
+    "entity": "PLAN010013",
+    "column": "Storage GB",
+    "answer": "513"
+  },
+  {
+    "query": "PLAN010014 Seats",
+    "entity": "PLAN010014",
+    "column": "Seats",
+    "answer": "19"
+  },
+  {
+    "query": "PLAN010014 Annual cost",
+    "entity": "PLAN010014",
+    "column": "Annual cost",
+    "answer": "1074"
+  },
+  {
+    "query": "PLAN010014 Storage GB",
+    "entity": "PLAN010014",
+    "column": "Storage GB",
+    "answer": "514"
+  },
+  {
+    "query": "PLAN010015 Seats",
+    "entity": "PLAN010015",
+    "column": "Seats",
+    "answer": "20"
+  },
+  {
+    "query": "PLAN010015 Annual cost",
+    "entity": "PLAN010015",
+    "column": "Annual cost",
+    "answer": "1075"
+  },
+  {
+    "query": "PLAN010015 Storage GB",
+    "entity": "PLAN010015",
+    "column": "Storage GB",
+    "answer": "515"
+  },
+  {
+    "query": "PLAN010016 Seats",
+    "entity": "PLAN010016",
+    "column": "Seats",
+    "answer": "21"
+  },
+  {
+    "query": "PLAN010016 Annual cost",
+    "entity": "PLAN010016",
+    "column": "Annual cost",
+    "answer": "1076"
+  },
+  {
+    "query": "PLAN010016 Storage GB",
+    "entity": "PLAN010016",
+    "column": "Storage GB",
+    "answer": "516"
+  },
+  {
+    "query": "PLAN010017 Seats",
+    "entity": "PLAN010017",
+    "column": "Seats",
+    "answer": "22"
+  },
+  {
+    "query": "PLAN010017 Annual cost",
+    "entity": "PLAN010017",
+    "column": "Annual cost",
+    "answer": "1077"
+  },
+  {
+    "query": "PLAN010017 Storage GB",
+    "entity": "PLAN010017",
+    "column": "Storage GB",
+    "answer": "517"
+  },
+  {
+    "query": "PLAN010018 Seats",
+    "entity": "PLAN010018",
+    "column": "Seats",
+    "answer": "23"
+  },
+  {
+    "query": "PLAN010018 Annual cost",
+    "entity": "PLAN010018",
+    "column": "Annual cost",
+    "answer": "1078"
+  },
+  {
+    "query": "PLAN010018 Storage GB",
+    "entity": "PLAN010018",
+    "column": "Storage GB",
+    "answer": "518"
+  },
+  {
+    "query": "PLAN010019 Seats",
+    "entity": "PLAN010019",
+    "column": "Seats",
+    "answer": "24"
+  },
+  {
+    "query": "PLAN010019 Annual cost",
+    "entity": "PLAN010019",
+    "column": "Annual cost",
+    "answer": "1079"
+  },
+  {
+    "query": "PLAN010019 Storage GB",
+    "entity": "PLAN010019",
+    "column": "Storage GB",
+    "answer": "519"
+  },
+  {
+    "query": "PLAN010020 Seats",
+    "entity": "PLAN010020",
+    "column": "Seats",
+    "answer": "25"
+  },
+  {
+    "query": "PLAN010020 Annual cost",
+    "entity": "PLAN010020",
+    "column": "Annual cost",
+    "answer": "1080"
+  },
+  {
+    "query": "PLAN010020 Storage GB",
+    "entity": "PLAN010020",
+    "column": "Storage GB",
+    "answer": "520"
+  },
+  {
+    "query": "PLAN010021 Seats",
+    "entity": "PLAN010021",
+    "column": "Seats",
+    "answer": "26"
+  },
+  {
+    "query": "PLAN010021 Annual cost",
+    "entity": "PLAN010021",
+    "column": "Annual cost",
+    "answer": "1081"
+  },
+  {
+    "query": "PLAN010021 Storage GB",
+    "entity": "PLAN010021",
+    "column": "Storage GB",
+    "answer": "521"
+  },
+  {
+    "query": "PLAN010022 Seats",
+    "entity": "PLAN010022",
+    "column": "Seats",
+    "answer": "27"
+  },
+  {
+    "query": "PLAN010022 Annual cost",
+    "entity": "PLAN010022",
+    "column": "Annual cost",
+    "answer": "1082"
+  },
+  {
+    "query": "PLAN010022 Storage GB",
+    "entity": "PLAN010022",
+    "column": "Storage GB",
+    "answer": "522"
+  },
+  {
+    "query": "PLAN010023 Seats",
+    "entity": "PLAN010023",
+    "column": "Seats",
+    "answer": "28"
+  },
+  {
+    "query": "PLAN010023 Annual cost",
+    "entity": "PLAN010023",
+    "column": "Annual cost",
+    "answer": "1083"
+  },
+  {
+    "query": "PLAN010023 Storage GB",
+    "entity": "PLAN010023",
+    "column": "Storage GB",
+    "answer": "523"
+  },
+  {
+    "query": "PLAN010024 Seats",
+    "entity": "PLAN010024",
+    "column": "Seats",
+    "answer": "29"
+  },
+  {
+    "query": "PLAN010024 Annual cost",
+    "entity": "PLAN010024",
+    "column": "Annual cost",
+    "answer": "1084"
+  },
+  {
+    "query": "PLAN010024 Storage GB",
+    "entity": "PLAN010024",
+    "column": "Storage GB",
+    "answer": "524"
+  },
+  {
+    "query": "PLAN010025 Seats",
+    "entity": "PLAN010025",
+    "column": "Seats",
+    "answer": "30"
+  },
+  {
+    "query": "PLAN010025 Annual cost",
+    "entity": "PLAN010025",
+    "column": "Annual cost",
+    "answer": "1085"
+  },
+  {
+    "query": "PLAN010025 Storage GB",
+    "entity": "PLAN010025",
+    "column": "Storage GB",
+    "answer": "525"
+  },
+  {
+    "query": "PLAN010026 Seats",
+    "entity": "PLAN010026",
+    "column": "Seats",
+    "answer": "31"
+  },
+  {
+    "query": "PLAN010026 Annual cost",
+    "entity": "PLAN010026",
+    "column": "Annual cost",
+    "answer": "1086"
+  },
+  {
+    "query": "PLAN010026 Storage GB",
+    "entity": "PLAN010026",
+    "column": "Storage GB",
+    "answer": "526"
+  },
+  {
+    "query": "PLAN010027 Seats",
+    "entity": "PLAN010027",
+    "column": "Seats",
+    "answer": "32"
+  },
+  {
+    "query": "PLAN010027 Annual cost",
+    "entity": "PLAN010027",
+    "column": "Annual cost",
+    "answer": "1087"
+  },
+  {
+    "query": "PLAN010027 Storage GB",
+    "entity": "PLAN010027",
+    "column": "Storage GB",
+    "answer": "527"
+  },
+  {
+    "query": "PLAN010028 Seats",
+    "entity": "PLAN010028",
+    "column": "Seats",
+    "answer": "33"
+  },
+  {
+    "query": "PLAN010028 Annual cost",
+    "entity": "PLAN010028",
+    "column": "Annual cost",
+    "answer": "1088"
+  },
+  {
+    "query": "PLAN010028 Storage GB",
+    "entity": "PLAN010028",
+    "column": "Storage GB",
+    "answer": "528"
+  },
+  {
+    "query": "PLAN010029 Seats",
+    "entity": "PLAN010029",
+    "column": "Seats",
+    "answer": "34"
+  },
+  {
+    "query": "PLAN010029 Annual cost",
+    "entity": "PLAN010029",
+    "column": "Annual cost",
+    "answer": "1089"
+  },
+  {
+    "query": "PLAN010029 Storage GB",
+    "entity": "PLAN010029",
+    "column": "Storage GB",
+    "answer": "529"
+  },
+  {
+    "query": "PLAN010030 Seats",
+    "entity": "PLAN010030",
+    "column": "Seats",
+    "answer": "35"
+  },
+  {
+    "query": "PLAN010030 Annual cost",
+    "entity": "PLAN010030",
+    "column": "Annual cost",
+    "answer": "1090"
+  },
+  {
+    "query": "PLAN010030 Storage GB",
+    "entity": "PLAN010030",
+    "column": "Storage GB",
+    "answer": "530"
+  },
+  {
+    "query": "PLAN010031 Seats",
+    "entity": "PLAN010031",
+    "column": "Seats",
+    "answer": "36"
+  },
+  {
+    "query": "PLAN010031 Annual cost",
+    "entity": "PLAN010031",
+    "column": "Annual cost",
+    "answer": "1091"
+  },
+  {
+    "query": "PLAN010031 Storage GB",
+    "entity": "PLAN010031",
+    "column": "Storage GB",
+    "answer": "531"
+  },
+  {
+    "query": "PLAN010032 Seats",
+    "entity": "PLAN010032",
+    "column": "Seats",
+    "answer": "37"
+  },
+  {
+    "query": "PLAN010032 Annual cost",
+    "entity": "PLAN010032",
+    "column": "Annual cost",
+    "answer": "1092"
+  },
+  {
+    "query": "PLAN010032 Storage GB",
+    "entity": "PLAN010032",
+    "column": "Storage GB",
+    "answer": "532"
+  },
+  {
+    "query": "PLAN010033 Seats",
+    "entity": "PLAN010033",
+    "column": "Seats",
+    "answer": "38"
+  },
+  {
+    "query": "PLAN010033 Annual cost",
+    "entity": "PLAN010033",
+    "column": "Annual cost",
+    "answer": "1093"
+  },
+  {
+    "query": "PLAN010033 Storage GB",
+    "entity": "PLAN010033",
+    "column": "Storage GB",
+    "answer": "533"
+  },
+  {
+    "query": "PLAN010034 Seats",
+    "entity": "PLAN010034",
+    "column": "Seats",
+    "answer": "39"
+  },
+  {
+    "query": "PLAN010034 Annual cost",
+    "entity": "PLAN010034",
+    "column": "Annual cost",
+    "answer": "1094"
+  },
+  {
+    "query": "PLAN010034 Storage GB",
+    "entity": "PLAN010034",
+    "column": "Storage GB",
+    "answer": "534"
+  },
+  {
+    "query": "PLAN010035 Seats",
+    "entity": "PLAN010035",
+    "column": "Seats",
+    "answer": "40"
+  },
+  {
+    "query": "PLAN010035 Annual cost",
+    "entity": "PLAN010035",
+    "column": "Annual cost",
+    "answer": "1095"
+  },
+  {
+    "query": "PLAN010035 Storage GB",
+    "entity": "PLAN010035",
+    "column": "Storage GB",
+    "answer": "535"
+  },
+  {
+    "query": "PLAN010036 Seats",
+    "entity": "PLAN010036",
+    "column": "Seats",
+    "answer": "41"
+  },
+  {
+    "query": "PLAN010036 Annual cost",
+    "entity": "PLAN010036",
+    "column": "Annual cost",
+    "answer": "1096"
+  },
+  {
+    "query": "PLAN010036 Storage GB",
+    "entity": "PLAN010036",
+    "column": "Storage GB",
+    "answer": "536"
+  },
+  {
+    "query": "PLAN010037 Seats",
+    "entity": "PLAN010037",
+    "column": "Seats",
+    "answer": "42"
+  },
+  {
+    "query": "PLAN010037 Annual cost",
+    "entity": "PLAN010037",
+    "column": "Annual cost",
+    "answer": "1097"
+  },
+  {
+    "query": "PLAN010037 Storage GB",
+    "entity": "PLAN010037",
+    "column": "Storage GB",
+    "answer": "537"
+  },
+  {
+    "query": "PLAN010038 Seats",
+    "entity": "PLAN010038",
+    "column": "Seats",
+    "answer": "43"
+  },
+  {
+    "query": "PLAN010038 Annual cost",
+    "entity": "PLAN010038",
+    "column": "Annual cost",
+    "answer": "1098"
+  },
+  {
+    "query": "PLAN010038 Storage GB",
+    "entity": "PLAN010038",
+    "column": "Storage GB",
+    "answer": "538"
+  },
+  {
+    "query": "PLAN010039 Seats",
+    "entity": "PLAN010039",
+    "column": "Seats",
+    "answer": "44"
+  },
+  {
+    "query": "PLAN010039 Annual cost",
+    "entity": "PLAN010039",
+    "column": "Annual cost",
+    "answer": "1099"
+  },
+  {
+    "query": "PLAN010039 Storage GB",
+    "entity": "PLAN010039",
+    "column": "Storage GB",
+    "answer": "539"
+  },
+  {
+    "query": "PLAN010040 Seats",
+    "entity": "PLAN010040",
+    "column": "Seats",
+    "answer": "45"
+  },
+  {
+    "query": "PLAN010040 Annual cost",
+    "entity": "PLAN010040",
+    "column": "Annual cost",
+    "answer": "1100"
+  },
+  {
+    "query": "PLAN010040 Storage GB",
+    "entity": "PLAN010040",
+    "column": "Storage GB",
+    "answer": "540"
+  },
+  {
+    "query": "PLAN010041 Seats",
+    "entity": "PLAN010041",
+    "column": "Seats",
+    "answer": "46"
+  },
+  {
+    "query": "PLAN010041 Annual cost",
+    "entity": "PLAN010041",
+    "column": "Annual cost",
+    "answer": "1101"
+  },
+  {
+    "query": "PLAN010041 Storage GB",
+    "entity": "PLAN010041",
+    "column": "Storage GB",
+    "answer": "541"
+  },
+  {
+    "query": "PLAN010042 Seats",
+    "entity": "PLAN010042",
+    "column": "Seats",
+    "answer": "47"
+  },
+  {
+    "query": "PLAN010042 Annual cost",
+    "entity": "PLAN010042",
+    "column": "Annual cost",
+    "answer": "1102"
+  },
+  {
+    "query": "PLAN010042 Storage GB",
+    "entity": "PLAN010042",
+    "column": "Storage GB",
+    "answer": "542"
+  },
+  {
+    "query": "PLAN010043 Seats",
+    "entity": "PLAN010043",
+    "column": "Seats",
+    "answer": "48"
+  },
+  {
+    "query": "PLAN010043 Annual cost",
+    "entity": "PLAN010043",
+    "column": "Annual cost",
+    "answer": "1103"
+  },
+  {
+    "query": "PLAN010043 Storage GB",
+    "entity": "PLAN010043",
+    "column": "Storage GB",
+    "answer": "543"
+  },
+  {
+    "query": "PLAN010044 Seats",
+    "entity": "PLAN010044",
+    "column": "Seats",
+    "answer": "49"
+  },
+  {
+    "query": "PLAN010044 Annual cost",
+    "entity": "PLAN010044",
+    "column": "Annual cost",
+    "answer": "1104"
+  },
+  {
+    "query": "PLAN010044 Storage GB",
+    "entity": "PLAN010044",
+    "column": "Storage GB",
+    "answer": "544"
+  },
+  {
+    "query": "PLAN010045 Seats",
+    "entity": "PLAN010045",
+    "column": "Seats",
+    "answer": "50"
+  },
+  {
+    "query": "PLAN010045 Annual cost",
+    "entity": "PLAN010045",
+    "column": "Annual cost",
+    "answer": "1105"
+  },
+  {
+    "query": "PLAN010045 Storage GB",
+    "entity": "PLAN010045",
+    "column": "Storage GB",
+    "answer": "545"
+  },
+  {
+    "query": "PLAN010046 Seats",
+    "entity": "PLAN010046",
+    "column": "Seats",
+    "answer": "51"
+  },
+  {
+    "query": "PLAN010046 Annual cost",
+    "entity": "PLAN010046",
+    "column": "Annual cost",
+    "answer": "1106"
+  },
+  {
+    "query": "PLAN010046 Storage GB",
+    "entity": "PLAN010046",
+    "column": "Storage GB",
+    "answer": "546"
+  },
+  {
+    "query": "PLAN010047 Seats",
+    "entity": "PLAN010047",
+    "column": "Seats",
+    "answer": "52"
+  },
+  {
+    "query": "PLAN010047 Annual cost",
+    "entity": "PLAN010047",
+    "column": "Annual cost",
+    "answer": "1107"
+  },
+  {
+    "query": "PLAN010047 Storage GB",
+    "entity": "PLAN010047",
+    "column": "Storage GB",
+    "answer": "547"
+  },
+  {
+    "query": "PLAN010048 Seats",
+    "entity": "PLAN010048",
+    "column": "Seats",
+    "answer": "53"
+  },
+  {
+    "query": "PLAN010048 Annual cost",
+    "entity": "PLAN010048",
+    "column": "Annual cost",
+    "answer": "1108"
+  },
+  {
+    "query": "PLAN010048 Storage GB",
+    "entity": "PLAN010048",
+    "column": "Storage GB",
+    "answer": "548"
+  },
+  {
+    "query": "PLAN010049 Seats",
+    "entity": "PLAN010049",
+    "column": "Seats",
+    "answer": "54"
+  },
+  {
+    "query": "PLAN010049 Annual cost",
+    "entity": "PLAN010049",
+    "column": "Annual cost",
+    "answer": "1109"
+  },
+  {
+    "query": "PLAN010049 Storage GB",
+    "entity": "PLAN010049",
+    "column": "Storage GB",
+    "answer": "549"
+  },
+  {
+    "query": "PLAN010050 Seats",
+    "entity": "PLAN010050",
+    "column": "Seats",
+    "answer": "55"
+  },
+  {
+    "query": "PLAN010050 Annual cost",
+    "entity": "PLAN010050",
+    "column": "Annual cost",
+    "answer": "1110"
+  },
+  {
+    "query": "PLAN010050 Storage GB",
+    "entity": "PLAN010050",
+    "column": "Storage GB",
+    "answer": "550"
+  },
+  {
+    "query": "PLAN010051 Seats",
+    "entity": "PLAN010051",
+    "column": "Seats",
+    "answer": "56"
+  },
+  {
+    "query": "PLAN010051 Annual cost",
+    "entity": "PLAN010051",
+    "column": "Annual cost",
+    "answer": "1111"
+  },
+  {
+    "query": "PLAN010051 Storage GB",
+    "entity": "PLAN010051",
+    "column": "Storage GB",
+    "answer": "551"
+  },
+  {
+    "query": "PLAN010052 Seats",
+    "entity": "PLAN010052",
+    "column": "Seats",
+    "answer": "57"
+  },
+  {
+    "query": "PLAN010052 Annual cost",
+    "entity": "PLAN010052",
+    "column": "Annual cost",
+    "answer": "1112"
+  },
+  {
+    "query": "PLAN010052 Storage GB",
+    "entity": "PLAN010052",
+    "column": "Storage GB",
+    "answer": "552"
+  },
+  {
+    "query": "PLAN010053 Seats",
+    "entity": "PLAN010053",
+    "column": "Seats",
+    "answer": "58"
+  },
+  {
+    "query": "PLAN010053 Annual cost",
+    "entity": "PLAN010053",
+    "column": "Annual cost",
+    "answer": "1113"
+  },
+  {
+    "query": "PLAN010053 Storage GB",
+    "entity": "PLAN010053",
+    "column": "Storage GB",
+    "answer": "553"
+  },
+  {
+    "query": "PLAN010054 Seats",
+    "entity": "PLAN010054",
+    "column": "Seats",
+    "answer": "59"
+  },
+  {
+    "query": "PLAN010054 Annual cost",
+    "entity": "PLAN010054",
+    "column": "Annual cost",
+    "answer": "1114"
+  },
+  {
+    "query": "PLAN010054 Storage GB",
+    "entity": "PLAN010054",
+    "column": "Storage GB",
+    "answer": "554"
+  },
+  {
+    "query": "PLAN010055 Seats",
+    "entity": "PLAN010055",
+    "column": "Seats",
+    "answer": "60"
+  },
+  {
+    "query": "PLAN010055 Annual cost",
+    "entity": "PLAN010055",
+    "column": "Annual cost",
+    "answer": "1115"
+  },
+  {
+    "query": "PLAN010055 Storage GB",
+    "entity": "PLAN010055",
+    "column": "Storage GB",
+    "answer": "555"
+  },
+  {
+    "query": "PLAN010056 Seats",
+    "entity": "PLAN010056",
+    "column": "Seats",
+    "answer": "61"
+  },
+  {
+    "query": "PLAN010056 Annual cost",
+    "entity": "PLAN010056",
+    "column": "Annual cost",
+    "answer": "1116"
+  },
+  {
+    "query": "PLAN010056 Storage GB",
+    "entity": "PLAN010056",
+    "column": "Storage GB",
+    "answer": "556"
+  },
+  {
+    "query": "PLAN010057 Seats",
+    "entity": "PLAN010057",
+    "column": "Seats",
+    "answer": "62"
+  },
+  {
+    "query": "PLAN010057 Annual cost",
+    "entity": "PLAN010057",
+    "column": "Annual cost",
+    "answer": "1117"
+  },
+  {
+    "query": "PLAN010057 Storage GB",
+    "entity": "PLAN010057",
+    "column": "Storage GB",
+    "answer": "557"
+  },
+  {
+    "query": "PLAN010058 Seats",
+    "entity": "PLAN010058",
+    "column": "Seats",
+    "answer": "63"
+  },
+  {
+    "query": "PLAN010058 Annual cost",
+    "entity": "PLAN010058",
+    "column": "Annual cost",
+    "answer": "1118"
+  },
+  {
+    "query": "PLAN010058 Storage GB",
+    "entity": "PLAN010058",
+    "column": "Storage GB",
+    "answer": "558"
+  },
+  {
+    "query": "PLAN010059 Seats",
+    "entity": "PLAN010059",
+    "column": "Seats",
+    "answer": "64"
+  },
+  {
+    "query": "PLAN010059 Annual cost",
+    "entity": "PLAN010059",
+    "column": "Annual cost",
+    "answer": "1119"
+  },
+  {
+    "query": "PLAN010059 Storage GB",
+    "entity": "PLAN010059",
+    "column": "Storage GB",
+    "answer": "559"
+  },
+  {
+    "query": "PLAN020000 Seats",
+    "entity": "PLAN020000",
+    "column": "Seats",
+    "answer": "5"
+  },
+  {
+    "query": "PLAN020000 Annual cost",
+    "entity": "PLAN020000",
+    "column": "Annual cost",
+    "answer": "1120"
+  },
+  {
+    "query": "PLAN020000 Storage GB",
+    "entity": "PLAN020000",
+    "column": "Storage GB",
+    "answer": "500"
+  },
+  {
+    "query": "PLAN020001 Seats",
+    "entity": "PLAN020001",
+    "column": "Seats",
+    "answer": "6"
+  },
+  {
+    "query": "PLAN020001 Annual cost",
+    "entity": "PLAN020001",
+    "column": "Annual cost",
+    "answer": "1121"
+  },
+  {
+    "query": "PLAN020001 Storage GB",
+    "entity": "PLAN020001",
+    "column": "Storage GB",
+    "answer": "501"
+  },
+  {
+    "query": "PLAN020002 Seats",
+    "entity": "PLAN020002",
+    "column": "Seats",
+    "answer": "7"
+  },
+  {
+    "query": "PLAN020002 Annual cost",
+    "entity": "PLAN020002",
+    "column": "Annual cost",
+    "answer": "1122"
+  },
+  {
+    "query": "PLAN020002 Storage GB",
+    "entity": "PLAN020002",
+    "column": "Storage GB",
+    "answer": "502"
+  },
+  {
+    "query": "PLAN020003 Seats",
+    "entity": "PLAN020003",
+    "column": "Seats",
+    "answer": "8"
+  },
+  {
+    "query": "PLAN020003 Annual cost",
+    "entity": "PLAN020003",
+    "column": "Annual cost",
+    "answer": "1123"
+  },
+  {
+    "query": "PLAN020003 Storage GB",
+    "entity": "PLAN020003",
+    "column": "Storage GB",
+    "answer": "503"
+  },
+  {
+    "query": "PLAN020004 Seats",
+    "entity": "PLAN020004",
+    "column": "Seats",
+    "answer": "9"
+  },
+  {
+    "query": "PLAN020004 Annual cost",
+    "entity": "PLAN020004",
+    "column": "Annual cost",
+    "answer": "1124"
+  },
+  {
+    "query": "PLAN020004 Storage GB",
+    "entity": "PLAN020004",
+    "column": "Storage GB",
+    "answer": "504"
+  },
+  {
+    "query": "PLAN020005 Seats",
+    "entity": "PLAN020005",
+    "column": "Seats",
+    "answer": "10"
+  },
+  {
+    "query": "PLAN020005 Annual cost",
+    "entity": "PLAN020005",
+    "column": "Annual cost",
+    "answer": "1125"
+  },
+  {
+    "query": "PLAN020005 Storage GB",
+    "entity": "PLAN020005",
+    "column": "Storage GB",
+    "answer": "505"
+  },
+  {
+    "query": "PLAN020006 Seats",
+    "entity": "PLAN020006",
+    "column": "Seats",
+    "answer": "11"
+  },
+  {
+    "query": "PLAN020006 Annual cost",
+    "entity": "PLAN020006",
+    "column": "Annual cost",
+    "answer": "1126"
+  },
+  {
+    "query": "PLAN020006 Storage GB",
+    "entity": "PLAN020006",
+    "column": "Storage GB",
+    "answer": "506"
+  },
+  {
+    "query": "PLAN020007 Seats",
+    "entity": "PLAN020007",
+    "column": "Seats",
+    "answer": "12"
+  },
+  {
+    "query": "PLAN020007 Annual cost",
+    "entity": "PLAN020007",
+    "column": "Annual cost",
+    "answer": "1127"
+  },
+  {
+    "query": "PLAN020007 Storage GB",
+    "entity": "PLAN020007",
+    "column": "Storage GB",
+    "answer": "507"
+  },
+  {
+    "query": "PLAN020008 Seats",
+    "entity": "PLAN020008",
+    "column": "Seats",
+    "answer": "13"
+  },
+  {
+    "query": "PLAN020008 Annual cost",
+    "entity": "PLAN020008",
+    "column": "Annual cost",
+    "answer": "1128"
+  },
+  {
+    "query": "PLAN020008 Storage GB",
+    "entity": "PLAN020008",
+    "column": "Storage GB",
+    "answer": "508"
+  },
+  {
+    "query": "PLAN020009 Seats",
+    "entity": "PLAN020009",
+    "column": "Seats",
+    "answer": "14"
+  },
+  {
+    "query": "PLAN020009 Annual cost",
+    "entity": "PLAN020009",
+    "column": "Annual cost",
+    "answer": "1129"
+  },
+  {
+    "query": "PLAN020009 Storage GB",
+    "entity": "PLAN020009",
+    "column": "Storage GB",
+    "answer": "509"
+  },
+  {
+    "query": "PLAN020010 Seats",
+    "entity": "PLAN020010",
+    "column": "Seats",
+    "answer": "15"
+  },
+  {
+    "query": "PLAN020010 Annual cost",
+    "entity": "PLAN020010",
+    "column": "Annual cost",
+    "answer": "1130"
+  },
+  {
+    "query": "PLAN020010 Storage GB",
+    "entity": "PLAN020010",
+    "column": "Storage GB",
+    "answer": "510"
+  },
+  {
+    "query": "PLAN020011 Seats",
+    "entity": "PLAN020011",
+    "column": "Seats",
+    "answer": "16"
+  },
+  {
+    "query": "PLAN020011 Annual cost",
+    "entity": "PLAN020011",
+    "column": "Annual cost",
+    "answer": "1131"
+  },
+  {
+    "query": "PLAN020011 Storage GB",
+    "entity": "PLAN020011",
+    "column": "Storage GB",
+    "answer": "511"
+  },
+  {
+    "query": "PLAN020012 Seats",
+    "entity": "PLAN020012",
+    "column": "Seats",
+    "answer": "17"
+  },
+  {
+    "query": "PLAN020012 Annual cost",
+    "entity": "PLAN020012",
+    "column": "Annual cost",
+    "answer": "1132"
+  },
+  {
+    "query": "PLAN020012 Storage GB",
+    "entity": "PLAN020012",
+    "column": "Storage GB",
+    "answer": "512"
+  },
+  {
+    "query": "PLAN020013 Seats",
+    "entity": "PLAN020013",
+    "column": "Seats",
+    "answer": "18"
+  },
+  {
+    "query": "PLAN020013 Annual cost",
+    "entity": "PLAN020013",
+    "column": "Annual cost",
+    "answer": "1133"
+  },
+  {
+    "query": "PLAN020013 Storage GB",
+    "entity": "PLAN020013",
+    "column": "Storage GB",
+    "answer": "513"
+  },
+  {
+    "query": "PLAN020014 Seats",
+    "entity": "PLAN020014",
+    "column": "Seats",
+    "answer": "19"
+  },
+  {
+    "query": "PLAN020014 Annual cost",
+    "entity": "PLAN020014",
+    "column": "Annual cost",
+    "answer": "1134"
+  },
+  {
+    "query": "PLAN020014 Storage GB",
+    "entity": "PLAN020014",
+    "column": "Storage GB",
+    "answer": "514"
+  },
+  {
+    "query": "PLAN020015 Seats",
+    "entity": "PLAN020015",
+    "column": "Seats",
+    "answer": "20"
+  },
+  {
+    "query": "PLAN020015 Annual cost",
+    "entity": "PLAN020015",
+    "column": "Annual cost",
+    "answer": "1135"
+  },
+  {
+    "query": "PLAN020015 Storage GB",
+    "entity": "PLAN020015",
+    "column": "Storage GB",
+    "answer": "515"
+  },
+  {
+    "query": "PLAN020016 Seats",
+    "entity": "PLAN020016",
+    "column": "Seats",
+    "answer": "21"
+  },
+  {
+    "query": "PLAN020016 Annual cost",
+    "entity": "PLAN020016",
+    "column": "Annual cost",
+    "answer": "1136"
+  },
+  {
+    "query": "PLAN020016 Storage GB",
+    "entity": "PLAN020016",
+    "column": "Storage GB",
+    "answer": "516"
+  },
+  {
+    "query": "PLAN020017 Seats",
+    "entity": "PLAN020017",
+    "column": "Seats",
+    "answer": "22"
+  },
+  {
+    "query": "PLAN020017 Annual cost",
+    "entity": "PLAN020017",
+    "column": "Annual cost",
+    "answer": "1137"
+  },
+  {
+    "query": "PLAN020017 Storage GB",
+    "entity": "PLAN020017",
+    "column": "Storage GB",
+    "answer": "517"
+  },
+  {
+    "query": "PLAN020018 Seats",
+    "entity": "PLAN020018",
+    "column": "Seats",
+    "answer": "23"
+  },
+  {
+    "query": "PLAN020018 Annual cost",
+    "entity": "PLAN020018",
+    "column": "Annual cost",
+    "answer": "1138"
+  },
+  {
+    "query": "PLAN020018 Storage GB",
+    "entity": "PLAN020018",
+    "column": "Storage GB",
+    "answer": "518"
+  },
+  {
+    "query": "PLAN020019 Seats",
+    "entity": "PLAN020019",
+    "column": "Seats",
+    "answer": "24"
+  },
+  {
+    "query": "PLAN020019 Annual cost",
+    "entity": "PLAN020019",
+    "column": "Annual cost",
+    "answer": "1139"
+  },
+  {
+    "query": "PLAN020019 Storage GB",
+    "entity": "PLAN020019",
+    "column": "Storage GB",
+    "answer": "519"
+  },
+  {
+    "query": "PLAN020020 Seats",
+    "entity": "PLAN020020",
+    "column": "Seats",
+    "answer": "25"
+  },
+  {
+    "query": "PLAN020020 Annual cost",
+    "entity": "PLAN020020",
+    "column": "Annual cost",
+    "answer": "1140"
+  },
+  {
+    "query": "PLAN020020 Storage GB",
+    "entity": "PLAN020020",
+    "column": "Storage GB",
+    "answer": "520"
+  },
+  {
+    "query": "PLAN020021 Seats",
+    "entity": "PLAN020021",
+    "column": "Seats",
+    "answer": "26"
+  },
+  {
+    "query": "PLAN020021 Annual cost",
+    "entity": "PLAN020021",
+    "column": "Annual cost",
+    "answer": "1141"
+  },
+  {
+    "query": "PLAN020021 Storage GB",
+    "entity": "PLAN020021",
+    "column": "Storage GB",
+    "answer": "521"
+  },
+  {
+    "query": "PLAN020022 Seats",
+    "entity": "PLAN020022",
+    "column": "Seats",
+    "answer": "27"
+  },
+  {
+    "query": "PLAN020022 Annual cost",
+    "entity": "PLAN020022",
+    "column": "Annual cost",
+    "answer": "1142"
+  },
+  {
+    "query": "PLAN020022 Storage GB",
+    "entity": "PLAN020022",
+    "column": "Storage GB",
+    "answer": "522"
+  },
+  {
+    "query": "PLAN020023 Seats",
+    "entity": "PLAN020023",
+    "column": "Seats",
+    "answer": "28"
+  },
+  {
+    "query": "PLAN020023 Annual cost",
+    "entity": "PLAN020023",
+    "column": "Annual cost",
+    "answer": "1143"
+  },
+  {
+    "query": "PLAN020023 Storage GB",
+    "entity": "PLAN020023",
+    "column": "Storage GB",
+    "answer": "523"
+  },
+  {
+    "query": "PLAN020024 Seats",
+    "entity": "PLAN020024",
+    "column": "Seats",
+    "answer": "29"
+  },
+  {
+    "query": "PLAN020024 Annual cost",
+    "entity": "PLAN020024",
+    "column": "Annual cost",
+    "answer": "1144"
+  },
+  {
+    "query": "PLAN020024 Storage GB",
+    "entity": "PLAN020024",
+    "column": "Storage GB",
+    "answer": "524"
+  },
+  {
+    "query": "PLAN020025 Seats",
+    "entity": "PLAN020025",
+    "column": "Seats",
+    "answer": "30"
+  },
+  {
+    "query": "PLAN020025 Annual cost",
+    "entity": "PLAN020025",
+    "column": "Annual cost",
+    "answer": "1145"
+  },
+  {
+    "query": "PLAN020025 Storage GB",
+    "entity": "PLAN020025",
+    "column": "Storage GB",
+    "answer": "525"
+  },
+  {
+    "query": "PLAN020026 Seats",
+    "entity": "PLAN020026",
+    "column": "Seats",
+    "answer": "31"
+  },
+  {
+    "query": "PLAN020026 Annual cost",
+    "entity": "PLAN020026",
+    "column": "Annual cost",
+    "answer": "1146"
+  },
+  {
+    "query": "PLAN020026 Storage GB",
+    "entity": "PLAN020026",
+    "column": "Storage GB",
+    "answer": "526"
+  },
+  {
+    "query": "PLAN020027 Seats",
+    "entity": "PLAN020027",
+    "column": "Seats",
+    "answer": "32"
+  },
+  {
+    "query": "PLAN020027 Annual cost",
+    "entity": "PLAN020027",
+    "column": "Annual cost",
+    "answer": "1147"
+  },
+  {
+    "query": "PLAN020027 Storage GB",
+    "entity": "PLAN020027",
+    "column": "Storage GB",
+    "answer": "527"
+  },
+  {
+    "query": "PLAN020028 Seats",
+    "entity": "PLAN020028",
+    "column": "Seats",
+    "answer": "33"
+  },
+  {
+    "query": "PLAN020028 Annual cost",
+    "entity": "PLAN020028",
+    "column": "Annual cost",
+    "answer": "1148"
+  },
+  {
+    "query": "PLAN020028 Storage GB",
+    "entity": "PLAN020028",
+    "column": "Storage GB",
+    "answer": "528"
+  },
+  {
+    "query": "PLAN020029 Seats",
+    "entity": "PLAN020029",
+    "column": "Seats",
+    "answer": "34"
+  },
+  {
+    "query": "PLAN020029 Annual cost",
+    "entity": "PLAN020029",
+    "column": "Annual cost",
+    "answer": "1149"
+  },
+  {
+    "query": "PLAN020029 Storage GB",
+    "entity": "PLAN020029",
+    "column": "Storage GB",
+    "answer": "529"
+  },
+  {
+    "query": "PLAN020030 Seats",
+    "entity": "PLAN020030",
+    "column": "Seats",
+    "answer": "35"
+  },
+  {
+    "query": "PLAN020030 Annual cost",
+    "entity": "PLAN020030",
+    "column": "Annual cost",
+    "answer": "1150"
+  },
+  {
+    "query": "PLAN020030 Storage GB",
+    "entity": "PLAN020030",
+    "column": "Storage GB",
+    "answer": "530"
+  },
+  {
+    "query": "PLAN020031 Seats",
+    "entity": "PLAN020031",
+    "column": "Seats",
+    "answer": "36"
+  },
+  {
+    "query": "PLAN020031 Annual cost",
+    "entity": "PLAN020031",
+    "column": "Annual cost",
+    "answer": "1151"
+  },
+  {
+    "query": "PLAN020031 Storage GB",
+    "entity": "PLAN020031",
+    "column": "Storage GB",
+    "answer": "531"
+  },
+  {
+    "query": "PLAN020032 Seats",
+    "entity": "PLAN020032",
+    "column": "Seats",
+    "answer": "37"
+  },
+  {
+    "query": "PLAN020032 Annual cost",
+    "entity": "PLAN020032",
+    "column": "Annual cost",
+    "answer": "1152"
+  },
+  {
+    "query": "PLAN020032 Storage GB",
+    "entity": "PLAN020032",
+    "column": "Storage GB",
+    "answer": "532"
+  },
+  {
+    "query": "PLAN020033 Seats",
+    "entity": "PLAN020033",
+    "column": "Seats",
+    "answer": "38"
+  },
+  {
+    "query": "PLAN020033 Annual cost",
+    "entity": "PLAN020033",
+    "column": "Annual cost",
+    "answer": "1153"
+  },
+  {
+    "query": "PLAN020033 Storage GB",
+    "entity": "PLAN020033",
+    "column": "Storage GB",
+    "answer": "533"
+  },
+  {
+    "query": "PLAN020034 Seats",
+    "entity": "PLAN020034",
+    "column": "Seats",
+    "answer": "39"
+  },
+  {
+    "query": "PLAN020034 Annual cost",
+    "entity": "PLAN020034",
+    "column": "Annual cost",
+    "answer": "1154"
+  },
+  {
+    "query": "PLAN020034 Storage GB",
+    "entity": "PLAN020034",
+    "column": "Storage GB",
+    "answer": "534"
+  },
+  {
+    "query": "PLAN020035 Seats",
+    "entity": "PLAN020035",
+    "column": "Seats",
+    "answer": "40"
+  },
+  {
+    "query": "PLAN020035 Annual cost",
+    "entity": "PLAN020035",
+    "column": "Annual cost",
+    "answer": "1155"
+  },
+  {
+    "query": "PLAN020035 Storage GB",
+    "entity": "PLAN020035",
+    "column": "Storage GB",
+    "answer": "535"
+  },
+  {
+    "query": "PLAN020036 Seats",
+    "entity": "PLAN020036",
+    "column": "Seats",
+    "answer": "41"
+  },
+  {
+    "query": "PLAN020036 Annual cost",
+    "entity": "PLAN020036",
+    "column": "Annual cost",
+    "answer": "1156"
+  },
+  {
+    "query": "PLAN020036 Storage GB",
+    "entity": "PLAN020036",
+    "column": "Storage GB",
+    "answer": "536"
+  },
+  {
+    "query": "PLAN020037 Seats",
+    "entity": "PLAN020037",
+    "column": "Seats",
+    "answer": "42"
+  },
+  {
+    "query": "PLAN020037 Annual cost",
+    "entity": "PLAN020037",
+    "column": "Annual cost",
+    "answer": "1157"
+  },
+  {
+    "query": "PLAN020037 Storage GB",
+    "entity": "PLAN020037",
+    "column": "Storage GB",
+    "answer": "537"
+  },
+  {
+    "query": "PLAN020038 Seats",
+    "entity": "PLAN020038",
+    "column": "Seats",
+    "answer": "43"
+  },
+  {
+    "query": "PLAN020038 Annual cost",
+    "entity": "PLAN020038",
+    "column": "Annual cost",
+    "answer": "1158"
+  },
+  {
+    "query": "PLAN020038 Storage GB",
+    "entity": "PLAN020038",
+    "column": "Storage GB",
+    "answer": "538"
+  },
+  {
+    "query": "PLAN020039 Seats",
+    "entity": "PLAN020039",
+    "column": "Seats",
+    "answer": "44"
+  },
+  {
+    "query": "PLAN020039 Annual cost",
+    "entity": "PLAN020039",
+    "column": "Annual cost",
+    "answer": "1159"
+  },
+  {
+    "query": "PLAN020039 Storage GB",
+    "entity": "PLAN020039",
+    "column": "Storage GB",
+    "answer": "539"
+  },
+  {
+    "query": "PLAN020040 Seats",
+    "entity": "PLAN020040",
+    "column": "Seats",
+    "answer": "45"
+  },
+  {
+    "query": "PLAN020040 Annual cost",
+    "entity": "PLAN020040",
+    "column": "Annual cost",
+    "answer": "1160"
+  },
+  {
+    "query": "PLAN020040 Storage GB",
+    "entity": "PLAN020040",
+    "column": "Storage GB",
+    "answer": "540"
+  },
+  {
+    "query": "PLAN020041 Seats",
+    "entity": "PLAN020041",
+    "column": "Seats",
+    "answer": "46"
+  },
+  {
+    "query": "PLAN020041 Annual cost",
+    "entity": "PLAN020041",
+    "column": "Annual cost",
+    "answer": "1161"
+  },
+  {
+    "query": "PLAN020041 Storage GB",
+    "entity": "PLAN020041",
+    "column": "Storage GB",
+    "answer": "541"
+  },
+  {
+    "query": "PLAN020042 Seats",
+    "entity": "PLAN020042",
+    "column": "Seats",
+    "answer": "47"
+  },
+  {
+    "query": "PLAN020042 Annual cost",
+    "entity": "PLAN020042",
+    "column": "Annual cost",
+    "answer": "1162"
+  },
+  {
+    "query": "PLAN020042 Storage GB",
+    "entity": "PLAN020042",
+    "column": "Storage GB",
+    "answer": "542"
+  },
+  {
+    "query": "PLAN020043 Seats",
+    "entity": "PLAN020043",
+    "column": "Seats",
+    "answer": "48"
+  },
+  {
+    "query": "PLAN020043 Annual cost",
+    "entity": "PLAN020043",
+    "column": "Annual cost",
+    "answer": "1163"
+  },
+  {
+    "query": "PLAN020043 Storage GB",
+    "entity": "PLAN020043",
+    "column": "Storage GB",
+    "answer": "543"
+  },
+  {
+    "query": "PLAN020044 Seats",
+    "entity": "PLAN020044",
+    "column": "Seats",
+    "answer": "49"
+  },
+  {
+    "query": "PLAN020044 Annual cost",
+    "entity": "PLAN020044",
+    "column": "Annual cost",
+    "answer": "1164"
+  },
+  {
+    "query": "PLAN020044 Storage GB",
+    "entity": "PLAN020044",
+    "column": "Storage GB",
+    "answer": "544"
+  },
+  {
+    "query": "PLAN020045 Seats",
+    "entity": "PLAN020045",
+    "column": "Seats",
+    "answer": "50"
+  },
+  {
+    "query": "PLAN020045 Annual cost",
+    "entity": "PLAN020045",
+    "column": "Annual cost",
+    "answer": "1165"
+  },
+  {
+    "query": "PLAN020045 Storage GB",
+    "entity": "PLAN020045",
+    "column": "Storage GB",
+    "answer": "545"
+  },
+  {
+    "query": "PLAN020046 Seats",
+    "entity": "PLAN020046",
+    "column": "Seats",
+    "answer": "51"
+  },
+  {
+    "query": "PLAN020046 Annual cost",
+    "entity": "PLAN020046",
+    "column": "Annual cost",
+    "answer": "1166"
+  },
+  {
+    "query": "PLAN020046 Storage GB",
+    "entity": "PLAN020046",
+    "column": "Storage GB",
+    "answer": "546"
+  },
+  {
+    "query": "PLAN020047 Seats",
+    "entity": "PLAN020047",
+    "column": "Seats",
+    "answer": "52"
+  },
+  {
+    "query": "PLAN020047 Annual cost",
+    "entity": "PLAN020047",
+    "column": "Annual cost",
+    "answer": "1167"
+  },
+  {
+    "query": "PLAN020047 Storage GB",
+    "entity": "PLAN020047",
+    "column": "Storage GB",
+    "answer": "547"
+  },
+  {
+    "query": "PLAN020048 Seats",
+    "entity": "PLAN020048",
+    "column": "Seats",
+    "answer": "53"
+  },
+  {
+    "query": "PLAN020048 Annual cost",
+    "entity": "PLAN020048",
+    "column": "Annual cost",
+    "answer": "1168"
+  },
+  {
+    "query": "PLAN020048 Storage GB",
+    "entity": "PLAN020048",
+    "column": "Storage GB",
+    "answer": "548"
+  },
+  {
+    "query": "PLAN020049 Seats",
+    "entity": "PLAN020049",
+    "column": "Seats",
+    "answer": "54"
+  },
+  {
+    "query": "PLAN020049 Annual cost",
+    "entity": "PLAN020049",
+    "column": "Annual cost",
+    "answer": "1169"
+  },
+  {
+    "query": "PLAN020049 Storage GB",
+    "entity": "PLAN020049",
+    "column": "Storage GB",
+    "answer": "549"
+  },
+  {
+    "query": "PLAN020050 Seats",
+    "entity": "PLAN020050",
+    "column": "Seats",
+    "answer": "55"
+  },
+  {
+    "query": "PLAN020050 Annual cost",
+    "entity": "PLAN020050",
+    "column": "Annual cost",
+    "answer": "1170"
+  },
+  {
+    "query": "PLAN020050 Storage GB",
+    "entity": "PLAN020050",
+    "column": "Storage GB",
+    "answer": "550"
+  },
+  {
+    "query": "PLAN020051 Seats",
+    "entity": "PLAN020051",
+    "column": "Seats",
+    "answer": "56"
+  },
+  {
+    "query": "PLAN020051 Annual cost",
+    "entity": "PLAN020051",
+    "column": "Annual cost",
+    "answer": "1171"
+  },
+  {
+    "query": "PLAN020051 Storage GB",
+    "entity": "PLAN020051",
+    "column": "Storage GB",
+    "answer": "551"
+  },
+  {
+    "query": "PLAN020052 Seats",
+    "entity": "PLAN020052",
+    "column": "Seats",
+    "answer": "57"
+  },
+  {
+    "query": "PLAN020052 Annual cost",
+    "entity": "PLAN020052",
+    "column": "Annual cost",
+    "answer": "1172"
+  },
+  {
+    "query": "PLAN020052 Storage GB",
+    "entity": "PLAN020052",
+    "column": "Storage GB",
+    "answer": "552"
+  },
+  {
+    "query": "PLAN020053 Seats",
+    "entity": "PLAN020053",
+    "column": "Seats",
+    "answer": "58"
+  },
+  {
+    "query": "PLAN020053 Annual cost",
+    "entity": "PLAN020053",
+    "column": "Annual cost",
+    "answer": "1173"
+  },
+  {
+    "query": "PLAN020053 Storage GB",
+    "entity": "PLAN020053",
+    "column": "Storage GB",
+    "answer": "553"
+  },
+  {
+    "query": "PLAN020054 Seats",
+    "entity": "PLAN020054",
+    "column": "Seats",
+    "answer": "59"
+  },
+  {
+    "query": "PLAN020054 Annual cost",
+    "entity": "PLAN020054",
+    "column": "Annual cost",
+    "answer": "1174"
+  },
+  {
+    "query": "PLAN020054 Storage GB",
+    "entity": "PLAN020054",
+    "column": "Storage GB",
+    "answer": "554"
+  },
+  {
+    "query": "PLAN020055 Seats",
+    "entity": "PLAN020055",
+    "column": "Seats",
+    "answer": "60"
+  },
+  {
+    "query": "PLAN020055 Annual cost",
+    "entity": "PLAN020055",
+    "column": "Annual cost",
+    "answer": "1175"
+  },
+  {
+    "query": "PLAN020055 Storage GB",
+    "entity": "PLAN020055",
+    "column": "Storage GB",
+    "answer": "555"
+  },
+  {
+    "query": "PLAN020056 Seats",
+    "entity": "PLAN020056",
+    "column": "Seats",
+    "answer": "61"
+  },
+  {
+    "query": "PLAN020056 Annual cost",
+    "entity": "PLAN020056",
+    "column": "Annual cost",
+    "answer": "1176"
+  },
+  {
+    "query": "PLAN020056 Storage GB",
+    "entity": "PLAN020056",
+    "column": "Storage GB",
+    "answer": "556"
+  },
+  {
+    "query": "PLAN020057 Seats",
+    "entity": "PLAN020057",
+    "column": "Seats",
+    "answer": "62"
+  },
+  {
+    "query": "PLAN020057 Annual cost",
+    "entity": "PLAN020057",
+    "column": "Annual cost",
+    "answer": "1177"
+  },
+  {
+    "query": "PLAN020057 Storage GB",
+    "entity": "PLAN020057",
+    "column": "Storage GB",
+    "answer": "557"
+  },
+  {
+    "query": "PLAN020058 Seats",
+    "entity": "PLAN020058",
+    "column": "Seats",
+    "answer": "63"
+  },
+  {
+    "query": "PLAN020058 Annual cost",
+    "entity": "PLAN020058",
+    "column": "Annual cost",
+    "answer": "1178"
+  },
+  {
+    "query": "PLAN020058 Storage GB",
+    "entity": "PLAN020058",
+    "column": "Storage GB",
+    "answer": "558"
+  },
+  {
+    "query": "PLAN020059 Seats",
+    "entity": "PLAN020059",
+    "column": "Seats",
+    "answer": "64"
+  },
+  {
+    "query": "PLAN020059 Annual cost",
+    "entity": "PLAN020059",
+    "column": "Annual cost",
+    "answer": "1179"
+  },
+  {
+    "query": "PLAN020059 Storage GB",
+    "entity": "PLAN020059",
+    "column": "Storage GB",
+    "answer": "559"
+  },
+  {
+    "query": "PLAN030000 Seats",
+    "entity": "PLAN030000",
+    "column": "Seats",
+    "answer": "5"
+  },
+  {
+    "query": "PLAN030000 Annual cost",
+    "entity": "PLAN030000",
+    "column": "Annual cost",
+    "answer": "1180"
+  },
+  {
+    "query": "PLAN030000 Storage GB",
+    "entity": "PLAN030000",
+    "column": "Storage GB",
+    "answer": "500"
+  },
+  {
+    "query": "PLAN030001 Seats",
+    "entity": "PLAN030001",
+    "column": "Seats",
+    "answer": "6"
+  },
+  {
+    "query": "PLAN030001 Annual cost",
+    "entity": "PLAN030001",
+    "column": "Annual cost",
+    "answer": "1181"
+  },
+  {
+    "query": "PLAN030001 Storage GB",
+    "entity": "PLAN030001",
+    "column": "Storage GB",
+    "answer": "501"
+  },
+  {
+    "query": "PLAN030002 Seats",
+    "entity": "PLAN030002",
+    "column": "Seats",
+    "answer": "7"
+  },
+  {
+    "query": "PLAN030002 Annual cost",
+    "entity": "PLAN030002",
+    "column": "Annual cost",
+    "answer": "1182"
+  },
+  {
+    "query": "PLAN030002 Storage GB",
+    "entity": "PLAN030002",
+    "column": "Storage GB",
+    "answer": "502"
+  },
+  {
+    "query": "PLAN030003 Seats",
+    "entity": "PLAN030003",
+    "column": "Seats",
+    "answer": "8"
+  },
+  {
+    "query": "PLAN030003 Annual cost",
+    "entity": "PLAN030003",
+    "column": "Annual cost",
+    "answer": "1183"
+  },
+  {
+    "query": "PLAN030003 Storage GB",
+    "entity": "PLAN030003",
+    "column": "Storage GB",
+    "answer": "503"
+  },
+  {
+    "query": "PLAN030004 Seats",
+    "entity": "PLAN030004",
+    "column": "Seats",
+    "answer": "9"
+  },
+  {
+    "query": "PLAN030004 Annual cost",
+    "entity": "PLAN030004",
+    "column": "Annual cost",
+    "answer": "1184"
+  },
+  {
+    "query": "PLAN030004 Storage GB",
+    "entity": "PLAN030004",
+    "column": "Storage GB",
+    "answer": "504"
+  },
+  {
+    "query": "PLAN030005 Seats",
+    "entity": "PLAN030005",
+    "column": "Seats",
+    "answer": "10"
+  },
+  {
+    "query": "PLAN030005 Annual cost",
+    "entity": "PLAN030005",
+    "column": "Annual cost",
+    "answer": "1185"
+  },
+  {
+    "query": "PLAN030005 Storage GB",
+    "entity": "PLAN030005",
+    "column": "Storage GB",
+    "answer": "505"
+  },
+  {
+    "query": "PLAN030006 Seats",
+    "entity": "PLAN030006",
+    "column": "Seats",
+    "answer": "11"
+  },
+  {
+    "query": "PLAN030006 Annual cost",
+    "entity": "PLAN030006",
+    "column": "Annual cost",
+    "answer": "1186"
+  },
+  {
+    "query": "PLAN030006 Storage GB",
+    "entity": "PLAN030006",
+    "column": "Storage GB",
+    "answer": "506"
+  },
+  {
+    "query": "PLAN030007 Seats",
+    "entity": "PLAN030007",
+    "column": "Seats",
+    "answer": "12"
+  },
+  {
+    "query": "PLAN030007 Annual cost",
+    "entity": "PLAN030007",
+    "column": "Annual cost",
+    "answer": "1187"
+  },
+  {
+    "query": "PLAN030007 Storage GB",
+    "entity": "PLAN030007",
+    "column": "Storage GB",
+    "answer": "507"
+  },
+  {
+    "query": "PLAN030008 Seats",
+    "entity": "PLAN030008",
+    "column": "Seats",
+    "answer": "13"
+  },
+  {
+    "query": "PLAN030008 Annual cost",
+    "entity": "PLAN030008",
+    "column": "Annual cost",
+    "answer": "1188"
+  },
+  {
+    "query": "PLAN030008 Storage GB",
+    "entity": "PLAN030008",
+    "column": "Storage GB",
+    "answer": "508"
+  },
+  {
+    "query": "PLAN030009 Seats",
+    "entity": "PLAN030009",
+    "column": "Seats",
+    "answer": "14"
+  },
+  {
+    "query": "PLAN030009 Annual cost",
+    "entity": "PLAN030009",
+    "column": "Annual cost",
+    "answer": "1189"
+  },
+  {
+    "query": "PLAN030009 Storage GB",
+    "entity": "PLAN030009",
+    "column": "Storage GB",
+    "answer": "509"
+  },
+  {
+    "query": "PLAN030010 Seats",
+    "entity": "PLAN030010",
+    "column": "Seats",
+    "answer": "15"
+  },
+  {
+    "query": "PLAN030010 Annual cost",
+    "entity": "PLAN030010",
+    "column": "Annual cost",
+    "answer": "1190"
+  },
+  {
+    "query": "PLAN030010 Storage GB",
+    "entity": "PLAN030010",
+    "column": "Storage GB",
+    "answer": "510"
+  },
+  {
+    "query": "PLAN030011 Seats",
+    "entity": "PLAN030011",
+    "column": "Seats",
+    "answer": "16"
+  },
+  {
+    "query": "PLAN030011 Annual cost",
+    "entity": "PLAN030011",
+    "column": "Annual cost",
+    "answer": "1191"
+  },
+  {
+    "query": "PLAN030011 Storage GB",
+    "entity": "PLAN030011",
+    "column": "Storage GB",
+    "answer": "511"
+  },
+  {
+    "query": "PLAN030012 Seats",
+    "entity": "PLAN030012",
+    "column": "Seats",
+    "answer": "17"
+  },
+  {
+    "query": "PLAN030012 Annual cost",
+    "entity": "PLAN030012",
+    "column": "Annual cost",
+    "answer": "1192"
+  },
+  {
+    "query": "PLAN030012 Storage GB",
+    "entity": "PLAN030012",
+    "column": "Storage GB",
+    "answer": "512"
+  },
+  {
+    "query": "PLAN030013 Seats",
+    "entity": "PLAN030013",
+    "column": "Seats",
+    "answer": "18"
+  },
+  {
+    "query": "PLAN030013 Annual cost",
+    "entity": "PLAN030013",
+    "column": "Annual cost",
+    "answer": "1193"
+  },
+  {
+    "query": "PLAN030013 Storage GB",
+    "entity": "PLAN030013",
+    "column": "Storage GB",
+    "answer": "513"
+  },
+  {
+    "query": "PLAN030014 Seats",
+    "entity": "PLAN030014",
+    "column": "Seats",
+    "answer": "19"
+  },
+  {
+    "query": "PLAN030014 Annual cost",
+    "entity": "PLAN030014",
+    "column": "Annual cost",
+    "answer": "1194"
+  },
+  {
+    "query": "PLAN030014 Storage GB",
+    "entity": "PLAN030014",
+    "column": "Storage GB",
+    "answer": "514"
+  },
+  {
+    "query": "PLAN030015 Seats",
+    "entity": "PLAN030015",
+    "column": "Seats",
+    "answer": "20"
+  },
+  {
+    "query": "PLAN030015 Annual cost",
+    "entity": "PLAN030015",
+    "column": "Annual cost",
+    "answer": "1195"
+  },
+  {
+    "query": "PLAN030015 Storage GB",
+    "entity": "PLAN030015",
+    "column": "Storage GB",
+    "answer": "515"
+  },
+  {
+    "query": "PLAN030016 Seats",
+    "entity": "PLAN030016",
+    "column": "Seats",
+    "answer": "21"
+  },
+  {
+    "query": "PLAN030016 Annual cost",
+    "entity": "PLAN030016",
+    "column": "Annual cost",
+    "answer": "1196"
+  },
+  {
+    "query": "PLAN030016 Storage GB",
+    "entity": "PLAN030016",
+    "column": "Storage GB",
+    "answer": "516"
+  },
+  {
+    "query": "PLAN030017 Seats",
+    "entity": "PLAN030017",
+    "column": "Seats",
+    "answer": "22"
+  },
+  {
+    "query": "PLAN030017 Annual cost",
+    "entity": "PLAN030017",
+    "column": "Annual cost",
+    "answer": "1197"
+  },
+  {
+    "query": "PLAN030017 Storage GB",
+    "entity": "PLAN030017",
+    "column": "Storage GB",
+    "answer": "517"
+  },
+  {
+    "query": "PLAN030018 Seats",
+    "entity": "PLAN030018",
+    "column": "Seats",
+    "answer": "23"
+  },
+  {
+    "query": "PLAN030018 Annual cost",
+    "entity": "PLAN030018",
+    "column": "Annual cost",
+    "answer": "1198"
+  },
+  {
+    "query": "PLAN030018 Storage GB",
+    "entity": "PLAN030018",
+    "column": "Storage GB",
+    "answer": "518"
+  },
+  {
+    "query": "PLAN030019 Seats",
+    "entity": "PLAN030019",
+    "column": "Seats",
+    "answer": "24"
+  },
+  {
+    "query": "PLAN030019 Annual cost",
+    "entity": "PLAN030019",
+    "column": "Annual cost",
+    "answer": "1199"
+  },
+  {
+    "query": "PLAN030019 Storage GB",
+    "entity": "PLAN030019",
+    "column": "Storage GB",
+    "answer": "519"
+  },
+  {
+    "query": "PLAN030020 Seats",
+    "entity": "PLAN030020",
+    "column": "Seats",
+    "answer": "25"
+  },
+  {
+    "query": "PLAN030020 Annual cost",
+    "entity": "PLAN030020",
+    "column": "Annual cost",
+    "answer": "1200"
+  },
+  {
+    "query": "PLAN030020 Storage GB",
+    "entity": "PLAN030020",
+    "column": "Storage GB",
+    "answer": "520"
+  },
+  {
+    "query": "PLAN030021 Seats",
+    "entity": "PLAN030021",
+    "column": "Seats",
+    "answer": "26"
+  },
+  {
+    "query": "PLAN030021 Annual cost",
+    "entity": "PLAN030021",
+    "column": "Annual cost",
+    "answer": "1201"
+  },
+  {
+    "query": "PLAN030021 Storage GB",
+    "entity": "PLAN030021",
+    "column": "Storage GB",
+    "answer": "521"
+  },
+  {
+    "query": "PLAN030022 Seats",
+    "entity": "PLAN030022",
+    "column": "Seats",
+    "answer": "27"
+  },
+  {
+    "query": "PLAN030022 Annual cost",
+    "entity": "PLAN030022",
+    "column": "Annual cost",
+    "answer": "1202"
+  },
+  {
+    "query": "PLAN030022 Storage GB",
+    "entity": "PLAN030022",
+    "column": "Storage GB",
+    "answer": "522"
+  },
+  {
+    "query": "PLAN030023 Seats",
+    "entity": "PLAN030023",
+    "column": "Seats",
+    "answer": "28"
+  },
+  {
+    "query": "PLAN030023 Annual cost",
+    "entity": "PLAN030023",
+    "column": "Annual cost",
+    "answer": "1203"
+  },
+  {
+    "query": "PLAN030023 Storage GB",
+    "entity": "PLAN030023",
+    "column": "Storage GB",
+    "answer": "523"
+  },
+  {
+    "query": "PLAN030024 Seats",
+    "entity": "PLAN030024",
+    "column": "Seats",
+    "answer": "29"
+  },
+  {
+    "query": "PLAN030024 Annual cost",
+    "entity": "PLAN030024",
+    "column": "Annual cost",
+    "answer": "1204"
+  },
+  {
+    "query": "PLAN030024 Storage GB",
+    "entity": "PLAN030024",
+    "column": "Storage GB",
+    "answer": "524"
+  },
+  {
+    "query": "PLAN030025 Seats",
+    "entity": "PLAN030025",
+    "column": "Seats",
+    "answer": "30"
+  },
+  {
+    "query": "PLAN030025 Annual cost",
+    "entity": "PLAN030025",
+    "column": "Annual cost",
+    "answer": "1205"
+  },
+  {
+    "query": "PLAN030025 Storage GB",
+    "entity": "PLAN030025",
+    "column": "Storage GB",
+    "answer": "525"
+  },
+  {
+    "query": "PLAN030026 Seats",
+    "entity": "PLAN030026",
+    "column": "Seats",
+    "answer": "31"
+  },
+  {
+    "query": "PLAN030026 Annual cost",
+    "entity": "PLAN030026",
+    "column": "Annual cost",
+    "answer": "1206"
+  },
+  {
+    "query": "PLAN030026 Storage GB",
+    "entity": "PLAN030026",
+    "column": "Storage GB",
+    "answer": "526"
+  },
+  {
+    "query": "PLAN030027 Seats",
+    "entity": "PLAN030027",
+    "column": "Seats",
+    "answer": "32"
+  },
+  {
+    "query": "PLAN030027 Annual cost",
+    "entity": "PLAN030027",
+    "column": "Annual cost",
+    "answer": "1207"
+  },
+  {
+    "query": "PLAN030027 Storage GB",
+    "entity": "PLAN030027",
+    "column": "Storage GB",
+    "answer": "527"
+  },
+  {
+    "query": "PLAN030028 Seats",
+    "entity": "PLAN030028",
+    "column": "Seats",
+    "answer": "33"
+  },
+  {
+    "query": "PLAN030028 Annual cost",
+    "entity": "PLAN030028",
+    "column": "Annual cost",
+    "answer": "1208"
+  },
+  {
+    "query": "PLAN030028 Storage GB",
+    "entity": "PLAN030028",
+    "column": "Storage GB",
+    "answer": "528"
+  },
+  {
+    "query": "PLAN030029 Seats",
+    "entity": "PLAN030029",
+    "column": "Seats",
+    "answer": "34"
+  },
+  {
+    "query": "PLAN030029 Annual cost",
+    "entity": "PLAN030029",
+    "column": "Annual cost",
+    "answer": "1209"
+  },
+  {
+    "query": "PLAN030029 Storage GB",
+    "entity": "PLAN030029",
+    "column": "Storage GB",
+    "answer": "529"
+  },
+  {
+    "query": "PLAN030030 Seats",
+    "entity": "PLAN030030",
+    "column": "Seats",
+    "answer": "35"
+  },
+  {
+    "query": "PLAN030030 Annual cost",
+    "entity": "PLAN030030",
+    "column": "Annual cost",
+    "answer": "1210"
+  },
+  {
+    "query": "PLAN030030 Storage GB",
+    "entity": "PLAN030030",
+    "column": "Storage GB",
+    "answer": "530"
+  },
+  {
+    "query": "PLAN030031 Seats",
+    "entity": "PLAN030031",
+    "column": "Seats",
+    "answer": "36"
+  },
+  {
+    "query": "PLAN030031 Annual cost",
+    "entity": "PLAN030031",
+    "column": "Annual cost",
+    "answer": "1211"
+  },
+  {
+    "query": "PLAN030031 Storage GB",
+    "entity": "PLAN030031",
+    "column": "Storage GB",
+    "answer": "531"
+  },
+  {
+    "query": "PLAN030032 Seats",
+    "entity": "PLAN030032",
+    "column": "Seats",
+    "answer": "37"
+  },
+  {
+    "query": "PLAN030032 Annual cost",
+    "entity": "PLAN030032",
+    "column": "Annual cost",
+    "answer": "1212"
+  },
+  {
+    "query": "PLAN030032 Storage GB",
+    "entity": "PLAN030032",
+    "column": "Storage GB",
+    "answer": "532"
+  },
+  {
+    "query": "PLAN030033 Seats",
+    "entity": "PLAN030033",
+    "column": "Seats",
+    "answer": "38"
+  },
+  {
+    "query": "PLAN030033 Annual cost",
+    "entity": "PLAN030033",
+    "column": "Annual cost",
+    "answer": "1213"
+  },
+  {
+    "query": "PLAN030033 Storage GB",
+    "entity": "PLAN030033",
+    "column": "Storage GB",
+    "answer": "533"
+  },
+  {
+    "query": "PLAN030034 Seats",
+    "entity": "PLAN030034",
+    "column": "Seats",
+    "answer": "39"
+  },
+  {
+    "query": "PLAN030034 Annual cost",
+    "entity": "PLAN030034",
+    "column": "Annual cost",
+    "answer": "1214"
+  },
+  {
+    "query": "PLAN030034 Storage GB",
+    "entity": "PLAN030034",
+    "column": "Storage GB",
+    "answer": "534"
+  },
+  {
+    "query": "PLAN030035 Seats",
+    "entity": "PLAN030035",
+    "column": "Seats",
+    "answer": "40"
+  },
+  {
+    "query": "PLAN030035 Annual cost",
+    "entity": "PLAN030035",
+    "column": "Annual cost",
+    "answer": "1215"
+  },
+  {
+    "query": "PLAN030035 Storage GB",
+    "entity": "PLAN030035",
+    "column": "Storage GB",
+    "answer": "535"
+  },
+  {
+    "query": "PLAN030036 Seats",
+    "entity": "PLAN030036",
+    "column": "Seats",
+    "answer": "41"
+  },
+  {
+    "query": "PLAN030036 Annual cost",
+    "entity": "PLAN030036",
+    "column": "Annual cost",
+    "answer": "1216"
+  },
+  {
+    "query": "PLAN030036 Storage GB",
+    "entity": "PLAN030036",
+    "column": "Storage GB",
+    "answer": "536"
+  },
+  {
+    "query": "PLAN030037 Seats",
+    "entity": "PLAN030037",
+    "column": "Seats",
+    "answer": "42"
+  },
+  {
+    "query": "PLAN030037 Annual cost",
+    "entity": "PLAN030037",
+    "column": "Annual cost",
+    "answer": "1217"
+  },
+  {
+    "query": "PLAN030037 Storage GB",
+    "entity": "PLAN030037",
+    "column": "Storage GB",
+    "answer": "537"
+  },
+  {
+    "query": "PLAN030038 Seats",
+    "entity": "PLAN030038",
+    "column": "Seats",
+    "answer": "43"
+  },
+  {
+    "query": "PLAN030038 Annual cost",
+    "entity": "PLAN030038",
+    "column": "Annual cost",
+    "answer": "1218"
+  },
+  {
+    "query": "PLAN030038 Storage GB",
+    "entity": "PLAN030038",
+    "column": "Storage GB",
+    "answer": "538"
+  },
+  {
+    "query": "PLAN030039 Seats",
+    "entity": "PLAN030039",
+    "column": "Seats",
+    "answer": "44"
+  },
+  {
+    "query": "PLAN030039 Annual cost",
+    "entity": "PLAN030039",
+    "column": "Annual cost",
+    "answer": "1219"
+  },
+  {
+    "query": "PLAN030039 Storage GB",
+    "entity": "PLAN030039",
+    "column": "Storage GB",
+    "answer": "539"
+  },
+  {
+    "query": "PLAN030040 Seats",
+    "entity": "PLAN030040",
+    "column": "Seats",
+    "answer": "45"
+  },
+  {
+    "query": "PLAN030040 Annual cost",
+    "entity": "PLAN030040",
+    "column": "Annual cost",
+    "answer": "1220"
+  },
+  {
+    "query": "PLAN030040 Storage GB",
+    "entity": "PLAN030040",
+    "column": "Storage GB",
+    "answer": "540"
+  },
+  {
+    "query": "PLAN030041 Seats",
+    "entity": "PLAN030041",
+    "column": "Seats",
+    "answer": "46"
+  },
+  {
+    "query": "PLAN030041 Annual cost",
+    "entity": "PLAN030041",
+    "column": "Annual cost",
+    "answer": "1221"
+  },
+  {
+    "query": "PLAN030041 Storage GB",
+    "entity": "PLAN030041",
+    "column": "Storage GB",
+    "answer": "541"
+  },
+  {
+    "query": "PLAN030042 Seats",
+    "entity": "PLAN030042",
+    "column": "Seats",
+    "answer": "47"
+  },
+  {
+    "query": "PLAN030042 Annual cost",
+    "entity": "PLAN030042",
+    "column": "Annual cost",
+    "answer": "1222"
+  },
+  {
+    "query": "PLAN030042 Storage GB",
+    "entity": "PLAN030042",
+    "column": "Storage GB",
+    "answer": "542"
+  },
+  {
+    "query": "PLAN030043 Seats",
+    "entity": "PLAN030043",
+    "column": "Seats",
+    "answer": "48"
+  },
+  {
+    "query": "PLAN030043 Annual cost",
+    "entity": "PLAN030043",
+    "column": "Annual cost",
+    "answer": "1223"
+  },
+  {
+    "query": "PLAN030043 Storage GB",
+    "entity": "PLAN030043",
+    "column": "Storage GB",
+    "answer": "543"
+  },
+  {
+    "query": "PLAN030044 Seats",
+    "entity": "PLAN030044",
+    "column": "Seats",
+    "answer": "49"
+  },
+  {
+    "query": "PLAN030044 Annual cost",
+    "entity": "PLAN030044",
+    "column": "Annual cost",
+    "answer": "1224"
+  },
+  {
+    "query": "PLAN030044 Storage GB",
+    "entity": "PLAN030044",
+    "column": "Storage GB",
+    "answer": "544"
+  },
+  {
+    "query": "PLAN030045 Seats",
+    "entity": "PLAN030045",
+    "column": "Seats",
+    "answer": "50"
+  },
+  {
+    "query": "PLAN030045 Annual cost",
+    "entity": "PLAN030045",
+    "column": "Annual cost",
+    "answer": "1225"
+  },
+  {
+    "query": "PLAN030045 Storage GB",
+    "entity": "PLAN030045",
+    "column": "Storage GB",
+    "answer": "545"
+  },
+  {
+    "query": "PLAN030046 Seats",
+    "entity": "PLAN030046",
+    "column": "Seats",
+    "answer": "51"
+  },
+  {
+    "query": "PLAN030046 Annual cost",
+    "entity": "PLAN030046",
+    "column": "Annual cost",
+    "answer": "1226"
+  },
+  {
+    "query": "PLAN030046 Storage GB",
+    "entity": "PLAN030046",
+    "column": "Storage GB",
+    "answer": "546"
+  },
+  {
+    "query": "PLAN030047 Seats",
+    "entity": "PLAN030047",
+    "column": "Seats",
+    "answer": "52"
+  },
+  {
+    "query": "PLAN030047 Annual cost",
+    "entity": "PLAN030047",
+    "column": "Annual cost",
+    "answer": "1227"
+  },
+  {
+    "query": "PLAN030047 Storage GB",
+    "entity": "PLAN030047",
+    "column": "Storage GB",
+    "answer": "547"
+  },
+  {
+    "query": "PLAN030048 Seats",
+    "entity": "PLAN030048",
+    "column": "Seats",
+    "answer": "53"
+  },
+  {
+    "query": "PLAN030048 Annual cost",
+    "entity": "PLAN030048",
+    "column": "Annual cost",
+    "answer": "1228"
+  },
+  {
+    "query": "PLAN030048 Storage GB",
+    "entity": "PLAN030048",
+    "column": "Storage GB",
+    "answer": "548"
+  },
+  {
+    "query": "PLAN030049 Seats",
+    "entity": "PLAN030049",
+    "column": "Seats",
+    "answer": "54"
+  },
+  {
+    "query": "PLAN030049 Annual cost",
+    "entity": "PLAN030049",
+    "column": "Annual cost",
+    "answer": "1229"
+  },
+  {
+    "query": "PLAN030049 Storage GB",
+    "entity": "PLAN030049",
+    "column": "Storage GB",
+    "answer": "549"
+  },
+  {
+    "query": "PLAN030050 Seats",
+    "entity": "PLAN030050",
+    "column": "Seats",
+    "answer": "55"
+  },
+  {
+    "query": "PLAN030050 Annual cost",
+    "entity": "PLAN030050",
+    "column": "Annual cost",
+    "answer": "1230"
+  },
+  {
+    "query": "PLAN030050 Storage GB",
+    "entity": "PLAN030050",
+    "column": "Storage GB",
+    "answer": "550"
+  },
+  {
+    "query": "PLAN030051 Seats",
+    "entity": "PLAN030051",
+    "column": "Seats",
+    "answer": "56"
+  },
+  {
+    "query": "PLAN030051 Annual cost",
+    "entity": "PLAN030051",
+    "column": "Annual cost",
+    "answer": "1231"
+  },
+  {
+    "query": "PLAN030051 Storage GB",
+    "entity": "PLAN030051",
+    "column": "Storage GB",
+    "answer": "551"
+  },
+  {
+    "query": "PLAN030052 Seats",
+    "entity": "PLAN030052",
+    "column": "Seats",
+    "answer": "57"
+  },
+  {
+    "query": "PLAN030052 Annual cost",
+    "entity": "PLAN030052",
+    "column": "Annual cost",
+    "answer": "1232"
+  },
+  {
+    "query": "PLAN030052 Storage GB",
+    "entity": "PLAN030052",
+    "column": "Storage GB",
+    "answer": "552"
+  },
+  {
+    "query": "PLAN030053 Seats",
+    "entity": "PLAN030053",
+    "column": "Seats",
+    "answer": "58"
+  },
+  {
+    "query": "PLAN030053 Annual cost",
+    "entity": "PLAN030053",
+    "column": "Annual cost",
+    "answer": "1233"
+  },
+  {
+    "query": "PLAN030053 Storage GB",
+    "entity": "PLAN030053",
+    "column": "Storage GB",
+    "answer": "553"
+  },
+  {
+    "query": "PLAN030054 Seats",
+    "entity": "PLAN030054",
+    "column": "Seats",
+    "answer": "59"
+  },
+  {
+    "query": "PLAN030054 Annual cost",
+    "entity": "PLAN030054",
+    "column": "Annual cost",
+    "answer": "1234"
+  },
+  {
+    "query": "PLAN030054 Storage GB",
+    "entity": "PLAN030054",
+    "column": "Storage GB",
+    "answer": "554"
+  },
+  {
+    "query": "PLAN030055 Seats",
+    "entity": "PLAN030055",
+    "column": "Seats",
+    "answer": "60"
+  },
+  {
+    "query": "PLAN030055 Annual cost",
+    "entity": "PLAN030055",
+    "column": "Annual cost",
+    "answer": "1235"
+  },
+  {
+    "query": "PLAN030055 Storage GB",
+    "entity": "PLAN030055",
+    "column": "Storage GB",
+    "answer": "555"
+  },
+  {
+    "query": "PLAN030056 Seats",
+    "entity": "PLAN030056",
+    "column": "Seats",
+    "answer": "61"
+  },
+  {
+    "query": "PLAN030056 Annual cost",
+    "entity": "PLAN030056",
+    "column": "Annual cost",
+    "answer": "1236"
+  },
+  {
+    "query": "PLAN030056 Storage GB",
+    "entity": "PLAN030056",
+    "column": "Storage GB",
+    "answer": "556"
+  },
+  {
+    "query": "PLAN030057 Seats",
+    "entity": "PLAN030057",
+    "column": "Seats",
+    "answer": "62"
+  },
+  {
+    "query": "PLAN030057 Annual cost",
+    "entity": "PLAN030057",
+    "column": "Annual cost",
+    "answer": "1237"
+  },
+  {
+    "query": "PLAN030057 Storage GB",
+    "entity": "PLAN030057",
+    "column": "Storage GB",
+    "answer": "557"
+  },
+  {
+    "query": "PLAN030058 Seats",
+    "entity": "PLAN030058",
+    "column": "Seats",
+    "answer": "63"
+  },
+  {
+    "query": "PLAN030058 Annual cost",
+    "entity": "PLAN030058",
+    "column": "Annual cost",
+    "answer": "1238"
+  },
+  {
+    "query": "PLAN030058 Storage GB",
+    "entity": "PLAN030058",
+    "column": "Storage GB",
+    "answer": "558"
+  },
+  {
+    "query": "PLAN030059 Seats",
+    "entity": "PLAN030059",
+    "column": "Seats",
+    "answer": "64"
+  },
+  {
+    "query": "PLAN030059 Annual cost",
+    "entity": "PLAN030059",
+    "column": "Annual cost",
+    "answer": "1239"
+  },
+  {
+    "query": "PLAN030059 Storage GB",
+    "entity": "PLAN030059",
+    "column": "Storage GB",
+    "answer": "559"
+  }
+]

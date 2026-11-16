@@ -1,0 +1,16 @@
+[
+  {
+    "chunk_id": "quarterly-summary",
+    "text": "Revenue grew 12%. Costs fell 3%.",
+    "meta": {
+      "doc_items": [
+        {
+          "self_ref": "#/texts/0"
+        },
+        {
+          "self_ref": "#/texts/1"
+        }
+      ]
+    }
+  }
+]

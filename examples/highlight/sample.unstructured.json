@@ -1,0 +1,64 @@
+[
+  {
+    "type": "NarrativeText",
+    "element_id": "element-0",
+    "text": "Revenue grew 12%.",
+    "metadata": {
+      "page_number": 1,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200,
+        "points": [
+          [
+            200,
+            255.55555555555554
+          ],
+          [
+            200,
+            294.44444444444446
+          ],
+          [
+            833.3333333333334,
+            294.44444444444446
+          ],
+          [
+            833.3333333333334,
+            255.55555555555554
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "element-1",
+    "text": "Costs fell 3%.",
+    "metadata": {
+      "page_number": 2,
+      "coordinates": {
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200,
+        "points": [
+          [
+            200,
+            255.55555555555554
+          ],
+          [
+            200,
+            294.44444444444446
+          ],
+          [
+            833.3333333333334,
+            294.44444444444446
+          ],
+          [
+            833.3333333333334,
+            255.55555555555554
+          ]
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.0.0",
+  "name": "Synthetic quarterly report",
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "label": "text",
+      "text": "Revenue grew 12%.",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 72,
+            "t": 700,
+            "r": 300,
+            "b": 686,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "self_ref": "#/texts/1",
+      "label": "text",
+      "text": "Costs fell 3%.",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 72,
+            "t": 700,
+            "r": 300,
+            "b": 686,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            14
+          ]
+        }
+      ]
+    }
+  ],
+  "pages": {
+    "1": {
+      "page_no": 1,
+      "size": {
+        "width": 612,
+        "height": 792
+      }
+    },
+    "2": {
+      "page_no": 2,
+      "size": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  }
+}

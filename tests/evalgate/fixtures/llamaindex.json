@@ -1,0 +1,6 @@
+{
+  "queries": {"q2": "Which document describes birds?", "q1": "Where is the synthetic cat?"},
+  "corpus": {"d1": "A synthetic cat.", "d2": "A synthetic bird.", "d3": "Another synthetic cat."},
+  "relevant_docs": {"q1": ["d1", "d3"], "q2": ["d2"]},
+  "mode": "text"
+}

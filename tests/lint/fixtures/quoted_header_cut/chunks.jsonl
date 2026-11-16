@@ -1,0 +1,2 @@
+{"id": "h", "text": "> | café \\", "metadata": {"source": "quoted.md", "chunklint": {"operation": "rejoin_table", "inputs": [{"id": "h0", "metadata": {"part": 0}}, {"id": "h1", "metadata": {"part": 1, "label": "雪"}}]}}}
+{"id": "r", "text": "| 雪 | v |\n> | -- | :-: |\n> | a | b |\n", "metadata": {"source": "quoted.md", "part": 2}}

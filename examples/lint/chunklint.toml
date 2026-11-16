@@ -1,0 +1,8 @@
+[chunklint]
+min_chars = 40
+max_chars = 4000
+near_duplicate = 0.90
+max_overlap = 0.50
+fail_on = "error"
+disable = []
+max_pair_checks = 100000

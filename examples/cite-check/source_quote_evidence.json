@@ -1,0 +1,11 @@
+{
+  "answer": "The manual says \"CAFÉ & stable\" ##0$$.",
+  "reference": {
+    "chunks": [
+      {
+        "chunk_id": "local-synthetic-source",
+        "content_with_weight": "<p>The manual says</p><p>🙂 preface</p><b>cafe&#x301;</b><i>&amp;\tSTABLE</i><p>tail</p>"
+      }
+    ]
+  }
+}
