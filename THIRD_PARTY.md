@@ -154,7 +154,7 @@ redistribute those projects' code.
 ## `ragwrench sync` (formerly chunk-sync-planner)
 
 Original implementation, examples and synthetic fixtures: MIT, copyright 2026
-the ragwrench contributors. No upstream implementation source was copied or vendored.
+tianhaogutum. No upstream implementation source was copied or vendored.
 Dependencies are installed separately and retain their own licenses and notices.
 This notice does not relicense those packages. Consult the installed distribution's
 license files for full terms, including notices for code bundled inside wheels.
